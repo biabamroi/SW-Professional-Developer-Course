@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- 언어 변경 -->
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 추가 meta tag 기입 -->
+  <meta name="desription" content="이 페이지는 a Tag Practice 페이지입니다.">
+  <meta name="keywords" content="HTML, a태그, 링크">
+  <meta name="author" content="X">  
+  <!-- css 연결 -->
+  <link rel="stylesheet" href="../CSS/aTagPractice.css">
+  <!-- 제목 변경 -->
+  <title>a Tag 실습예제1</title>
+</head>
+<body>
+  <!-- 전체 감싸기용 div : 고정값을 주고 평균 기기 사이즈에 맞추기 위함. -->
+  <div class="wrapper">
+
+    <!-- class 생성 시 한 칸 띄워쓰면 추가 class 생성, 예시에서는 google, box 2종 -->
+    <div class="google box">
+      <h1>구글로 이동하기</h1>
+      <a href="https://www.google.com/" target="_blank">
+        <img src="../images/google.PNG" alt="구글 로고">
+      </a>
+      <p>Google 이미지를 눌렀을 때 <span class="txt-bold">구글로 이동</span></p>
+    </div>
+
+    <div class="naver box">
+      <h1>네이버로 이동하기</h1>
+      <img src="..//images/naver2.PNG" alt="네이버 로고">
+      <p>
+      <a href="https://www.naver.com/"><span class="txt-green">여기</span></a>를 눌렀을 때 네이버로 이동
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* 폰트를 두껍게 하려면 700 or bold */
+.b-weight {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+.delete {
+  text-decoration: line-through;
+}
+.underline {
+  text-decoration: underline;
+}
+.mark {
+  background-color: yellow;
+}

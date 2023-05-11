@@ -1,0 +1,65 @@
+body {
+/* 연결 확인용 background-color: rgb(203, 241, 203); */
+}
+
+.google {
+
+  width: 400px;
+  border-radius: 30px;
+  border: 2px solid blue;
+  margin: auto;
+  padding: 10px;
+
+}
+
+.naver {
+
+  width: 400px;
+  border-radius: 30px;
+  border: 2px solid green;
+  margin: auto;
+  padding: 10px;
+
+}
+
+
+.insta {
+  width: 150px;
+  border: 1px solid saddlebrown;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  margin-right: 20px;
+  padding-left: 5px;
+  padding-top: 10px;
+}
+
+.youtube {
+  /* width로 고정하여 고정값, 화면을 100% 차지하지 않게끔 유도. */
+  width: 300px;
+  border: 2px solid black;
+  /* margin : 박스 바깥쪽 여백 */
+  /* margin auto 바깥 여백 자동 계산 */
+  margin: 0 auto;
+  /* padding : 박스 안쪽 여백 */
+  /* 박스 안쪽 상 하 좌 우 각각 20px 여백이 생긴다. */
+  /* top, bottom, left, right 임의 설정 */
+  padding: 20px;
+  /* 값을 두 개만 입력 시 앞의 값이 상, 하가 되고 뒤에 오는 값이 좌, 우가 된다. */
+  /* padding: 20px 200px 50px 100px; */
+  /* 네 가지 값을 전부 입력하면 상 우 하 좌 시계방향으로 입력한 값 */
+  /*
+  위에 작성한 값과 동일한 상황 
+  padding-top: 20px;
+  padding-right: 200px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  */
+}
+
+.paypal {
+  width: 250px;
+  border: 2px solid red;
+  margin: 10px;
+  padding: 30px;
+}

@@ -1,0 +1,48 @@
+/* 연결 확인용
+body {
+  background-color: #d49292;
+} */
+
+/* 공통 사용 태그는 CSS 상단에 미리 만들어 올려놓고
+html 태그에서 클래스만 부여하는 식으로 사용하면 편하다.*/
+
+/* 하이퍼 링크 연결 시 생기는 밑줄 제거용 */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* 디자인 실무 시 기획 컨펌을 위해 자주 사용하는 색상은
+메인 상단에 표기해 놓고 이용하는 쪽이 편하다. */
+.txt-green {
+  color: green;
+}
+
+img {
+  width: 200px;
+}
+
+.box {
+  width: 300px;
+  border-radius: 10px;
+  padding: 20px;
+  /* text-align의 기본값은 left */
+  /* text-align 속성으로 이미지도 정렬 가능
+    img 태그에 text-align: center; 주면 안 되고 부모 요소에 적용
+  */
+  text-align: center;
+  margin: 20px auto;
+}
+
+.google {
+  border: 2px solid red;
+}
+
+.txt-bold {
+  font-weight: 700;
+}
+
+.naver {
+  border: 2px solid green;
+}
+

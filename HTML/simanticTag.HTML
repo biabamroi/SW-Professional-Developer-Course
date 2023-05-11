@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <link rel="stylesheet" href="simanticTag.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 시멘틱 태그와 일반 태그의 차이</title>
+</head>
+<body>
+  <!-- <b>와 <strong>의 차이점 -->
+  <div class="font-b">
+    <b>berry</b>
+    <p>
+      &lt;황금 공과 개구리&gt; css처럼 단순히 웹브라우저에 표시되는 모양만 결정<br>
+      <span class="b-weight">css에서 폰트 두께는 font-weight 속성으로 조절한다.</span> 
+    </p>
+
+    <strong>berry</strong>
+    <p>
+      &lt;공주님과 백조왕자&gt; Semantic Tag, HTML 문서 내에서 강조하고 싶은 내용에 사용<br>
+      <strong>둘 다 폰트가 두꺼워지지만, 스트롱 태그는 내용 강조 시멘틱 태그다.</strong>
+      <!-- 시각장애인 등 스크린리더기 등 특수한 상황에 필요한 태그, 인식 문제. -->
+    </p>
+
+  </div>
+
+  <!-- <i>와 <em>의 차이점 -->
+  <div class="font-i">
+    <p>&lt;i&gt;태그는 CSS처럼 웹사이트에 표시되는 모양만 결정한다. (스타일링) <br>
+      <i>이탤릭체, 기울기</i><br>
+      <span class="italic">내용 강조 없이 모양만 이탤릭체로 표현하고 싶p을 때는 
+        CSS font-style 속성을 사용한다.</span>
+    </p>
+    <p>&lt;em&gt;태그는 semantic 태그로 HTML에서 이탤릭체로 
+      <em>내용을 강조</em>하고 싶을 때 사용한다.
+    </p>
+
+  </div>
+
+  <!-- <s>와 <del>의 차이점 -->
+  <div class="font-d">
+    <p>&lt;s&gt;태그는 화면상 표시되는 모양만 결정
+    <s>취소선</s><br>
+    <span class="delete">취소된 내용이라는 강조가 아닌 
+      디자인적으로 중간에 가로선을 긋고 싶을 때 
+      Css text-decoration 속성을 사용한다.
+    </span></p>
+    <p>
+      &lt;del&gt;태그는 Semantic 태그로 문서 내에서 삭제된 내용이라는 것을
+      강조하고 싶을 때 사용한다. <br>
+      <del>시멘틱 태그</del>
+    </p>
+  </div>
+
+  <!-- <u> 태그와 <ins> 태그의 차이점 -->
+  <div class="font-u">
+    <p>
+      &lt;u&gt;태그는 웹 브라우저에서 표시되는 모양만 결정 <br>
+      <u>언더라인</u><br>
+      <span class="underline">css text-decotation : underline</span>
+    </p>
+    <p>
+      &lt;ins&gt;태그는 Semantic Tag로 HTML 문서에 새로 삽입된 내용이라는 것을 
+      강조하고 싶을 때 사용한다. <br>
+      <ins>새로 삽입된 내용을 강조하는 Semantic Tag!</ins>
+    </p>
+  </div>
+
+  <p>지금 배운 것들 <mark>절대 외우지 않아도</mark> 됨.</p>
+  <p>css background-color 속성 이용하여 &lt;마크&gt; 태그로 적용하기</p>
+  <p>지금 배운 것들 <span class="mark">절대 외우지 않아도</span> 됨.</p>
+</body>
+</html>

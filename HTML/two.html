@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="./two.css">
+    <!-- 문자 인코딩 -->
+    <meta carset="UTF-8">
+    <!-- 브라우저 호환성 지정 -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <!-- 반응형 웹, 모바일 등 기기장치 인식 기준 코드 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 검색 엔진 결과에 표시되는 페이지에 대한 설명 -->
+    <meta name="description" content="이 페이지는 화요일에 작성된 페이지입니다.">
+    <!-- 검색 엔진에 의해 검색되는 키워드 지정 -->
+    <meta name="keywords" content="HTML, CSS, Javascript, Frontend">
+    <!-- 이 문서를 작성한 사람에 대한 정보 -->
+    <meta name="author" content="x">
+    <title>meta 연습</title>
+  </head>
+  <body>
+    <!-- div : 상자 구역 태그 -->
+    <div>나는 구역을 나누는 태그</div><br>
+    <div>그리고 나는 Block 요소 태그</div>
+    <!--  -->
+    <p>나는 pragraph 문단</p>
+    <p>나도 <span class="txt-red">Block</span> 요소 태그</p>
+    <!--  -->
+    <span>나는 텍스트 특정 부분에 스타일 적용 시 사용</span>
+    <span>나는 inline 요소, Block 요소 내부 진입 가능</span>
+    <!--  --><br><br>
+    <span>
+      <div>나는 Block 요소여서 절대 inline인 span태그 안에 들어갈 수 없다.</div>
+      <p>나도 마찬가지. 문법적으로 잘못된 코드다.</p>
+    </span>
+    <!--  -->
+    <div class="box-green">
+      <p>문단1</p>
+      <p>문단2</p>
+      <p>문단3</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div><br>
+
+    <!-- Orderd List -->
+    <!-- li*5 -->
+    <!-- heading tag : 가장 중요한 제목이나 로고에 사용 -->
+    <div class="shop">
+      <h3>&nbsp;과일가게</h3>
+      <h5><i>&nbsp;&nbsp;당도가 높고 맛있어요!</i></h5>
+      <ol>
+        <li><strong>딸기</strong></li>
+        <li>사과</li>
+        <li>포도</li>
+        <li><b>귤</b></li>
+        <li>수박</li>
+      </ol>
+      <!-- unodered list -->
+      <ul class="nav-list">
+        <li>짜장면</li>
+        <li>짬뽕</li>
+        <li>돈가스</li>
+        <li>떡볶이</li>
+        <li>피자</li>
+      </ul>
+    </div>
+  </body>
+</html>
+

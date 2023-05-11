@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="desription" content="이 페이지는 a 태그를 연습하는 페이지입니다.">
+  <meta name="keywords" content="HTML, a태그, 링크">
+  <meta name="author" content="X">
+  <title>a link 두 번째 페이지</title>
+</head>
+
+<style>
+  p {
+    border: 1px solid black;
+  }
+  a {
+    background-color: rgb(222, 243, 236);
+  }
+  .red-text {
+    color: red;
+  }
+  #para1 {
+    background-color: rgb(216, 195, 236);
+  }
+
+  /* class와 id의 차이점 */
+  /*
+    1. 클래스는 중복 가능, 아이디는 중복 불가
+    2. 아이디는 자바스크립트를 사용할 때 쓴다.
+    3. css에서 아이디를 사용할 때는 앞에 #을 붙인다.
+    4. css에서 클래스를 사용할 때는 앞에 .을 붙인다.
+  */
+
+</style>
+
+<body>
+  <h2>
+    <a href="./a_link.html">첫 번째 페이지</a>
+  </h2>
+
+  <div>
+    <a href="#para1">첫 번째 문단으로 이동하기</a><br>
+    <a href="#para2">두 번째 문단으로 이동하기</a><br>
+    <a href="#para3">세 번째 문단으로 이동하기</a><br>
+
+    <p>
+      <a href="">첫 번째 문단 이동</a>
+    </p>
+    <p>
+      <a href="">두 번째 문단 이동</a>
+    </p>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="one">
+    <h2 id="para1" class="red-text">첫 번째 문단</h2>
+    <H1>
+    Lorem ipsum dolor sit amet consectetur, <br>adipisicing elit. <br>Ipsum totam, <br>aperiam sint vitae placeat<br> eos neque maxime ad voluptas doloremque obcaecati optio aliquid odio, <br>minus sit?<br> Veniam perferendis quibusdam reprehenderit.
+    </H1>
+  </div><br>  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="two">
+    <h2 id="para2" class="red-text">두 번째 문단</h2>
+    <img src="../images/compass.webp" alt="나침판">
+  </div><br>  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="three">
+    <h2 id="para3" class="red-text">세 번째 문단</h2>
+    <img src="../images/fungus.webp" alt="버섯">
+  </div><br>  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+</html>
