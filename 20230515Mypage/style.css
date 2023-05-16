@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background-color: #1e1e1e;
+}
+
+.wrapper {
+  text-align: center;
+  background-color: #282828;
+  border: 1px solid #868686;
+  border-radius: 10px;
+  margin: 30px;
+}
+
+.mac-btn-list {
+  /* 정렬하고 싶은 아이템의 부모 요소에 display : flex 속성 부여 */
+  /* 화면상 중요한 순서로 태그 작성할 것. */
+  /* display, position 필히 상단 기재. 이후 width, height 정도.*/
+  display: flex;
+  background-color: #151515;  
+  padding: 10px 0;
+  border-radius: 10px 10px 0 0;
+  /* 시계 방향
+  1번 좌측 상단
+  2번 우측 상단
+  3번 우측 하단
+  4번 좌측 하단 */
+  border-bottom: 1px solid #000;
+}
+
+.mac-btn-item {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  margin-left: 6px;
+}
+
+.red {
+  background-color: #db4932;
+}
+
+.yellow {
+  background-color: #ffc34a; 
+}
+
+.green {
+  background-color: #59c24b;
+}
+
+.gnb-list {
+  display: flex;
+  /* 기본값 : felex-start(좌측 정렬) */
+  /* 가운데 : center */
+  /* 우측 정렬 : flex-end */
+  justify-content: center;
+  margin-top: 30px;
+  /* font-weight : 두껍게 700 or bold */
+  font-weight: 700;
+}
+
+.gnb-item {
+  margin-right: 30px;
+}
+
+/* gnb-item 클래스 중 마지막 요소 */
+.gnb-item:last-child {
+  margin: 0;
+}
+
+.my-name {
+  /* margin 적용 시 개발자들 사이에서의 규칙 
+  일괄 적용이 아닌 한쪽으로 치우친 값 통일하여 적용
+  수정 시 검색하여 일괄 적용 용이 (통일 속성 이용) */
+  margin-top: 30px;
+  color: #fff;
+}
+
+/* img {
+  border-radius: 50%;
+} */
+
+/* 클래스 내부에 있는 img에 적용 */
+.info-section img {
+  margin-top: 30px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+/* 비율 조절
+  object-fit: contain; or cover;
+  1. cover : 내용물이 비율 유지하면서
+  정의된 가로x세로 사이즈를 가득 채울 때까지 확대
+  2. contain : 내용물이 비율 유지하면서
+  정의된 가로x세로 값 내부에서 최대한 확대 */
+
+  .contact-list {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .contact-list h3 {
+    color: #fff;
+    margin-right: 40px;
+  }
+
+  .contact-item {
+    padding-right: 20px;
+  }
+
+  .contact-item:last-child {
+    padding: 0;
+  }

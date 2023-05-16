@@ -1,0 +1,21 @@
+
+li {
+  margin-right: 30px;
+}
+
+.gnb-list {
+  display: flex;
+}
+
+.gnb-list li {
+  list-style: none;
+}
+
+.gnb-list li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.ordered-list {
+  display: flex;
+}
