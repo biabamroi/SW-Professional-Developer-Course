@@ -98,3 +98,30 @@
   display: flex;
   justify-content: center;
 }
+
+.flex {
+  display: flex;
+
+  /* 기본값이 flex-start */
+  /* 가로축 정렬하는 속성 */
+  justify-content: center;
+
+  /* 세로축 정렬하는 속성 */
+  /* space-between 사이값 공간 여백 */
+  align-items: center;
+  /* 박스 떨어지는 방향 기본값 : row */
+
+  /* felx-direction 값이 row일 경우, 가로축이 주축. */
+  /* 수평정렬 = justify-content (주축)
+    수직정렬 = align-items */
+  
+  flex-direction: column; /* column은 세로 */
+  
+  /* 주축을 변경할 경우, justify-content 속성의 주축도 변경. */
+  /* flex-direction : column일 경우, 세로축이 주축. */
+  /* 수직정렬 = justiry-content (주축)
+    수평정렬 = align-items */
+  
+  height: 700px;
+  border: 2px solid #000;
+}
