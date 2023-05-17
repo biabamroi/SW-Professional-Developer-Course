@@ -109,13 +109,13 @@
   /* 세로축 정렬하는 속성 */
   /* space-between 사이값 공간 여백 */
   align-items: center;
-  /* 박스 떨어지는 방향 기본값 : row */
+  /* 박스 떨어지는 방향 기본값 : row (열, 줄) */
 
   /* felx-direction 값이 row일 경우, 가로축이 주축. */
   /* 수평정렬 = justify-content (주축)
     수직정렬 = align-items */
   
-  flex-direction: column; /* column은 세로 */
+  flex-direction: row; /* column 세로, 기둥 */
   
   /* 주축을 변경할 경우, justify-content 속성의 주축도 변경. */
   /* flex-direction : column일 경우, 세로축이 주축. */
@@ -125,3 +125,27 @@
   height: 700px;
   border: 2px solid #000;
 }
+
+.flex div {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* order
+  부모의 display가 flex인 경우 자식 요소에
+  order 속성으로 화면에 보이는 순서를 바꿀 수 있다.
+  기본값은 0, 숫자가 작은 순서대로 화면에 출력된다.
+  order값이 같을 경우, 작성 순서대로 출력된다. */
+
+.first {
+  order : 1;
+}
+
+.second {
+  order : 1;
+}
+
+.third {
+  order : -1;
+}
+
