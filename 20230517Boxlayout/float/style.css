@@ -1,0 +1,42 @@
+* {
+
+}
+
+.layout {
+  width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: left;
+  background-color: aquamarine;
+}
+
+.box1 {
+  height: 100px;
+}
+
+.box2 {
+  height: 400px;
+}
+
+.left-box {
+  width: 100px;
+  float: left;
+  background-color: cornflowerblue;
+  text-align: left;
+}
+
+.right-box {
+  width: 700px;
+  float: right;
+  background-color: coral;
+  text-align: left;
+}
+
+.footer {
+  clear: both;
+  background-color: lightgreen;
+  text-align: left;
+}
