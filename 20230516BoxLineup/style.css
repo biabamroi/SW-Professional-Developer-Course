@@ -67,3 +67,34 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.center-float {
+  /* 1. 자식 div들의 가로값을 다 더해서 width */
+  /* border 5px, box 100px, 총 110px x3 = 330px */
+  /* 박스 사이징을 해주면 border 사이즈 관계 없이 값 */
+  width: 300px;
+  margin: 0 auto;
+  /* 상하는 o, 좌우는 auto */
+}
+
+.center-float div {
+  /* width : 100px이 아니라 양 옆 border : 5px씩
+  더해져서 박스 하나의 width값은 110px이 된다. */
+  float: left;
+  /* 내가 지정한 박스 사이즈에 border까지 포함한 값 */
+  box-sizing: border-box;
+}
+
+.center-inline {
+  text-align: center;
+}
+
+.center-inline div {
+  display: inline-block;
+  text-align: left;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+}
