@@ -1,0 +1,33 @@
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 36px;
+}
+
+.header {
+  height: 100px;
+  background-color: aquamarine;
+}
+
+.left-box {
+  width: 200px;
+  height: 500px;
+  float: left;
+  /* 붕 띄워서 정렬 */
+  background-color: cornflowerblue;
+}
+
+.right-box {
+  width: 1000px;
+  height: 500px;
+  float: right;
+  /* left-box 옆으로 붙으라는 의미에서 float : left 사용 */
+  /* 나머지 공간 오른쪽으로 가라는 의미로 float : right 사용 */
+  background-color: coral;
+}
+
+.footer {
+  clear: both;
+  height: 100px;
+  background-color: lightgreen;
+}
