@@ -1,2 +1,42 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  /* display : flex
+  내가 정렬하고 싶은 부모에게 속성을 준다. */
+  /* flexible box 라고도 부른다.
+  말 그대로 유연하게 박스들을 배치 가능하기 때문. */
+  display: flex;
+  /* row : 수평 정렬하는 속성 */
+  justify-content: space-between;
+  /* align : 수직 정렬하는 속성 */
+  align-items: center;
+  padding: 15px 40px 15px 40px;
+  background-color: #333;
+}
+
+.logo img {
+  /* .logo라는 클래스 내부의 img 태그에만 적용 */
+  width: 40px;
+}
+
+.gnb-list {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.gnb-item a {
+  color: #fff;
+  font-weight: 700; 
 }
