@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* header {
+} */
+
+nav {
+  background-color: black;
+  display: flex;
+}
+
+.logo img {
+  width: 50px;
+  margin: 20px;
+}
+
+.gnb-list {
+  width: 30%;
+  /* list-style: none; */
+  display: flex;
+  /* flex-direction: row-reverse; */
+  /* justify-content: flex-end; */
+  justify-content: space-between;
+}
+
+/* .gnb-list li {
+} */
+
+.gnb-list a {
+  color: #fff;
+  /* font-size: 24px; */
+  font-weight: bold;
+  /* text-decoration: none; */
+}
+
+
