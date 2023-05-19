@@ -105,7 +105,11 @@ nav {
   color: #fff;
   background-color: #000;
   border-radius: 20px;
-  box-shadow: 2px 2px gray;
+  /* 속성 : 수평 | 수직 | 그림자 테두리 선명도 | 그림자 크기 | 색상 */
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  /* blur-radius : 기본값 0
+  spread-radius : 양수값은 그림자가 커지고 음수값은 그림자가 작아진다. */
+  box-shadow: 5px 5px 10px #666;
 }
 
 .first-box p {
