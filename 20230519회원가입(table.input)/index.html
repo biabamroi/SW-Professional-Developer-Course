@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./CSS/style.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,21 +12,47 @@
 </head>
 <body>
   <div class="wrapper">
-    <header>
 
-    </header>
-
-
-
-    <main>
-
-    </main>
-
-
-
-    <footer>
-
-    </footer>
+    <div class="join">
+      <h1>회원가입</h1>
+      <p>
+        회원가입 페이지 입니다. <br>
+        본사는 고객님들의 개인정보를 소중하고 안전하게 보관하고 있습니다. <br>
+        불편사항이 있으시면 010-1234-5678로 연락주시기 바랍니다.
+      </p>
+    </div>
+    <hr>
+    <!-- User 입력 정보를 받기 위한 틀 
+        form tag : 입력된 데이터를 한번에 서버로 전송한다. -->
+    <!-- action : 데이터를 서버로 전송할 때 데이터가 도착할 URL 작성 -->
+    <!-- method : 서버 전송 HTTP 메소드 선택. GET, POST -->
+    <form action="" method="">
+      <!-- th(table head) : 표 제목 -->
+      <!-- tr(table row) : 행, 가로줄 -->
+      <!-- td(table data) : 셀 -->
+    <table class="table-border" border="1">
+        <tr>
+          <th>테이블</th>
+          <th>만들기</th>
+        </tr>
+        <tr>
+          <td>첫번째 칸</td>
+          <td>두번째 칸</td>
+        </tr>
+        <tr>
+          <td>세번째 칸</td>
+          <td>네번째 칸</td>
+        </tr>
+    </table>
+    <br>
+    <table border>
+      <tr><th>번호</th><th>이름</th></tr>
+      <tr><td>1</td><td>홍길동</td></tr>
+      <tr><td>2</td><td>이순신</td></tr>
+      <tr><td>3</td><td>전우치</td></tr>
+    </table>
+    
+    </form>
   </div>
 </body>
 </html>
