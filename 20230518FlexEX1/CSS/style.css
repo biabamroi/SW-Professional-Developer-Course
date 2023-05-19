@@ -144,3 +144,27 @@ nav {
 .post-box-item p {
   margin-top: 30px;
 }
+
+
+
+
+footer {
+  margin-top: 80px;
+}
+
+.contact {
+  color: #fff;
+  text-decoration: none;
+}
+
+.gnb-list2 {
+  display: flex;
+  margin-right: 50px;
+  width: 160px;
+  justify-content: space-between;
+}
+
+.gnb-item2 a {
+  color: #fff;
+  font-weight: 700; 
+}
