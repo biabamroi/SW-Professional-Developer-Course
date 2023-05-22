@@ -30,7 +30,9 @@
       <!-- th(table head) : 표 제목 -->
       <!-- tr(table row) : 행, 가로줄 -->
       <!-- td(table data) : 셀 -->
-    <table class="table-border" border="1">
+
+    <!-- Table 태그 연습
+      <table class="table-border" border="1">
         <tr>
           <th>테이블</th>
           <th>만들기</th>
@@ -50,8 +52,45 @@
       <tr><td>1</td><td>홍길동</td></tr>
       <tr><td>2</td><td>이순신</td></tr>
       <tr><td>3</td><td>전우치</td></tr>
-    </table>
+    </table> -->
     
+    <table class="info-table">
+      <tr>
+        <!-- label 생성하여 두 값 연결 -->
+        <!-- for 내부 값이 iD 내부 값과 동일해야 한다. -->
+        <td><label for="id">아이디</label></td>
+        <!-- input tag : 사용자로부터 정보 입력 -->
+        <!-- type 속성 이용, 다양한 방법으로 값을 입력 -->
+        <!-- name 속성은 서버 전송 시 필요한 값 -->
+        <td><input required id="id" type="text" name="userID">
+          <!-- button type : 1. button 2. reset 3. submit  -->
+          <button type="button">아이디 중복체크</button></td>
+      </tr>
+      <tr>
+        <td><label for="pw">비밀번호</label></td>
+        <td><input required id="pw" type="password" name="userPW"></td>
+      </tr>
+      <tr>
+        <!-- required : 필수 요소로 지정하는 속성 -->
+        <td><label for="name">이름</label></td>
+        <td><input required id="name" type="text" name="userName"></td>
+      </tr>
+      <tr>
+        <td><label for="email"></label>이메일</td>
+        <!-- 카멜표기법 : 낙타 등 혹처럼 소문자 다음 대문자 표기 -->
+        <!-- 자바스크립트에서 변수명 작성 시 사용하는 표기법 -->
+        <!--  CSS에서는 하이픈(-) 주로 사용 -->
+        <td><input required id="email" type="email" name="userEmail"></td>
+      </tr>
+      <tr>
+        <td><label for="nationality">국적</label></td>
+        <td><input id="nationality"></td>
+      </tr>
+      <tr>
+        <td><label for=""></label></td>
+      </tr>
+    </table>
+
     </form>
   </div>
 </body>
