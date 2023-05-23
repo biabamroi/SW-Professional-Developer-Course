@@ -8,7 +8,6 @@
   <meta name="description" content="CSS Position Page">
   <meta name="keywords" content="CSS, HTML, Position">
   <meta name="author" content="Kai">
-  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -27,7 +26,39 @@
 </head>
 <body>
   <div class="wrapper">
+  
     <h1>CSS Position 연습</h1>
+    
+    <!-- Position : HTML 문서 상에서 요소가 배치되는 방식을 결정한다. -->
+    <!-- top, bottom, left, right 이용, 원하는 위치로 좌표 이동 (2,3,4) -->
+    
+    <!-- 1. static : 원래 뜻 / 고정 → css-position에서는 '원래 위치'를 뜻한다.
+      문서 흐름에 맞춰서 그대로 배치되며, 별도 지정하지 않으면 기본값이 static 상태
+      static에서는 top, bottom, left, right에 좌표 넣어도 적용 x -->
+    
+    <!-- 2. relative : 원래 위치 기준 좌표대로 이동한다. -->
+    
+    <!-- √ 3. absolute : relative 기준으로 이동한다. 
+        position 중에서 가장 주의하여 사용해야 하는 속성 
+       relative(상대적인) ↔ absolute(절대적인)
+       absolute는 기준을 자신이 아닌 상위 요소에서 찾는다.
+       상위에 기준이 되는 position : relative 필요 
+       기준이 없다면 DOM 트리 최상위 <body> 태그가 배치 기준이 된다. -->
+    
+    <!-- 4. fixed : viewport 브라우저 화면 기준으로 좌표 이동한다.
+       화면을 스크롤하더라도 특정 좌표에 고정되어서 움직이지 않는다.-->
+
+    <!-- 5. sticky : 원래 뜻 / 끈적거리는, 달라붙는 → 스크롤링 시 효과가 나타난다.
+       스크롤 했을 때 지정한 좌표에 도달하면 그 위치에 달라붙는다. -->
+
+    <div class="position">
+      <!-- div.box$*3 -->
+      <div class="box1">position:relative</div>
+      <div class="box2">position:fixed</div>
+      <div class="box3">position:sticky</div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
 
   </div>
 </body>
