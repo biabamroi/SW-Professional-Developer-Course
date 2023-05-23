@@ -1,4 +1,5 @@
 
-body {
+* {
+  /* 앞 폰트 비적용 시 기본 폰트 sans-serif, serif 글자체 차이 */
   font-family: 'Nanum Myeongjo', serif;
 }
