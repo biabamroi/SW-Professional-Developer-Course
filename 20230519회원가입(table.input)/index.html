@@ -170,7 +170,62 @@
         <!-- CSS는 Style 안에, 자바스크립트는 script 안에 작성해야 인식 -->
       </tr>
       <tr>
-        <td></td>
+        <td><label>성별</label></td>
+        <td>
+          <input type="radio" name="gender" value="m">남자
+          <input type="radio" name="gender" value="f">여자
+        </td>
+      </tr>
+      <tr>
+        <td><label for="number">전화번호</label></td>
+        <td>
+          <select name="number" id="number">
+           <option value="010">010</option>
+           <option value="011">011</option> 
+           <option value="016">016</option> 
+          </select> -
+          <input type="number" size="4"> -
+          <input type="number" size="4">
+        </td>
+      </tr>
+      <tr>
+        <td><label>희망연봉</label></td>
+        <td><input type="range" min="0" max="10000" step="1"></td>
+      </tr>
+      <tr>
+        <td><label>취미</label></td>
+        <td>
+          <input type="checkbox" name="op01" value="ok"> 양궁
+          <input type="checkbox" name="op02" value="ok"> 등산
+          <input type="checkbox" name="op03" value="ok"> 영화
+          <input type="checkbox" name="op04" value="ok"> 음악
+          <input type="checkbox" name="op05" value="ok"> 독서
+          <input type="checkbox" name="op06" value="ok"> 다도
+          <input type="checkbox" name="op07" value="ok"> 수영
+          <input type="checkbox" name="op08" value="ok"> 낚시
+          <input type="checkbox" name="op09" value="ok"> 농구
+          <input type="checkbox" name="op10" value="ok"> 야구
+          <input type="checkbox" name="op11" value="ok"> 축구
+          <input type="checkbox" name="op12" value="ok"> 악기
+          <input type="checkbox" name="op13" value="ok"> 바둑
+          <input type="checkbox" name="op14" value="ok"> 체스
+        </td>
+      </tr>
+      <tr>
+        <td><label>증명사진</label></td>
+        <td><button>파일선택</button>선택된 파일 없음</td>
+      </tr>
+      <tr>
+        <td><label for="self">자기소개서</label></td>
+        <td>
+          <input id="self" type="text" name="userSelf" 
+          placeholder="400자 미만으로 작성하시오."
+          style="width:300px;height:200px;">
+        </td>
+      </tr>
+      <tr>
+        <td><button type="submit">제출</button></td>
+        <td><button type="reset">초기화</button></td>
       </tr>
     </table>
 
