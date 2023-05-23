@@ -1,3 +1,7 @@
+* {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
 .table-border {
   /* separate(기본값) : border 분리 상태 */
   /* collapse : border 한 줄로 합치기 */
