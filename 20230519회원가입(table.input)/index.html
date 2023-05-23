@@ -27,7 +27,13 @@
         form tag : 입력된 데이터를 한번에 서버로 전송한다. -->
     <!-- action : 데이터를 서버로 전송할 때 데이터가 도착할 URL 작성 -->
     <!-- method : 서버 전송 HTTP 메소드 선택. GET, POST -->
-    <form action="" method="">
+    <!-- Get, Post 둘 다 form 태그에 작성한 데이터를 서버로 전송하는 역할.
+        Get : 폼 전송 데이터가 URL 끝 외부 노출, 브라우저 기록 → 보안 취약
+              데이터를 요청하는 데 사용 (수정 x)
+        Post : 내부적으로 보이지 않게 데이터를 전송한다.
+              브라우저에 기록이 남지 않으므로 보안이 중요한 경우 사용
+              데이터 수정, 삭제 시 사용 -->
+    <form action="./action.html" method="post">
       <!-- th(table head) : 표 제목 -->
       <!-- tr(table row) : 행, 가로줄 -->
       <!-- td(table data) : 셀 -->
@@ -170,10 +176,12 @@
         <!-- CSS는 Style 안에, 자바스크립트는 script 안에 작성해야 인식 -->
       </tr>
       <tr>
-        <td><label>성별</label></td>
+        <td>성별</td>
         <td>
-          <input type="radio" name="gender" value="m">남자
-          <input type="radio" name="gender" value="f">여자
+          <!-- radio button : name 값 중복 선택 불가능 -->
+          <!-- value : 사용자 선택 시 전달되는 값 -->
+          <span><input type="radio" name="gender" value="m" checked>남자</span>
+          <span><input type="radio" name="gender" value="f">여자</span>
         </td>
       </tr>
       <tr>
@@ -182,50 +190,48 @@
           <select name="number" id="number">
            <option value="010">010</option>
            <option value="011">011</option> 
-           <option value="016">016</option> 
+           <option value="041">041</option> 
+           <option value="042">042</option> 
+           <option value="02">02</option> 
           </select> -
-          <input type="number" size="4"> -
-          <input type="number" size="4">
+          <input type="text" maxlength="4"> -
+          <input type="text" maxlength="4">
+          <!-- 자바스크립트 조건문으로 조절 -->
         </td>
       </tr>
       <tr>
-        <td><label>희망연봉</label></td>
-        <td><input type="range" min="0" max="10000" step="1"></td>
+        <td>희망연봉</td>
+        <!-- max : input 요소 최댓값 -->
+        <!-- min : input 요소 최솟값 -->
+        <!-- step : input 요소에 입력할 수 있는 숫자 사이 간격 -->
+        <td><input type="range" min="100" max="100000" step="100"></td>
       </tr>
       <tr>
-        <td><label>취미</label></td>
+        <td>취미</td>
         <td>
-          <input type="checkbox" name="op01" value="ok"> 양궁
-          <input type="checkbox" name="op02" value="ok"> 등산
-          <input type="checkbox" name="op03" value="ok"> 영화
-          <input type="checkbox" name="op04" value="ok"> 음악
-          <input type="checkbox" name="op05" value="ok"> 독서
-          <input type="checkbox" name="op06" value="ok"> 다도
-          <input type="checkbox" name="op07" value="ok"> 수영
-          <input type="checkbox" name="op08" value="ok"> 낚시
-          <input type="checkbox" name="op09" value="ok"> 농구
-          <input type="checkbox" name="op10" value="ok"> 야구
-          <input type="checkbox" name="op11" value="ok"> 축구
-          <input type="checkbox" name="op12" value="ok"> 악기
-          <input type="checkbox" name="op13" value="ok"> 바둑
-          <input type="checkbox" name="op14" value="ok"> 체스
+          <!-- 동일한 name값을 가지고 있어도 다중 선택이 가능하다. -->
+          <!-- value : 해당 필드 체크 시 서버로 제출되는 값 -->
+          <!-- checked : 기본 선택 -->
+          <span><input type="checkbox" name="hobby" value="mov" checked>영화</span>
+          <span><input type="checkbox" name="hobby" value="arc">양궁</span>
+          <span><input type="checkbox" name="hobby" value="hik">등산</span>
+          <span><input type="checkbox" name="hobby" value="mus">음악</span>
+          <span><input type="checkbox" name="hobby" value="boo">독서</span>
         </td>
       </tr>
       <tr>
-        <td><label>증명사진</label></td>
-        <td><button>파일선택</button>선택된 파일 없음</td>
+        <td>증명사진</td>
+        <td><input type="file"></td>
       </tr>
       <tr>
-        <td><label for="self">자기소개서</label></td>
+        <td>자기소개서</td>
         <td>
-          <input id="self" type="text" name="userSelf" 
-          placeholder="400자 미만으로 작성하시오."
-          style="width:300px;height:200px;">
+          <textarea placeholder="400자 미만으로 작성하시오." name="" id="" cols="30" rows="10"></textarea>
         </td>
       </tr>
       <tr>
-        <td><button type="submit">제출</button></td>
-        <td><button type="reset">초기화</button></td>
+        <td><input type="submit"></td>
+        <td><input type="reset"></td>
       </tr>
     </table>
 
