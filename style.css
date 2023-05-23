@@ -11,6 +11,7 @@ body {
 
 .top {
   margin-top: 50px;
+  font-family: 'Lobster', cursive;
 }
 
 table {
@@ -49,6 +50,10 @@ table {
 
 a {
   text-decoration: none;
+}
+
+.hello {
+  font-family: 'East Sea Dokdo', cursive;
 }
 
 .table {
