@@ -1,0 +1,40 @@
+/* * {
+  margin: 0 auto;
+  padding: 0 auto;
+} */
+
+
+
+
+
+
+/* nav {
+  display: flex;
+} */
+
+.simbol div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: red;
+}
+
+.yel {
+  background-color: yellow;
+}
+
+.gre {
+  background-color: green;
+}
+
+
+
+
+
+
+
+
+
