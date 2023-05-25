@@ -138,3 +138,38 @@ header nav {
 
 
 
+footer {
+  padding: 20px 0;
+  background-color: skyblue;
+}
+
+.global-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.global-footer h3 {
+  color: #fff;
+}
+
+.icon-list {
+  display: flex;
+}
+
+.icon-item a {
+  padding-right: 20px;
+}
+
+/* 순서를 잘 볼 것.
+이 클래스를 가진 애들 중에 마지막 자식을 찾고
+그중에서 a 태그가 가지고 있는 여백을 없애라. */
+.icon-item:last-child a {
+  padding-right: 0;
+}
+/* class명 a:last-child로 하면 a 안에 있는 마지막 자식을 찾게 됨. */
+
+.icon-item i {
+  font-size: 24px;
+}
