@@ -1,3 +1,57 @@
 * {
+  margin: 0;
+  padding: 0;
   font-family: 'Ubuntu', sans-serif;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 웹 접근성을 높이기 위해 사용 (스크린 리더기) */
+.visually-hidden {
+  /* 스크린 리더기로 이용하는 분들께 알려주기 위한 화면 안내를
+  일반적인 이용자에게는 보이지 않게끔 가려주는 용도 */
+  display: none;
+  /* 눈에 띄지 않고 자리 차지 x */
+}
+
+header {
+  height: 80px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* 순서상 flex 다음에 position, 상단 고정 위한 용도 */
+  /* position :fixed를 주면 width값이 본인이 가진 콘텐츠만큼 줄어든다. */
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  /* 줄어든 크기를 가로값으로 */
+  width: 100%;
+  height: 80px;
+  padding: 10px 20px; /* 상하 좌우 */
+  background-color: skyblue;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.gnb-list {
+  display: flex;
+}
+
+.gnb-item a {
+  /* a tag에 여백을 주면 근처만 가도 클릭할 수 있다. */
+  padding: 20px;
+}
+
+
