@@ -187,3 +187,26 @@ footer {
   color: rgb(41,127,161);
 }
 
+
+
+.side-menu {
+  position: fixed;
+  top: 150px;
+  right: 50px;
+}
+
+.side-menu-list {
+  text-align: center;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888;
+}
+
+.side-menu-item a {
+  display: inline-block;
+  /* paddin에 안 먹어서 속성 인라인, 블록 넣어줌 */
+  padding: 10px 0;
+  color: #888;
+}
+
