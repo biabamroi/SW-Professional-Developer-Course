@@ -114,6 +114,27 @@ header nav {
 
 
 
+.fixed-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-color: rgb(217,241,254);
+}
+
+.fixed-back-img {
+  width: 1000px;
+  height: 500px;
+  background-color: #fff;
+  background-image: url(../imges/pngegg.png);
+  background-repeat: no-repeat;
+  /* px, %, top, bottom, left, right */
+  /* px, % 사용 시 왼쪽 상단 기준으로 멀어지는 거리 기재 */
+  /* x, y (가로x세로) 모두 center 시 center 한 번만 기재 */
+  background-size: 500px;
+  background-position: center bottom;
+  background-attachment: fixed; /* 스크롤 붙어서 이동 */
+}
 
 
 
