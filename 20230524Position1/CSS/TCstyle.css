@@ -55,3 +55,35 @@ header nav {
 }
 
 
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-image: url(../imges/스누피배경.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+.main-tittle {
+  font-size: 48px;
+}
+
+.main-content {
+  margin-top: 20px;
+}
+
+.main-btn {
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  /* 자체적으로 가지고 있는 라인을 제거 */
+  border-radius: 5px;
+}
+
+
