@@ -87,3 +87,33 @@ header nav {
 }
 
 
+
+.post-card {
+  /* div 외에 다른 태그가 있을 수 있으므로 부모를 이동 */
+  position: relative;
+  top: -50px;
+}
+
+/* > 표시로 자식 태그만 선택자 */
+.post-card > div {
+  width: 80%;
+  /* 최대 폭을 결정하는 속성 : 값 이상 커지지 않게 (모니터 등 차이에 인한) */
+  max-width: 600px;
+  min-width: 300px; /* 최솟값, 폰 등 기기에 의한 */
+  /* 양 옆 = auto / top : 30px / bottom : 0 */
+  margin: 30px auto 0 auto; /* 상우하좌 */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(217,241,254);
+}
+
+.post-card > div:first-child {
+  margin-top: 0;
+}
+
+
+
+
+
+
