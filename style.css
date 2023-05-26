@@ -28,6 +28,10 @@ table {
   width: 50px;
 }
 
+.icon:hover {
+  transform: scale(1.2);
+}
+
 .margin-name {
   text-align: left;
   padding-left: 60px;
@@ -66,6 +70,10 @@ a {
 .write {
   color: white;
   background-color: #000;
+}
+
+.write:hover {
+  color: red;
 }
 
 
