@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flex를 이용해서 layout 잡기 연습">
+  <meta name="keywords" content="Flex, HTML, 실습">
+  <meta name="author" content="Kai">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
+  <!-- favicon -->
+  <title>Flex 실습예제1</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="layout">
+
+      <!-- header 내부에 반드시 h1~6 태그 1개 이상 포함할 것. -->
+      <header>
+        <nav> <!-- GNB(글로벌 네비게이션 바) -->
+
+          <h1 class="logo">
+            <a href="./index.html">
+              <img src="./Images/applelogo.png" alt="applelogo">
+            </a>
+          </h1>
+
+          <ul class="gnb-list">
+            <li class="gnb-item"><a href="./menu1.html">menu1</a></li>
+            <li class="gnb-item"><a href="./menu2.html">menu2</a></li>
+            <li class="gnb-item"><a href="./menu3.html">menu3</a></li>
+          </ul>
+
+        </nav>
+      </header>
+
+      <!-- <main> 태그 내에 페이지 주 콘텐츠 내용이 들어간다. -->
+      <!-- 문서 내에서 <main> 태그는 한 번만 사용한다. -->
+      <main>
+        <!-- main 태그 안에서 영역별 section 태그로 구분해주는 게 좋다. -->
+
+        <section class="background">
+          <div class="back-txt">
+            <h2 class="back-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="back-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Ducimus quibusdam inventore, ut voluptatum soluta, 
+              enim quia sapiente, est necessitatibus architecto minima 
+              quam aspernatur adipisci temporibus cupiditate rem! Natus, 
+              voluptate necessitatibus?</p>
+            <!-- javascript 이벤트, 동적인 요소 / button 내 onclick="alert('')" -->
+            <button class="back-btn" onclick="alert('Hello, World!')">버튼</button>
+          </div>
+        </section>
+
+        <section class="first-box">
+          <div>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Expedita alias deserunt impedit voluptates ut quae?</p>
+          </div>
+        </section>
+
+        <section class="post-box-list">
+          <div class="post-box-item">
+            <h2>
+              Lorem ipsum dolor sit amet.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Accusantium quos maxime quidem facilis unde velit!
+            </p>
+          </div>
+
+          <div class="post-box-item">
+            <h2>
+              Lorem ipsum dolor sit amet.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Accusantium quos maxime quidem facilis unde velit!
+            </p>
+          </div>
+
+          <div class="post-box-item">
+            <h2>
+              Lorem ipsum dolor sit amet.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Accusantium quos maxime quidem facilis unde velit!
+            </p>
+          </div>
+        </section>
+
+      </main>
+
+      <footer>
+      <nav>
+
+        <h1 class="contact">
+            Contact
+        </h1>
+
+        <ul class="gnb-list2">
+          <li class="gnb-item2"><a href="mailto:email@gmail.com">메일</a></li>
+          <li class="gnb-item2"><a href="tel:010-1234-1234">전화</a></li>
+          <li class="gnb-item2"><a href="https://www.youtube.com">유튜브</a></li>
+        </ul>
+
+      </nav>
+      </footer>
+    </div>
+
+  </div>
+</body>
+</html>
