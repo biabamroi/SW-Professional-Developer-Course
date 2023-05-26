@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="display&visibility">
+  <meta name="author" content="Kai">
+  <meta name="keywords" content="CSS, html, display, visibility">
+  <title>display&visibility</title>
+</head>
+<style>
+.box {
+  width: 200px;
+  height: 200px;
+}
+.box1 {
+  background-color: blueviolet;
+}
+.box2 {
+  /* 자리 차지 x 화면상 사라짐 */
+  /* display: none; */
+  /* 자리 차지 o 화면상 모습 사라짐 */
+  visibility: hidden;
+  background-color: burlywood;
+}
+.box3 {
+  background-color: skyblue;
+}
+</style>
+<body>
+  <div class="wrapper">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+</body>
+</html>
