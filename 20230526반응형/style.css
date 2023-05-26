@@ -34,6 +34,30 @@ header, footer {
   width: 30%;
   height: 400px;
   border: 1px solid darkblue;
+}
 
 
+
+/* 권장 breakpoint */
+/* 1200px, 992px, 768px, 576px */
+/* bootstrap 라이브러리가 권장하는 breakpoint */
+/* 모든 기기에 대응할 수 없어서 가장 많이 쓰이는 기기 평균 기준 */
+/* 1200px 이상 : Desktop D, Large L */
+/* 1200px 미만 ~ 768px : 태블릿 T, M */
+/* 768px 미만 : 모바일 M, S */
+/*  */
+@media screen and (max-width:1200px) {
+  header, footer {
+    background-color: blue;
+    padding: 25px 0;
+  }
+
+  .back-img {
+    height: 1000px;
+    margin-top: 30px;
+    background-image: url(./images/whale-g56177290b_1280.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
 }
