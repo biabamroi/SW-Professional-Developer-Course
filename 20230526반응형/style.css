@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+header, footer {
+  color: darkblue;
+  background-color: aquamarine;
+  padding: 30px 0;
+}
+
+.back-img {
+  height: 1000px;
+  margin-top: 30px;
+  background-image: url(./images/cartoon-g65a3d882e_1280.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.box-list {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.box-list div {
+  width: 30%;
+  height: 400px;
+  border: 1px solid darkblue;
+
+
+}
