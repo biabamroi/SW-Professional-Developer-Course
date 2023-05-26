@@ -48,16 +48,37 @@ header, footer {
 /*  */
 @media screen and (max-width:1200px) {
   header, footer {
+    color: aquamarine;
     background-color: blue;
-    padding: 25px 0;
+    padding: 20px 0;
   }
-
   .back-img {
-    height: 1000px;
-    margin-top: 30px;
+    height: 800px;
     background-image: url(./images/whale-g56177290b_1280.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+  }
+}
+
+@media screen and (max-width:768px) {
+  header, footer {
+    color: aquamarine;
+    background-color: darkblue;
+    padding: 15px 0;
+  }
+  .back-img {
+    height: 500px;
+    background-image: url(./images/sea-turtle-gc08045a66_1280.png);
+  }
+  .box-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .box-list div {
+    width: 90%;
+    height: 200px;
+    margin-top: 20px;
+    border: 1px solid black;
+  }
+  .box-list div:first-child {
+    margin-top: 0;
   }
 }
