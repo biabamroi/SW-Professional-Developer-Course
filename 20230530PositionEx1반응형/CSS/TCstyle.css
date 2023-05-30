@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 웹 접근성을 높이기 위해 사용 (스크린 리더기) */
+.visually-hidden {
+  /* 스크린 리더기로 이용하는 분들께 알려주기 위한 화면 안내를
+  일반적인 이용자에게는 보이지 않게끔 가려주는 용도 */
+  display: none;
+  /* 눈에 띄지 않고 자리 차지 x */
+}
+
+header {
+  height: 80px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* 순서상 flex 다음에 position, 상단 고정 위한 용도 */
+  /* position :fixed를 주면 width값이 본인이 가진 콘텐츠만큼 줄어든다. */
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  /* 줄어든 크기를 가로값으로 */
+  width: 100%;
+  height: 80px;
+  padding: 10px 20px; /* 상하 좌우 */
+  box-sizing: border-box;
+  /* 사이즈에 여백이 더해져서 100px이 되기 때문에 사이즈를 맞춰줌. */
+  background-color: skyblue;
+  transition: color 500ms;
+}
+
+/* nav에 호버했을 때 클래스명 안에 있는 a 태그들한테 속성 적용하겠다
+클래스명 제거하고 a 태그를 잡으면 아래 클래스명 a 태그랑 동시 적용도 되는 듯 */
+header nav:hover a {
+  color: #000;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.gnb-list {
+  display: flex;
+}
+
+.gnb-item a {
+  /* a tag에 여백을 주면 근처만 가도 클릭할 수 있다. */
+  padding: 20px;
+  /* hover할 때 시간당 단위로 부드럽게 바뀌는 */
+  transition: color 500ms;
+}
+
+.gnb-item a:hover {
+  /* 마우스 올렸을 때 색깔 변경 */
+  color: dodgerblue;
+}
+
+
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-image: url(../imges/스누피배경.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+.main-tittle {
+  font-size: 48px;
+}
+
+.main-content {
+  margin-top: 20px;
+}
+
+.main-btn {
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  /* 자체적으로 가지고 있는 라인을 제거 */
+  border-radius: 5px;
+}
+
+
+
+/* .post-card {
+  position: relative;
+  top: -50px;
+} */
+
+.post-card {
+  display: flex;
+  justify-content: center;
+}
+
+.post-card > div {
+  width: 20%;
+  margin: 30px 10px;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(217,241,254);
+}
+
+/* .post-card > div {
+  width: 80%;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 30px auto 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(217,241,254);
+} */
+
+/* .post-card > div:first-child {
+  margin-top: 0;
+} */
+
+
+
+table {
+  border-spacing: 20px;
+}
+
+.fixed-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-color: rgb(217,241,254);
+}
+
+.fixed-back-img {
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  background-image: url(../imges/pngegg.png);
+  background-repeat: no-repeat;
+  /* px, %, top, bottom, left, right */
+  /* px, % 사용 시 왼쪽 상단 기준으로 멀어지는 거리 기재 */
+  /* x, y (가로x세로) 모두 center 시 center 한 번만 기재 */
+  background-size: 500px;
+  background-position: center bottom;
+  background-attachment: fixed; /* 스크롤 붙어서 이동 */
+  transition: 500ms;
+}
+
+.fixed-back-img2 {
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  background-image: url(../imges/스누피2.png);
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position: center bottom;
+  background-attachment: fixed; /* 스크롤 붙어서 이동 */
+  transition: 500ms;
+}
+
+.fixed-back-img:hover {
+  transform: scale(1.2);
+}
+.fixed-back-img2:hover {
+  transform: scale(1.2);
+}
+
+
+
+footer {
+  padding: 20px 0;
+  background-color: skyblue;
+}
+
+.global-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.global-footer h3 {
+  color: #fff;
+}
+
+.icon-list {
+  display: flex;
+}
+
+.icon-item a {
+  padding-right: 20px;
+}
+
+.icon-item a i {
+  transition: all 1s;
+  /* 1000ms = 1s, 500ms = 0.5s */
+  /* 500ms 이상 주면 사용자가 느리다고 인식 */
+}
+
+.icon-item a:hover i {
+  color: dodgerblue;
+  transform: scale(1.5);
+  /* scale 크기 변경 */
+  /* transform: rotate(180deg); 180도 회전*/
+}
+
+/* 순서를 잘 볼 것.
+이 클래스를 가진 애들 중에 마지막 자식을 찾고
+그중에서 a 태그가 가지고 있는 여백을 없애라. */
+.icon-item:last-child a {
+  padding-right: 0;
+}
+/* class명 a:last-child로 하면 a 안에 있는 마지막 자식을 찾게 됨. */
+
+.icon-item i {
+  font-size: 24px;
+}
+
+
+
+.top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.top-btn i {
+  font-size: 38px;
+  color: rgb(41,127,161);
+}
+
+
+
+.side-menu {
+  position: fixed;
+  top: 150px;
+  right: 50px;
+}
+
+.side-menu-list {
+  text-align: center;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888;
+}
+
+.side-menu-item a {
+  display: inline-block;
+  /* paddin에 안 먹어서 속성 인라인, 블록 넣어줌 */
+  padding: 10px 0;
+  color: #888;
+  transition: all 500ms;
+}
+
+.side-menu-item a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
