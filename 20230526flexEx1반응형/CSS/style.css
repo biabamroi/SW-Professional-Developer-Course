@@ -149,7 +149,7 @@ nav {
 
 
 footer {
-  margin-top: 80px;
+  margin-top: 120px;
 }
 
 .contact {
@@ -173,18 +173,39 @@ footer {
 
 
 @media screen and (max-width:1200px) {
+  .background {
+    height: 400px;
+  }
+  .back-txt {
+    height: 400px;
+  }
+  .back-title {
+    font-size: 28px;
+  }
+  .back-content {
+    font-size: 18px;
+  }
+
+  .first-box {
+    margin-top: -40px;
+  }
+
   .post-box-list {
-    margin-top: 40px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
   .post-box-item {
-    width: 70%;
-    margin-top: 30px;
+    width: 80%;
     margin-right: 0px;
-    padding: 80px 20px;
+    margin-top: 30px;
     box-shadow: 0px 0px;
+  }
+  .post-box-item:first-child {
+    margin-top: 0;
+  }
+
+  footer {
+    margin-top: 80px;
   }
 }
 
