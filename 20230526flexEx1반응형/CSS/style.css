@@ -32,7 +32,7 @@ nav {
 
 .gnb-list {
   display: flex;
-  width: 300px;
+  width: 260px;
   justify-content: space-between;
 }
 
@@ -98,7 +98,7 @@ nav {
 /* .first-box div : .first-box 라는 클래스 내부 모든 div 태그 */
 /* .first-box > div : 좌측 클래스 내부 div 중 자식 div 태그 (자식-손자 개념) */
 .first-box > div {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
@@ -210,42 +210,42 @@ footer {
 }
 
 @media screen and (max-width:768px) {
-  * {
-    box-sizing: border-box;
+  .logo img {
+    width: 30px;
   }
   .gnb-list {
     width: 200px;
   }
+
+  .background {
+    height: 300px;
+  }
+  .back-txt {
+    height: 300px;
+  }
+  .back-title {
+    font-size: 20px;
+  }
+  .back-content {
+    font-size: 14px;
+  }
+  .back-btn {
+    padding: 8px 16px;
+  }
+
   .first-box {
-    margin-top: -90px;
+    margin-top: -20px;
   }
   .first-box > div {
-    width: 70%;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-    color: #fff;
-    background-color: #000;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px #666;
+    width: 80%;
   }
-  .post-box-list {
-    margin-top: 20px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+
   .post-box-item {
-    width: 70%;
-    margin-top: 30px;
-    margin-right: 0px;
-    padding: 60px 10px;
-    box-shadow: 0px 0px;
+    padding: 60px 20px;
+    box-shadow: none;
   }
+
   footer {
     margin-top: 60px;
-  }
-  .gnb-list2 {
-    margin-right: 30px;
   }
 }
