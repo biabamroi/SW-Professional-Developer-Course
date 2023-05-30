@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS 형제 선택자">
+  <meta name="keywords" content="CSS">
+  <meta name="author" content="Kai">
+  <title>CSS 형제 선택자</title>
+</head>
+<style>
+  /* id > class > tag 우선 순위 */
+  /* 부모 hover 시 자식 요소는 선택자 없이 적용 가능 */
+  .parents:hover .second {
+    color: red;
+  }
+  /* 형제의 경우 + 또는 ~ 선택자 필요 */
+  .parents:hover ~ .parents2 {
+    font-size: x-large;
+  }
+  /* CSS는 아래 작성 속성이 적용,
+    tag < class < id */
+  /* +, ~ : CSS 형제 선택자
+    + (인접 형제 선택자) 선택된 요소 바로 다음 형제 요소만 선택
+    ~ (일반 형제 선택자) 선택된 요소 다음의 형제 요소들 선택 */
+  h1:hover + p {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+  }
+  .first:hover + .second {
+    text-decoration: underline;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;   
+    color: aliceblue; 
+  }
+
+  .box-wrapper {
+    border: 5px solid darkblue;
+  }
+
+  .tittle:hover ~ .box {
+    transform: translateX(1000px);
+  }
+
+  .box0 {
+    background-color: black;
+    transition: transform 5s ease;
+  }
+  .box1 {
+    background-color: blue;
+    /*
+    transition 속성
+    1. property : 변화를 주고자 하는 css 속성 지정 (복수 지정 가능)
+      └ none, all, 특정 속성 적용
+    2. duration : transtion 적용할 시간 지정 (s, ms) 1s = 1,000ms
+    3. timing-function : transition 패턴 지정 (ex 천천히 → 빠르게 등)
+      └ ease(기본값) : 천천히 시작 → 빠르게 → 천천히 끝나는 패턴
+      └ linear : 처음부터 끝까지 일정한 속도로 진행
+      └ ease-in : 천천히 → 빠르게 끝나는 패턴
+      └ ease-out : 빠르게 → 천천히 끝나는 패턴
+      └ ease-in-out : 천천히 시작 → 천천히 끝나는 패턴 
+    */
+    transition: transform 5s linear;
+  }
+  .box2 {
+    background-color: red;
+    transition: transform 5s ease-in;
+  }
+  .box3 {
+    background-color: darkgoldenrod;
+    transition: transform 5s ease-out;
+  }
+  .box4 {
+    background-color: green;
+    transition: transform 5s ease-in-out;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <div class="parents">
+      <h1>안녕</h1>
+      <p class="first">헤이</p>
+      <p class="second">하이</p>
+      <p>헬로</p>
+    </div>
+    <p class="parents2">부모의 형제 요소</p>
+    <div class="box-wrapper">
+      <h1 class="tittle">timing-function 비교</h1>
+      <div class="box box0">ease</div>
+      <div class="box box1">linear</div>
+      <div class="box box2">ease-in</div>
+      <div class="box box3">ease-out</div>
+      <div class="box box4">ease-in-out</div>
+    </div>
+  </div>
+</body>
+</html>
