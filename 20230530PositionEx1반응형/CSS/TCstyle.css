@@ -146,6 +146,7 @@ header nav:hover a {
   justify-content: space-evenly;
   align-items: center;
   height: 600px;
+  padding: 0 50px 0 50px;
   background-color: rgb(217,241,254);
 }
 
