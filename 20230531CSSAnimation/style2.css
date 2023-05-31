@@ -1,0 +1,37 @@
+
+.img-box {
+  position: relative;
+  width: 70%;
+  margin: 30px auto;
+  background-color: dodgerblue;
+}
+
+.img-box img {
+  width: 60%;
+}
+
+.elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: move 1.5s linear infinite;
+  /* animation-name: move;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite; */
+  /* linear, ease, ease-in, ease-out, ease-in-out */
+  /* animation-timing-function: linear; */
+}
+
+/* 0% animation 시작점, 100% animation 종료 from-to */
+@keyframes move {
+  0% {
+    transform: translate(-15px, 0);
+  }
+  50% {
+    transform: translate(0px, -15px);
+  }
+  100% {
+    transform: translate(-15px, 0);
+  }
+}
