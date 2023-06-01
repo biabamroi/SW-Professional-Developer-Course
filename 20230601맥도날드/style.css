@@ -76,7 +76,16 @@ header nav {
 
 /* ---------------------------------------main-bar-top----------------------------- */
 
-/* --------------------------------Main-------------------------------------------- */
+.back {
+  width: 100%;
+  height: 600px;
+  background-image: url(./images/back.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* --------------------------------Main-post--------------------------------------- */
 
 /* ---------------------------------------main-bar-bottom-------------------------- */
 
@@ -85,6 +94,7 @@ header nav {
   bottom: 0;
   width: 100%;
   border-top: 5px solid yellow;
+  background-color: #fff;
 }
 
 .main-bar-bottom ul {
