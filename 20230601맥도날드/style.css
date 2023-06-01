@@ -87,6 +87,40 @@ header nav {
 
 /* --------------------------------Main-post--------------------------------------- */
 
+.post-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0 20px 0;
+}
+
+.post-box-list {
+  display: flex;
+  justify-content: center;
+}
+
+.post-box-list img {
+  width: 100%;
+  height: 70%;
+}
+
+.post-box-item {
+  overflow: hidden;
+  width: 26%;
+  height: 400px;
+  margin: 10px;
+  box-shadow: 2px 2px 2px rgb(180, 180, 180);
+  border-radius: 20px;
+}
+
+.post-box-item p {
+  padding: 30px 20px 20px 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
 /* ---------------------------------------main-bar-bottom-------------------------- */
 
 .main-bar-bottom {
