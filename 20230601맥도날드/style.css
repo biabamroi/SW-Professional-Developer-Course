@@ -80,11 +80,49 @@ header nav {
 
 /* ---------------------------------------main-bar-bottom-------------------------- */
 
+.main-bar-bottom {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  border-top: 5px solid yellow;
+}
+
+.main-bar-bottom ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.main-bar-list2 img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+}
+
+.main-bar-list2 > div {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+}
+
+.main-bar-item2 {
+  padding: 0 10px;
+}
+
+.main-bar-item2 > a {
+  color: black;
+}
+
 /* -------------------------footer------------------------------------------------- */
 
 footer {
   width: 100%;
-  height: 120px;
+  height: 110px;
   background-color: red;
 }
 
@@ -94,7 +132,7 @@ footer nav {
   align-items: center;
   text-align: left;
   width: 100%;
-  height: 120px;
+  height: 110px;
   font-size: 10px;
   font-weight: lighter;
   text-decoration: none;
