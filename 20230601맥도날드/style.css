@@ -45,11 +45,42 @@ header nav {
   color: black;
 }
 
+/* ----------------------------------------------header---------------------------- */
 
+.main-bar-top {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: red;
+}
 
+.main-bar-list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
 
+.main-bar-list a {
+  color: #fff;
+}
 
+.main-bar-list a:hover {
+  color: yellow;
+}
 
+.main-bar-item {
+  padding: 0 30px;
+}
+
+/* ---------------------------------------main-bar-top----------------------------- */
+
+/* --------------------------------Main-------------------------------------------- */
+
+/* ---------------------------------------main-bar-bottom-------------------------- */
+
+/* -------------------------footer------------------------------------------------- */
 
 footer {
   width: 100%;
