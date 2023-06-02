@@ -29,16 +29,18 @@
   <title>맥도날드 반응형</title>
 </head>
 <body>
-  <p class="wrapper">
+  <!-- 기존 작성 코드 수정 도중 오타 발견, 삭제했던 id 추가 -->
+  <div class="wrapper" id="top">
     <header>
       <nav>
         <h1 class="logo">
-          <a href="./index.html">
-            <img src="./images/logo.png" alt="logo">
-          </a>
+          <a href="./TCindex.html"><img src="./images/logo.png" alt="logo-img"></a>
         </h1>
+        <!-- 햄버거 bar 추가 부분, 데스크탑 모드에서는 가리기 용도 -->
+        <div class="gnb-icon-btn sm-only"><i class="fa-solid fa-bars"></i></div>
         <h2 class="visually-hidden">메뉴</h2>
-        <ul class="gnb-list">
+        <!-- T, M 모드에서 가리기 용도 클래스 추가 -->
+        <ul class="gnb-list sm-hidden">
           <li class="gnb-item"><a href="./menu1.html">menu1</a></li>
           <li class="gnb-item"><a href="./menu2.html">menu2</a></li>
           <li class="gnb-item"><a href="./menu3.html">menu3</a></li>
@@ -86,7 +88,7 @@
         <ul class="main-bar-list2">
           <li class="main-bar-item2"><a href=""><div><img src="./images/side1.png" alt="logo"></div>품질 이야기</a></li>
           <li class="main-bar-item2"><a href=""><div><img src="./images/side2.jpeg" alt="McDelivery"></div>McDelivery</a></li>
-          <li class="main-bar-item2"><a href="#header"><div><img src="./images/top.jpeg" alt="top"></div>TOP</a></li>
+          <li class="main-bar-item2"><a href="#top"><div><img src="./images/top.jpeg" alt="top"></div>TOP</a></li>
         </ul>
       </section>
     </main>
