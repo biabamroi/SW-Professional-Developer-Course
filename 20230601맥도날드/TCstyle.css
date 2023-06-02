@@ -61,6 +61,7 @@ nav {
 .lnb-wrapper {
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .lnb-list {
@@ -85,8 +86,7 @@ nav {
 
 /* ---------------------------------------main-bar-top----------------------------- */
 
-.back {
-  width: 100%;
+.background {
   height: 600px;
   background-image: url(./images/back.jpeg);
   background-size: cover;
@@ -96,38 +96,47 @@ nav {
 
 /* --------------------------------Main-post--------------------------------------- */
 
-.post-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  padding: 50px 0 20px 0;
-}
-
-.post-box-list {
+.food-box {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 80px auto 0 auto;
 }
 
-.post-box-list img {
-  width: 100%;
-  height: 70%;
+.food-box-list {
+  display: flex;
+  margin-top: 30px;
+
+}
+.food-box-list:first-child {
+  margin-top: 0;
 }
 
-.post-box-item {
+.food-box-item {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  margin-right: 30px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px #e1e1e1;
   overflow: hidden;
-  width: 26%;
-  height: 400px;
-  margin: 10px;
-  box-shadow: 2px 2px 2px rgb(180, 180, 180);
-  border-radius: 20px;
+}
+.food-box-item:last-child {
+  margin-right: 0;
 }
 
-.post-box-item p {
-  padding: 30px 20px 20px 20px;
-  font-size: 13px;
-  font-weight: bold;
+.food-box-item a {
+  transition: opacity 300ms ease-in-out;
+} /* 단일 속성은 직접 지정해 주는 게 좋다. */
+.food-box-item a:hover {
+  opacity: 0.7;
+}
+
+.food-box-item img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
 }
 
 /* ---------------------------------------main-bar-bottom-------------------------- */
