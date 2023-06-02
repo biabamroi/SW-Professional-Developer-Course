@@ -11,39 +11,49 @@ li {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .visually-hidden {
   display: none;
 }
 
-header {
-  width: 100%;
-  height: 80px;
+/* 모바일용 햄버거, 사이드바 가리기 용도 */
+/* 부트스트랩에서 권장하는 그리드 시스템
+  sm(Small), md(Medium) 768px, lg(large) 1200px */
+.sm-only {
+  display: none;
 }
 
-header nav {
+/* -----------------------------default------------------------------------- */
+
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 80px;
-  padding: 0 10px 0 20px;
-  border-bottom: 5px solid yellow;
+  width: 95%; /* 사이즈 확인 */
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 10px 0; /* 상하에만 여백 */
 }
 
 .logo img {
-  width: 60px;
+  width: 70px;
 }
 
 .gnb-list {
   display: flex;
-}
+  justify-content: space-between;
+  width: 300px;
+} /* 여백 줄 필요 없이 정렬로 잡아줌 */
 
 .gnb-item a {
-  padding: 20px;
+  font-size: 16px;
   font-weight: bold;
-  color: black;
+  transition: color 300ms ease-in-out;
+}
+.gnb-item a:hover {
+  color: red;
 }
 
 /* ----------------------------------------------header---------------------------- */
