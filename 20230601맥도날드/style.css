@@ -280,26 +280,21 @@ footer nav a:hover {
     text-decoration: none;
     color: #fff;
   }
-
   .info1 {
     display: flex;
   }
-
   .gnb-list2 {
     padding-left: 30px;
   }
-
   .gnb-list3 {
     padding-left: 50px;
   }
-
   .gnb-list4 {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-right: 30px;
   }
-
   .gnb-list4 > div {
     width: 35px;
     height: 35px;
@@ -310,13 +305,8 @@ footer nav a:hover {
     background-color: #fff;
     margin-left: 10px;
   }
-
   .gnb-list4 > div:first-child {
     margin-left: 0;
-  }
-
-  .gnb-list4 > div:hover {
-    background-color: yellow;
   }
 }
 
