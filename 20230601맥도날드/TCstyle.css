@@ -192,10 +192,16 @@ footer {
 
 .mac-link-list {
   margin-right: 40px;
-
 }
+
+/* inline tag에 여백 적용이 안 될 경우, display */
+.mac-link-item a {
+  display: inline-block; /* 디스플레이 속성이 달라서 인라인, 블록 확인 후 적용 필요 */
+  padding: 5px 0;
+}
+
 .mac-link-item:first-child a {
-  color: yellow;
+  color: rgb(255,213,23);
 }
 
 /* flex-grow 속성 : flex-grow가 적용되지 않았을 경우, 
@@ -205,7 +211,46 @@ footer {
   flex-grow: 1;
 }
 
+.mac-info-list li {
+  padding: 5px 0;
+}
 
+.mac-icon-list {
+  display: flex;
+  align-items: center;
+}
+
+.mac-icon-list li {
+  position: relative; /* li 박스 기준 정렬 */
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: background-color 300ms ease-in-out;
+}
+
+.mac-icon-list li:hover {
+  background-color: rgb(235,27,27);
+}
+
+.mac-icon-list li:hover i {
+  color: #fff !important;
+}
+
+.mac-icon-list li:last-child {
+  margin-right: 0;
+}
+
+.mac-icon-list i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  color: rgb(235,27,27);
+  transition: background-color 300ms ease-in-out;
+}
 
 
 
@@ -214,7 +259,9 @@ footer {
 }
 
 
+@media screen and (max-width:768px) {
 
+}
 
 
 
