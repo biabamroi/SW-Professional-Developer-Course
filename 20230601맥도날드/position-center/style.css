@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: relative;
+  /* position : absolute 상태에서는 flex 적용 불가 */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  height: 100vh;
+  background-color: turquoise;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* translate(x, y) */
+  transform: translate(-50%, -50%);
+    /* 중심선 가운데 기준에 맞춰 움직이기 때문에 (본체는 왼쪽 상단 기준)
+    본체의 중심값을 당겨서 맞춰줄 필요 */
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
+}
+
