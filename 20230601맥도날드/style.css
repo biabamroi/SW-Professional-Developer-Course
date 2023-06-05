@@ -211,7 +211,7 @@ footer nav a:hover {
   padding-right: 30px;
 }
 
-.gnb-list4 > div {
+.gnb-list4 > li {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -222,11 +222,11 @@ footer nav a:hover {
   margin-left: 10px;
 }
 
-.gnb-list4 > div:first-child {
+.gnb-list4 > li:first-child {
   margin-left: 0;
 }
 
-.gnb-list4 > div:hover {
+.gnb-list4 > li:hover {
   background-color: yellow;
 }
 
@@ -295,7 +295,7 @@ footer nav a:hover {
     align-items: center;
     padding-right: 30px;
   }
-  .gnb-list4 > div {
+  .gnb-list4 > li {
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -305,7 +305,7 @@ footer nav a:hover {
     background-color: #fff;
     margin-left: 10px;
   }
-  .gnb-list4 > div:first-child {
+  .gnb-list4 > li:first-child {
     margin-left: 0;
   }
 }
