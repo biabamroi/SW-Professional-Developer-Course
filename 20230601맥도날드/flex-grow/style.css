@@ -1,0 +1,75 @@
+* {
+
+}
+
+.flex-list {
+  display: flex;
+  padding: 30px;
+  background-color: #333;
+}
+
+.flex-item {
+  width: 200px;
+  height: 200px;
+}
+
+.flex-item:nth-child(1) {
+  flex-grow: 1;
+  background-color: aqua;
+}
+
+.flex-item:nth-child(2) {
+  background-color: aquamarine;
+}
+
+.flex-item:nth-child(3) {
+  background-color: coral;
+}
+
+.flex-item:nth-child(4) {
+  flex-grow: 1;
+  background-color: cornflowerblue;
+}
+
+
+/* .selector > * {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+} */
+
+/* 그룹 선택자는 comma로 구분한다. */
+.selector p, span {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* 부모 내부 모든 요소 중 마지막 요소 선택 */
+.selector p:last-child {
+  background-color: skyblue;
+}
+/* 특정 타입 중 마지막 요소 선택 */
+.selector p:last-of-type {
+  background-color: skyblue;
+}
+/* 부모 내부 자식 중 첫 번째 요소 선택 */
+.selector p:first-child {
+  background-color: skyblue;
+}
+/* 특정 타입 태그 중 첫 번째 선택 */
+.selector p:first-of-type {
+  background-color: skyblue;
+}
+/* 부모 내부 모든 요소 중 (n)번째 요소 선택 */
+.selector span:nth-child(2) {
+  background-color: coral;
+}
+/* 특정 타입 태그 중 (n)번째 요소 선택 */
+.selector span:nth-of-type(2) {
+  background-color: coral;
+}
