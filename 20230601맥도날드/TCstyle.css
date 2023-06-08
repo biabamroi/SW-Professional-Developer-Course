@@ -322,7 +322,7 @@ footer {
     width: 90%;
     margin: 20px auto 0 auto;
   }
-  .food-box-item:first-child {
+  .food-box > .food-box-list:first-child > .food-box-item:first-child {
     margin-top: 0;
   }
   .food-box-item:last-child {
