@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="java로 html 요소 선택">
+  <meta name="keywords" content="html, java, script">
+  <meta name="author" content="kai">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <h1 id="hello">Hello, World!</h1>
+    <button id="btn" type="button">BUTTON</button>
+  </div>
+  <script>
+    // document.getElementById('hello').innerHTML = 'Are you OK?';
+    // document.getElementById('hello').style.color = 'green';
+
+
+    // function change() {
+    //   document.getElementById('hello').innerHTML = 'Are you OK?';
+    //   document.getElementById('hello').style.color = 'pink';
+    // }
+    // document.getElementById('btn').addEventListener('click', change);
+
+
+    // 콜백 함수
+    // 전역 변수 & 지역 변수
+    // 함수 선언이 밖에 있으면 전역, 코드 내부에 있으면 지역 변수 
+    // 전역 변수는 다른 함수에서도 사용이 가능
+    // 지역 변수는 다른 함수에서 변수 사용이 불가능
+
+    const btn = document.getElementById('btn');
+    const hello = document.getElementById('hello');
+    btn.addEventListener('click', function(){
+      hello.innerHTML = 'Are you OK?';
+      hello.style.color = 'red';
+    })
+
+  </script>
+</body>
+</html>
