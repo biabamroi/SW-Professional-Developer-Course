@@ -1,5 +1,158 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbit', sans-serif;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.gnb-hidden { display: none; }
+.se-hidden { display: none; }
+.user-hidden { display: none; }
+.gnb2-hidden { display: none; }
+.sm-only { display: none; }
+
+
+header > nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(255, 204, 0);
+}
+
+nav > p {
+  position: absolute;
+  left: 20px;
+  font-size: 36px;
+  color: rgb(222, 0, 0);
+}
+
+.logo img {
+  height: 60px;
+}
+
+.lnb-list {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-weight: 700;
+}
+
+.lnb-item {
+  padding-left: 10px;
+}
+
+.lnb-item:first-child {
+  padding-left: 20px;
+}
+
+.background {
+  height: 600px;
+  background-image: url(./images/lego.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+@media screen and (min-width:768px) {
+  .gnb-hidden { display: block; }
+  .user-hidden { display: block; }
+
+  header > nav {
+    display: flex;
+    justify-content:flex-start;
+  }
+  
+  nav > p {
+    visibility: hidden;
+  }
+  
+  .logo img {
+    padding-left: 20px;
+  }
+
+  .gnb-list {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .gnb-item {
+    font-weight: 700;
+    padding-left: 10px;
+  }
+
+  .user {
+    padding-right: 20px;
+  }
+
+  .user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .background {
+    height: 800px;
+  }
+  
+  
+}
+
+
+
+
+
+@media screen and (min-width:1200px) {
+  .se-hidden { display: block; }
+
+  .search i {
+    position: absolute;
+    
+  }
+
+  .search input {
+    padding: 7px;
+    border-color: blanchedalmond;
+    border-radius: 5px;
+  }
+
+  .user {
+    padding: 0 20px;
+  }
+
+  .user img {
+
+  }
+
+  .gnb-list2 {
+    display: flex;
+  }
+
+  .gnb-item2 {
+    padding-right: 20px;
+  }
+  
+  .lnb-item:first-child {
+    padding-left: 30px;
+  }
+
+  .background {
+    height: 1000px;
+  }
+}

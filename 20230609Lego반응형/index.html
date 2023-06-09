@@ -9,10 +9,130 @@
   <meta name="author" content="kai">
   <title>LEGO 반응형 실습</title>
   <link rel="stylesheet" href="./style.css">
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/6105f934ac.js" crossorigin="anonymous"></script>
+
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <div class="wrapper">
-    
+
+    <header>
+      <nav>
+        <p><i class="fa-solid fa-bars"></i></p>
+        <h1 class="logo">
+          <a href="./index.html"><img src="./images/logo.png" alt="logo"></a>
+        </h1>
+        <h2 class="visually-hidden">메뉴</h2>
+        <ul class="gnb-list gnb-hidden">
+          <li class="gnb-item"><a href="">제품쇼핑</a></li>
+          <li class="gnb-item"><a href="">브랜드소개</a></li>
+          <li class="gnb-item"><a href="">고객지원</a></li>
+          <li class="gnb-item"><a href="">세일</a></li>
+        </ul>
+        <div class="search se-hidden">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="스토어 검색">
+        </div>
+        <h2 class="user user-hidden">
+          <a href=""><img src="./images/user.jpeg" alt="user"></a>
+        </h2>
+        <ul class="gnb-list2 gnb2-hidden">
+          <li class="gnb-item2"><a href="">장바구니</a></li>
+          <li class="gnb-item2"><a href="">로그아웃</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <div class="lnb-wrapper">
+      <ul class="lnb-list">
+        <li class="lnb-item"><a href="">신제품</a></li>
+        <li class="lnb-item"><a href="">독점제품</a></li>
+        <li class="lnb-item"><a href="">행사</a></li>
+        <li class="lnb-item"><a href="">아이디어</a></li>
+        <li class="lnb-item"><a href="">베스트셀러</a></li>
+        <li class="lnb-item"><a href="">레어제품</a></li>
+      </ul>
+    </div>
+
+
+    <main>
+      <div class="main-wrapper">
+        <section class="background"><h2 class="visually-hidden">background image</h2></section>
+      </div>
+    </main>
+
+
+    <aside class="sidebar sm-only">
+      <nav class="sidebar-nav"></nav>
+      <h2 class="visually-hidden">사이드바 메뉴</h2>
+      <h2 class="user">
+        <a href=""><img src="./images/user.jpeg" alt="user"></a>
+        너의 이름은
+      </h2>
+      <hr>
+      <div class="side-big-menu-list">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p>레고 제품 쇼핑</p>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <ul class="side-menu-list">
+        <li class="side-menu-item"><a href="">시리즈별 세트</a></li>
+        <li class="side-menu-item"><a href="">연령별</a></li>
+        <li class="side-menu-item"><a href="">가격별</a></li>
+        <li class="side-menu-item"><a href="">레고 상품</a></li>
+        <li class="side-menu-item"><a href="">관심분야</a></li>
+        <li class="side-menu-item"><a href="">Pick and Build</a></li>
+        <li class="side-menu-item"><a href="">독점 제품</a></li>
+        <li class="side-menu-item"><a href="">신제품</a></li>
+      </ul>
+      <hr>
+      <div class="side-big-menu-list">
+        <i class="fa-regular fa-face-smile"></i>
+        <p>레고 브랜드 소개</p>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <ul class="side-menu-list">
+        <li class="side-menu-item"><a href="">기업가치</a></li>
+        <li class="side-menu-item"><a href="">레고 앱</a></li>
+        <li class="side-menu-item"><a href="">레고 매거진</a></li>
+        <li class="side-menu-item"><a href="">레고 전 제품</a></li>
+        <li class="side-menu-item"><a href="">레고 전체 관심사별</a></li>
+        <li class="side-menu-item"><a href="">성인 환영</a></li>
+      </ul>
+      <hr>
+      <div class="side-big-menu-list">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>고객 지원</p>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <ul class="side-menu-list">
+        <li class="side-menu-item"><a href="">주문 현황 확인</a></li>
+        <li class="side-menu-item"><a href="">배송 및 반품</a></li>
+        <li class="side-menu-item"><a href="">스토어 검색</a></li>
+        <li class="side-menu-item"><a href="">조립설명서 검색</a></li>
+        <li class="side-menu-item"><a href="">일반적인 질문</a></li>
+      </ul>
+    </aside>
+
+    <div class="overlay sm-only"></div>
+
   </div>
   <script src="./js/sidebar.js"></script>
   <script src="./js/sidebarDrawer.js"></script>
