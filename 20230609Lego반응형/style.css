@@ -121,9 +121,14 @@ nav > p {
 @media screen and (min-width:1200px) {
   .se-hidden { display: block; }
 
+  .search {
+    position: relative;
+  }
+
   .search i {
     position: absolute;
-    
+    top: 5px;
+    left: 5px;
   }
 
   .search input {
