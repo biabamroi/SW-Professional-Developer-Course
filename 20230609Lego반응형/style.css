@@ -131,10 +131,14 @@ aside hr {
   color: #3f4150;
 }
 
+.side-big-menu-list {
+  position: relative;
+}
+
 .side-big-menu-list i:last-child {
   position: absolute;
-  margin-top: 5px;
-  right: 50px;
+  margin-top: 6px;
+  right: 10px;
 }
 
 
@@ -159,10 +163,16 @@ aside hr {
 .drawer {
   display: none;
 }
-.drawer-active {
-  display: block;
+.drawer2 {
+  display: none;
+}
+.drawer3 {
+  display: none;
 }
 
+/* .drawer-active {
+  display: block;
+} */
 
 
 /* -------------------------------------------------------사이드바 */
