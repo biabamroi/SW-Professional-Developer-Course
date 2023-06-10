@@ -7,7 +7,7 @@ const drawerOpener3 = document.querySelector('.drawer-opener3');
 
 drawerOpener.addEventListener('click', function(){
     drawer.style.display = 'block';
-    .style.color = 'rgb(255, 204, 0)';
+    // .style.color = 'rgb(255, 204, 0)';
 
 })
 drawerOpener2.addEventListener('click', function(){
@@ -22,30 +22,30 @@ drawerOpener3.addEventListener('click', function(){
 
 
 
-var theParent = document.querySelector("#theDude");
-theParent.addEventListener("click", doSomething, false);
+// var theParent = document.querySelector("#theDude");
+// theParent.addEventListener("click", doSomething, false);
  
-function doSomething(e) {
-    if (e.target !== e.currentTarget) {
-        var clickedItem = e.target.id;
-        alert("Hello " + clickedItem);
-    }
-    e.stopPropagation();
-}
+// function doSomething(e) {
+//     if (e.target !== e.currentTarget) {
+//         var clickedItem = e.target.id;
+//         alert("Hello " + clickedItem);
+//     }
+//     e.stopPropagation();
+// }
 
 
 
-var theParent = document.querySelector("#theDude");
+// var theParent = document.querySelector("#theDude");
  
-for (var i = 0; i < theParent.children.length; i++) {
-    var childElement = theParent.children[i];
-    childElement.addEventListener('click', doSomething, false);
-}
+// for (var i = 0; i < theParent.children.length; i++) {
+//     var childElement = theParent.children[i];
+//     childElement.addEventListener('click', doSomething, false);
+// }
  
-function doSomething(e) {
-    var clickedItem = e.target.id;
-    alert("Hello " + clickedItem);
-}
+// function doSomething(e) {
+//     var clickedItem = e.target.id;
+//     alert("Hello " + clickedItem);
+// }
 
 
 

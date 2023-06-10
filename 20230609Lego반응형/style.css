@@ -273,6 +273,10 @@ aside hr {
   .gnb-item2 {
     padding-right: 20px;
   }
+
+  .gnb-item2 i {
+    display: none;
+  }
   
   .lnb-item:first-child {
     padding-left: 30px;
