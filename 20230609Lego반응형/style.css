@@ -23,6 +23,8 @@ a {
 .user-hidden { display: none; }
 .gnb2-hidden { display: none; }
 .sm-only { display: none; }
+.i-hidden { display: none; }
+.txt-hidden { display: none; }
 
 
 header > nav {
@@ -36,7 +38,7 @@ header > nav {
 
 nav > p {
   position: absolute;
-  left: 20px;
+  left: 40px;
   font-size: 36px;
   color: rgb(222, 0, 0);
 }
@@ -44,6 +46,14 @@ nav > p {
 .logo img {
   height: 60px;
 }
+
+nav div i {
+  position: absolute;
+  right: 30px;
+  margin-top: -15px;
+  font-size: 30px;
+}
+
 
 .lnb-list {
   display: flex;
@@ -53,11 +63,11 @@ nav > p {
 }
 
 .lnb-item {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 .lnb-item:first-child {
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 .background {
@@ -73,6 +83,8 @@ nav > p {
 @media screen and (min-width:768px) {
   .gnb-hidden { display: block; }
   .user-hidden { display: block; }
+  .gnb2-hidden { display: block; }
+  .i-hidden { display: block; }
 
   header > nav {
     display: flex;
@@ -84,7 +96,7 @@ nav > p {
   }
   
   .logo img {
-    padding-left: 20px;
+    padding-left: 30px;
   }
 
   .gnb-list {
@@ -94,7 +106,14 @@ nav > p {
 
   .gnb-item {
     font-weight: 700;
-    padding-left: 10px;
+    padding-left: 30px;
+  }
+
+  nav div i {
+    position: absolute;
+    right: 200px;
+    margin-top: -15px;
+    font-size: 30px;
   }
 
   .user {
@@ -107,11 +126,18 @@ nav > p {
     border-radius: 50%;
   }
   
+  .gnb-list2 {
+    display: flex;
+  }
+
+  .gnb-item2 i {
+    font-size: 30px;
+    padding-right: 20px;
+  }
+
   .background {
     height: 800px;
   }
-  
-  
 }
 
 
@@ -120,6 +146,8 @@ nav > p {
 
 @media screen and (min-width:1200px) {
   .se-hidden { display: block; }
+  .i-hidden { display: none; }
+  .txt-hidden { display: block; }  
 
   .search {
     position: relative;
@@ -127,8 +155,11 @@ nav > p {
 
   .search i {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 50%;
+    margin-top: -7px;
+    left: 10px;
+    font-size: 17px;
+    color:gray;
   }
 
   .search input {
@@ -139,10 +170,6 @@ nav > p {
 
   .user {
     padding: 0 20px;
-  }
-
-  .user img {
-
   }
 
   .gnb-list2 {
