@@ -22,7 +22,6 @@ a {
 .se-hidden { display: none; }
 .user-hidden { display: none; }
 .gnb2-hidden { display: none; }
-.sm-only { display: none; }
 .i-hidden { display: none; }
 .txt-hidden { display: none; }
 
@@ -79,19 +78,108 @@ nav div i {
 }
 
 
+/* -------------------------------------------------------사이드바 */
+
+aside > nav {
+  padding-top: 30px;
+}
+
+aside span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+aside hr {
+  margin: 20px 0;
+  opacity: 30%;
+}
+
+.sidebar {
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 200;
+  width: 300px;
+  height: 100vh;
+  padding: 30px 40px;
+  background-color: #fff;
+  transform: translateX(-300px);
+  transition: transform 300ms ease-in-out;
+}
+
+.user2 {
+  position: relative;
+  text-align: center;
+}
+
+.user2 img {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  left: 5px;
+  width: 35px;
+  height: 35px;
+}
+
+.sidebar.is-active {
+  transform: translateX(0);
+}
+
+.side-menu-item a {
+  display: inline-block;
+  padding: 10px;
+  color: #3f4150;
+}
+
+.side-big-menu-list i:last-child {
+  position: absolute;
+  margin-top: 5px;
+  right: 50px;
+}
+
+
+.overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(63,65,80,0.5);
+  transition: all 300ms ease-in-out;
+}
+
+.overlay.is-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.drawer {
+  display: none;
+}
+.drawer-active {
+  display: block;
+}
+
+
+
+/* -------------------------------------------------------사이드바 */
 
 @media screen and (min-width:768px) {
   .gnb-hidden { display: block; }
   .user-hidden { display: block; }
   .gnb2-hidden { display: block; }
   .i-hidden { display: block; }
+  .sm-only { display: none; }
 
   header > nav {
     display: flex;
     justify-content:flex-start;
   }
   
-  nav > p {
+  header > nav > p {
     visibility: hidden;
   }
   
@@ -109,7 +197,7 @@ nav div i {
     padding-left: 30px;
   }
 
-  nav div i {
+  header nav div i {
     position: absolute;
     right: 200px;
     margin-top: -15px;
