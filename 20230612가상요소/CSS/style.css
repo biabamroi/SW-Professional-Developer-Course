@@ -1,0 +1,111 @@
+.apple::after {
+  content: "다람쥐";
+  /* 가상 요소: 스타일링(장식)으로 인식, 검색 불가 */
+  /* 자바스크립트로 건드릴 수 없음 (DOM에 존재x) */
+  /* 닫을 수 있는 태그에만 사용 가능 */
+  /* 누군가를 감쌀 수 있는, 시작과 끝이 있는 */
+  /* 인라인 요소 */
+  color: red;
+  /* 기본(값) 색을 지정한 것 */
+}
+
+.apple::before {
+  content: "ㅎㅎㅎ";
+  display: block;
+  background-color: red;
+  width: 100px;
+  height: 30px;
+} 
+/* inline 요소를 block으로 변경해서 사이즈 값을 */
+
+#bill {
+  border: 1px solid black;
+  /* 두께와 종류는 필수, 색은 부모의 색 설정 상속 가능 */
+  border-collapse: collapse;
+  /* collapse 분배 : 퉁친다는 느낌's */
+}
+
+#bill td,
+#bill th {
+  border: 1px solid black;
+  padding: 0.3em 1em;
+  /* 기준 1em = 100% */
+  /* em : 부모 크기 대비 기준 % */
+  /* rem : 기본 기준 16px~ */
+  /* 특히 글자 기준에 사용 */
+  /* 모니터, 모바일 / 픽셀, 화소 / 다운그레이드 */
+  /* 실제 해상도와 viewport 해상도 차이 */
+  /* 제조사별 차이 / 1em으로 가정하고 */
+  /* 글자 ↑ */
+}
+
+#bill th {
+  background-color: #eee;
+}
+
+/* 확장 가능성을 고려한 설계 */
+#bill td:nth-of-type(2)::after {
+/* ID가 bill인 녀석의 자손 td 중에서 각각 둘째인 녀석들의 뒷부분 */
+  content: "원";
+   margin-left: 0.3em;
+   font-size: 0.8em;
+   color: #555;
+}
+
+/* position ex. html 중력은 위로 작용 */
+/* fixed는 우주적 관점에서 콕 */
+/* relative, absolute 기준 absolute / static 별개 */
+#modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  /* 0~255 alpha */
+  /* opacity: 0.3; 내부 박스에도 영향 */
+  z-index: 9999;
+}
+
+#modalwin {
+  background-color: #fff;
+  width: calc(100% - 20px); /* 계산 */
+  max-width: 450px;
+  /* 현재 플립 280 / 기존 320 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); /* 보정치 */
+  border-radius: 4px;
+  box-shadow: 3px 8px 12px rgba(0,0,0,0.1);
+}
+
+#modalcl {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: transparent; /* 투명 */
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+#modalcl::after,
+#modalcl::before {
+  content: ""; /* 필수 */
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 35px;
+  height: 2px;
+  background-color: red;
+}
+
+#modalcl::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+#modalcl::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
