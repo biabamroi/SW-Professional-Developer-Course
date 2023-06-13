@@ -20,6 +20,12 @@
   <title>가상 요소</title>
 </head>
 <body>
+
+  <div id="box1">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, quos?
+  </div>
+
+
   <p class="apple">안녕하세요.</p>
   <p class="apple">반갑습니다.</p>
   <p class="apple">Hello, World!</p>
@@ -58,6 +64,31 @@
       <p>Lorem ipsum dolor sit amet.</p>
     </div>
   </div>
+
+  <script>
+    // modalcl을 클릭했을 때 modal이 사라지게
+    // 1. #modalcl 이 클릭 당했을 때
+    // 2. #modal 의 style 중 display 값을 none 으로
+
+    // getElement(s)By ID와 클래스명 등 차이점 / 오타 주의
+    // 클래스로 불렀을 때 너희들 중 ()[0] 몇 번째
+
+    document.getElementById("modalcl").onclick = function(){
+      document.getElementById("modal").style.display = "none";
+    };
+
+    // function () {} 익명 함수
+    // function aaa(){ } 함수 이름(재료) {내용}
+    // f(x) = x+2 를 준다면 x에 +2를 
+    // 이런 식으로 함수를 적용 
+    // function dum(x){ return x+2; }  → 함수 선언 declare a function
+    // 실행 dum(5);   → 결과 call a function (함수 호출)
+    // alert( dum(5) ); 
+  
+    // jQuery 문법 
+    // $("#modalcl").click(function(){$("#modal").hide();});
+  
+  </script>
 
 </body>
 </html>

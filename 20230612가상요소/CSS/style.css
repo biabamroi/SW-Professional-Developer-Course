@@ -1,3 +1,39 @@
+/* sefif  - 획 긋는 모양
+sans-serif   - 정자체 모양
+폰트 모양 구분 필요 */
+
+/* 텍스트 정렬 */
+
+/* vertical-align / 기준 바닥
+인라인 요소 텍스트 움직일 때
+icon하고 글자 같이 쓸 때 */
+
+/* line-height 줄 간격 / 행간
+텍스트 박스 사이즈를 명확하게 알고
+앞으로 변경되지 않을 거라는 가정 하에 사용하기 좋은 */
+
+/* padding 값으로 가운데 들어간 것처럼 / 사이즈 x */
+
+/* 사이즈 지정, 텍스트도 가운데 정렬
+(포지션) 박스를 하나 더 쳐서 가운데로 보내버림 */
+
+/* white-space */
+#box1 {
+  width: 20%;
+  height: 1.5em;
+  background-color: yellow;
+  overflow: hidden;
+  /* 넘쳐 흘렀을 때 overflow: auto 스크롤 */
+  /* white space 영역, 다음 줄로 내려감 */
+  white-space: nowrap;
+  /* nomal 감싸서 떨어지는 걸 막음 - 한줄로 */
+  text-overflow: ellipsis;
+  /* 잘린 글자 표시 */
+}
+#box1:hover {
+  overflow:visible;
+}
+
 .apple::after {
   content: "다람쥐";
   /* 가상 요소: 스타일링(장식)으로 인식, 검색 불가 */
@@ -80,6 +116,8 @@
   box-shadow: 3px 8px 12px rgba(0,0,0,0.1);
 }
 
+/* button, img, input 등 inline 사이즈 ok */
+
 #modalcl {
   display: block;
   width: 30px;
@@ -90,22 +128,44 @@
   position: relative;
 }
 
+/* position: static; 포지션 줬다 뺏을 때 */
+
 #modalcl::after,
 #modalcl::before {
   content: ""; /* 필수 */
   display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
   width: 35px;
   height: 2px;
   background-color: red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: all 0.4s;
+  /* transition: 스타일명 시간 */
 }
 
 #modalcl::after {
   transform: translate(-50%,-50%) rotate(-45deg);
-}
+} /* 순서 유의 */
 #modalcl::before {
   transform: translate(-50%,-50%) rotate(45deg);
+}
+
+/* #modalcl에 마우스를 올렸을 때
+before와 after의 위치가 바뀌어야 한다면 */
+
+#modalcl:hover::before {
+  transform: translate(-50%,-50%) rotate(0deg);
+  margin-top: -5px;
+  /* 유지 보수 쉽게 하려면 ↑ */
+  /* transform: translate(-50%, calc(-50% - 5px)) rotate(0deg); */
+  width: 20px;
+  height: 5px;
+}
+#modalcl:hover::after {
+  transform: translate(-50%,-50%) rotate(0deg);
+  margin-top: 5px;
+  width: 20px;
+  height: 5px;
 }
 
