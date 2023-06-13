@@ -21,6 +21,30 @@ drawerOpener3.addEventListener('click', function(){
 
 
 
+// const drawerMenuButtonList = document.querySelectorAll('.drawer-menu-button');
+
+// function toggleDrawerMenu() {
+//   const drawerMenu = this.parentNode;
+//   drawerMenu.classList.toggle('is-open');
+//   drawerMenu.classList.toggle('is-active');
+// }
+
+// drawerMenuButtonList.forEach(function (button) {
+//   button.addEventListener('click', toggleDrawerMenu);
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // var theParent = document.querySelector("#theDude");
 // theParent.addEventListener("click", doSomething, false);
