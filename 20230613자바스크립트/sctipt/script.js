@@ -78,6 +78,7 @@ document.getElementById("apple").onclick = function(){
 
 
 // 배열(array)
+
 // index number 0,  1,  2,  3  번째 순서
 // var arr = [20, 35, 40, 50];   
 // var arr = [];
@@ -106,7 +107,10 @@ document.getElementById("apple").onclick = function(){
 
 
 
+
+
 // 객체형 변수
+
 // var hhe = {
 //   height: 175, 
 //   weight: 78, 
@@ -151,7 +155,9 @@ document.getElementById("apple").onclick = function(){
 
 
 
+
 // 이중 배열
+
 // 5층 건물, 1~4층 3개의 원룸, 5층은 주인 세대
 
 // var lenthouse = [
@@ -188,6 +194,8 @@ document.getElementById("apple").onclick = function(){
 
 
 
+
+
 // 전역 변수, 지역 변수
 
 // var kitae = "기태";
@@ -200,6 +208,9 @@ document.getElementById("apple").onclick = function(){
 // alert(kitae);
 
 
+
+
+// prompt, confirm
 
 // var birth = prompt("생년월일을 입력하세요. ex) 801123");
 // // 19800101 800101 80-08-08
@@ -238,8 +249,73 @@ document.getElementById("apple").onclick = function(){
 
 
 
+
+
 // 함수 이름 매개변수(인수) - 재료 - 내용
+
 // function 떡볶이(떡,소스){ 요리 과정 }
 // 실행 - 떡볶이(밀떡,고추장); 요리 과정에 밀떡과 고추장을 넣게 되는
 // var 변수이름 = function() { 내용 } - 익명 함수
+// 자주 사용할 : onkeyup 키를 누르고 있다가 떼는 순간 - ex) 아이디 중복체크  / 함수 시작 시점
+
+
+
+// 연산자 operators 
+// 나머지 연산자 7/2 = 3.5 몫 7% 2 = 1  배수 확인 [범위 내의 자연수]
+
+// ★ ++A, --A 증감 연산자  *** 매우 중요 *** 
+// var num = 3;
+// num++;
+// 전위 ++A 다른 계산 참여 전 먼저 계산 
+// 후위 A++ 일단 참여 후 계산, 사용은 후위 빈도 수 
+// alert(num);
+
+// 지금까지 버튼을 누른 횟수 = 0
+// #btn이 눌릴 때마다 
+  // 지금까지 버튼 누른 횟수 1 증가
+  // #num 박스에 숫자 입력 (카운트 박스)
+
+
+// 바닐라 자바스크립트 문법
+
+  var count = 0;
+document.getElementById("btn").onclick = function(){
+  // count++;
+  count += 10;
+  document.getElementById("num").innerHTML = count;
+}
+
+// 제이쿼리 문법
+// var count = 0;
+// $("#btn").click(function(){
+//   count++;
+//   $("#num").text(count);
+// });
+
+
+// ★ 매우 중요 -----------------------------------
+// 대입 연산자
+// A = B 
+
+var a = 3;
+a = a + 3;
+// a += 3;   
+a++;
+
+
+
+// 비교 연산자    참 true 또는 거짓 false
+// 3 == "3"  t    3 === "3"  f 
+// 3 !== "3"  f    3 !== 5  t
+
+// A && B and 조건
+// A || B or 조건
+// !A  결과 뒤집는 
+
+
+// ----------------------------------------------- if문
+
+// if (조건) { 참일 경우 내용 실행; } 거짓일 경우 내용 실행;
+// if (조건) { 참일 경우 내용 실행; } else { 거짓일 경우 실행; } 둘 중에 하나는 실행 (분기문)
+// if (조건1) { 참 } else if (조건2) { 1거짓 2참 } else { 거짓 } 셋 중 하나 실행
 

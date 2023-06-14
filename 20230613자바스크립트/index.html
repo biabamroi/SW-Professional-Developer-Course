@@ -13,13 +13,21 @@
 <body>
   <div class="wrapper">
 
+    <div id="num">0</div>
+    <button id="btn" type="button">Click</button>
+
     <div onclick="alert('hello, World!');">누르지 마시오.</div>
 
     <div id="apple">누르지 마시오.</div>
 
     <div>&middot; &copy; &amp; &nbsp;</div>
 
-    
+    <form action="join.jsp" method="post">
+      아이디 <input type="text" name="userid">
+      <button type="button">아이디 중복체크</button>
+      비밀번호 <input type="password" name="userpw">
+      <button type="submit">확인</button>
+    </form>
 
 
   </div>
