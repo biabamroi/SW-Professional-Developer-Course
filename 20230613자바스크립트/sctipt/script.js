@@ -107,15 +107,16 @@ document.getElementById("apple").onclick = function(){
 
 
 // 객체형 변수
-var hhe = {
-  height: 175, 
-  weight: 78, 
-  gender: "남자", 
-  marriage: false, 
-  house: null
-};
+// var hhe = {
+//   height: 175, 
+//   weight: 78, 
+//   gender: "남자", 
+//   marriage: false, 
+//   house: null,
+//   friends: ["홍길동", "김철수", "이영희", "전우치"]
+// };
 
-alert( "그의 몸무게 : "+hhe.weight );
+// alert( "그의 친구 : "+hhe.friends[3] );
 
 
 
