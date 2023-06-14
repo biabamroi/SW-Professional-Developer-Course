@@ -46,6 +46,8 @@ document.getElementById("apple").onclick = function(){
 // \'저\'는 \"홍길동\"입니다.");
 
 
+
+
 // 변수 variables 변할 수 있는 Data를 담는 그릇
 
 // var 만들 변수 이름;
@@ -68,8 +70,120 @@ document.getElementById("apple").onclick = function(){
 // var b = "hello";
 // var c = a=B;
 
+// NaN : Not a Number 에러 메시지
+
 // alelt(c문자열);
 
 
-var arr = [20, 35, 40, 50];
-alert(arr[0]);
+
+
+// 배열(array)
+// index number 0,  1,  2,  3  번째 순서
+// var arr = [20, 35, 40, 50];   
+// var arr = [];
+// var arr = Arry(4); // 4칸짜리 배열을 만듦
+
+// var arr = [];  // 개별 지정 
+// arr[0] = 20;
+// arr[1] = 35;
+
+// alert(arr[0]);
+
+
+
+
+// var arr = [175, 78, "남자", false, null];
+
+// alert( "그의 키는 "+arr[0]+"cm 입니다." );
+// alert( "그의 몸무게는 "+arr[1]+"kg 입니다." );
+// alert( "그의 성별은 "+arr[2]+ " 입니다." );
+
+// if(arr[3]){
+//   alert( "그는 기혼입니다." );
+// }else{
+//   alert( "그는 미혼입니다." );
+// }
+
+
+
+// 객체형 변수
+var hhe = {
+  height: 175, 
+  weight: 78, 
+  gender: "남자", 
+  marriage: false, 
+  house: null
+};
+
+alert( "그의 몸무게 : "+hhe.weight );
+
+
+
+
+
+
+// 로또 (임시, 중복 적용 x)
+
+// var lotto = [];
+// for(i=0; i<6; i++){
+//   var rand = Math.floor(Math.random()*(45-1+1)+1);
+//   lotto[i] = rand;
+// }
+
+// alert(lotto);
+
+
+
+// 주사위 
+
+// function dice(min,max) {
+//   return Math.floor(Math.random()*(max-min+1)+min);
+// }
+// alert( dice(1,6) );
+
+
+// function dice(min,max) {
+//   var a = Math.floor(Math.random()*(max-min+1)+min);
+// }
+// alert();
+
+
+
+
+// 이중 배열
+// 5층 건물, 1~4층 3개의 원룸, 5층은 주인 세대
+
+// var lenthouse = [
+//   [101호, 102호, 103호], 
+//   [201호, 202호, 203호], 
+//   [301호, 302호, 303호], 
+//   [401호, 402호, 403호],
+//   [501호] 
+// ];
+
+// var lenthouse = [
+//   ["전지현", "김태희", "정지훈"], 
+//   ["차승원", "슈가", "RM"], 
+//   ["정우성", "박성웅", "주지훈"], 
+//   ["아이유", "유재석", "손석구"],
+//   ["강동원"] 
+// ];
+
+// var floor;
+// var ho;
+
+// for(i=0; i<5; i++){
+//   for(j=0; j<lenthouse[i].length; j++){
+//     if(lenthouse[i][j] == "박성웅"){
+//       floor = i+1;
+//       ho = j+1;
+//       break;
+//     }
+//   }
+// }
+
+// alert( "박성웅은 "+floor+"0"+ho+"호에서 발견되었습니다.");
+
+
+
+
