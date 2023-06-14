@@ -188,3 +188,58 @@ document.getElementById("apple").onclick = function(){
 
 
 
+// 전역 변수, 지역 변수
+
+// var kitae = "기태";
+// alert(기태);
+// function seoul(){
+//   var kitae = "기태";
+//   alert(kitae);
+// }
+// seoul();
+// alert(kitae);
+
+
+
+// var birth = prompt("생년월일을 입력하세요. ex) 801123");
+// // 19800101 800101 80-08-08
+// // alert( birth );
+// birth = parseInt(birth);
+// var age = 2023 - birth;
+// alert("당신의 나이는 "+age+"세 입니다.");
+
+
+// var lunch = confirm("당신은 점심을 드셨습니까?");
+// if(lunch){
+//   alert("오, 배부르시겠네요.");
+// }else{
+//   alert("밥 먹을 시간도 없는 당신, 화이팅!");
+// }
+
+
+
+// --------------------------------- 외우면 좋을
+
+// function rand(min,max){
+//   return Math.floor(Math.random()*(max-min+1)+min);
+// }
+
+// alert( rand(0,255) );
+
+// setInterval(function(){
+//   var r = rand(0,255);
+//   var g = rand(0,255);
+//   var b = rand(0,255);
+//   document.getElementsByTagName("body")[0].style.backgroundColor
+//    = "rgb("+r+","+g+","+b+")";
+//   }, 1000);
+
+
+
+
+
+// 함수 이름 매개변수(인수) - 재료 - 내용
+// function 떡볶이(떡,소스){ 요리 과정 }
+// 실행 - 떡볶이(밀떡,고추장); 요리 과정에 밀떡과 고추장을 넣게 되는
+// var 변수이름 = function() { 내용 } - 익명 함수
+
