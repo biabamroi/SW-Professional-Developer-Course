@@ -3,7 +3,7 @@ document.getElementById("apple").onclick = function(){
   alert("누르지 말랬잖아!");
 }
 
-
+//
 // 주어;
 // 주어.속성;
 // 주어.주어.속성;
