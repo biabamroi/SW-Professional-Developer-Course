@@ -5,10 +5,11 @@ const drawerOpener2 = document.querySelector('.drawer-opener2');
 const drawer3 = document.querySelector('.drawer3');
 const drawerOpener3 = document.querySelector('.drawer-opener3');
 
-drawerOpener.addEventListener('click', function(){
-    drawer.style.display = 'block';
-    // .style.color = 'rgb(255, 204, 0)';
 
+
+drawerOpener.addEventListener('click', function(){
+    drawerOpener.classList.toggle('drawer');
+    drawer.style.display = 'block';
 })
 drawerOpener2.addEventListener('click', function(){
     drawer2.style.display = 'block';
@@ -32,15 +33,6 @@ drawerOpener3.addEventListener('click', function(){
 // drawerMenuButtonList.forEach(function (button) {
 //   button.addEventListener('click', toggleDrawerMenu);
 // })
-
-
-
-
-
-
-
-
-
 
 
 
