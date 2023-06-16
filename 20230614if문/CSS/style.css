@@ -8,3 +8,19 @@
   text-decoration: none;
   color: #444;
 }
+
+.caret-right {
+  /* 삼각형 원리 */
+  /* □ border 설정 시 생기는 사선 이용
+    선의 색상을 투명하게 설정해서 모양만 보이게끔*/
+  display: inline-block;
+  width: 5px;
+  height: 12px;
+
+  border-top: 6px solid transparent;
+  border-left: 5px solid #888;
+  border-bottom: 6px solid transparent;
+  box-sizing: border-box;
+
+  margin: 0 4px;
+}

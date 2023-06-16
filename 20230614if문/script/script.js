@@ -346,9 +346,21 @@ for(i=0; i<filename.length; i++){
 // alert(depth1+","+depth2);
 
 if(depth1 != undefined && depth2 != undefined){  // undefined가 아닐 때
-  var bc_1 = "&gt; <a>"+ menuname1[depth1] +"</a>";
-  var bc_2 = "&gt; <a href='"+currentname+"'>"+ menuname2[depth1][depth2] +"</a>";
+  var bc_1 = "<span class='caret-right'></span> <a>"+ menuname1[depth1] +"</a>";
+  var bc_2 = "<span class='caret-right'></span> <a href='"+currentname+"'>"+ menuname2[depth1][depth2] +"</a>";
   document.getElementById("bc_1").innerHTML = bc_1;
   document.getElementById("bc_2").innerHTML = bc_2;
 }
+
+
+
+
+
+// F12 개발자 모드
+// ≡ hamburger
+// : (점3개) kebab
+// … sushi
+// ▦ chocolate or bento
+// ▼ caret
+// ＞ (두꺼운모양) chervron
 
