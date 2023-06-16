@@ -148,3 +148,7 @@ var daytext = ["일","월","화","수","목","금","토"];
 
 alert(year+"-"+month+"-"+date+" "+daytext[day]+"요일");
 
+
+
+
+
