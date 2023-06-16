@@ -63,7 +63,7 @@ function addzero2(num){
   }
 }
 
-// setInterval(chktime, 1);
+setInterval(chktime, 1);
 // 원래는 window.setInterval(chktime, 1);
 
 
@@ -129,5 +129,22 @@ function rand(min, max){
 // 최소값이 1, 최대값이 6
 // alert(  Math.floor(Math.random()*(6-1+1)+1)  );
 
+document.body.style.backgroundColor = "rgb("+rand(0,255)+","+rand(0,255)+","+rand(0,255)+")";
+// 텍스트 찢기 ""++""      // rgb 해당 계열 색상에 따라 숫자 변경
 
+// string - split *** 활용가치 ▲
+
+
+
+// 월 (순환)   0~11     
+// 요일   일 월 화 수 목 금 토  ~번째 
+
+var now = new Date();
+var year = now.getFullYear();
+var month = addzero(now.getMonth()+1);  // 우리나라 날짜
+var date = addzero(now.getDate());
+var day = now.getDay();
+var daytext = ["일","월","화","수","목","금","토"];
+
+alert(year+"-"+month+"-"+date+" "+daytext[day]+"요일");
 
