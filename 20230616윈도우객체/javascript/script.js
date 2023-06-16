@@ -63,8 +63,71 @@ function addzero2(num){
   }
 }
 
-setInterval(chktime,0);
+// setInterval(chktime, 1);
+// 원래는 window.setInterval(chktime, 1);
 
+
+
+
+
+// element 객체, 메소드 / 누구든 무엇이든 어디든 ----------------
+
+// length -------------------
+
+// alert(document.getElementsByTagName("span").length);
+
+// var arr = [1, 5, 5, 6, 9, "a", true];
+// alert( arr.length );
+
+// var text = "Hello, World!";
+// alert( text.length );
+// alert( text.split(" ").length );
+
+// document.getElementById("si").style.fontSize = "2em";
+// document.getElementById("si").style.fontWeight = "bold";
+
+// alert(location.href);  // get 읽어들일 
+// location.href="";  // set 세팅할  - redirect (사용자 권리 침해)
+
+document.getElementById("saero").onclick = function(){
+  location.reload();
+} // history : 0 새로고침
+
+
+// Number, 숫자 재료 관리 
+// Math, 계산
+
+// 숫자 전역 메소드 Number, parselnt, parseFloat
+
+// 계산기
+// var a = window.prompt("더할 첫 번째 값을 입력하시오.");
+// var b = window.prompt("더할 두 번째 값을 입력하시오.");
+// // prompt : 문자열 
+// a = Number(a);
+// b = Number(b);
+// window.alert(a+b);
+
+// 7 나누기 3 의 몫
+// alert(parseInt(7/2)); // 정수로 만들어서 
+// alert(7%2); // 나머지 
+
+// PI 파이 원주율 3.141592653589793
+// SQRT2 루트2 1.4142135623730951
+
+
+
+// 랜덤 -----------------------------------------------------------
+// 최소, 최대값을 지정하고 그 사이의 임의 정수를 추출하는 함수
+function rand(min, max){
+  return Math.floor(Math.random()*(max-min+1)+min);
+}
+// alert(rand(1,6));
+
+// alert(Math.random());  // 임의의 쓸 수 없는 수 0~0.99999...
+// alert(Math.random()*6);  // 맥시멈 수는 나오지만...
+
+// 최소값이 1, 최대값이 6
+// alert(  Math.floor(Math.random()*(6-1+1)+1)  );
 
 
 
