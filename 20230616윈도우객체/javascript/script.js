@@ -32,6 +32,7 @@ function chktime(){
   var hour = now.getHours();  // now 객체에서 시간을 뽑아냄
   var min = now.getMinutes();
   var sec = now.getSeconds();
+  var msec = now.getMilliseconds();  // 0~999 (세자리수)
   // hour = addzero(hour);  // 한자리수 표기 함수 
   // min = addzero(min);
   // sec = addzero(sec);
@@ -39,12 +40,23 @@ function chktime(){
   document.getElementById("si").innerHTML = addzero(hour);
   document.getElementById("bun").innerHTML = addzero(min);
   document.getElementById("cho").innerHTML = addzero(sec);
+  document.getElementById("mcho").innerHTML = addzero2(msec);
 }
 
 function addzero(num){
   // 한자리수에 0 추가하기 위한 함수
   // 문자열로 바뀌기 때문에 계산 마지막에
   if(num<10){
+    return "0"+num;
+  }else{
+    return num;
+  }
+}
+
+function addzero2(num){
+  if(num<10){
+    return "00"+num;
+  }else if(num<100){
     return "0"+num;
   }else{
     return num;
