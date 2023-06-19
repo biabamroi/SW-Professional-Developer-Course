@@ -1,7 +1,7 @@
 // var variable = "text";
 // var number = "0";
 // var boolean = true
-// scope 변수 어디 범위
+// scope 변수 범위 ----------------------------------- *****
 
 // function check () {
 //   console.log(boolean)
@@ -97,6 +97,7 @@ btnDec.addEventListener('click', () => {
 
 const money = 1000  // 변수 하나만 조정하여 관리 측면 용이성 더할 때
 
+// 계산 함수 정의
 // function inc(number, content, check) {     // 기존 함수
 const inc = (number,content,check) => {     // fat arrow
   if(check === true){
@@ -106,8 +107,10 @@ const inc = (number,content,check) => {     // fat arrow
       number = number - money;
     }  // 감소할 때 0에서 멈추게끔 개선 
   }
+  // content에 변화한 매개변수(number)값 삽입(textContent)
   content.textContent = number
   // return originNumber = number   // fat arrow 에서는 자동 리턴
+  // originNumber 값을 매개변수(number)로 업데이트
   originNumber = number
 }
 inc(originNumber,content)
