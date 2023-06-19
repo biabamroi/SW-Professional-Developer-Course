@@ -16,6 +16,7 @@
 // app.textContent = text;  // text만 넣는 경우 가장 빠른 
 
 
+
 // var > ES5 버전
 // 현재 ES6  -  ESNEXT
 
@@ -33,6 +34,7 @@
 // 버튼을 눌렀을 때, 값이 증가한다.
 // 1. 버튼을 변수에 저장하는 과정
 const btnInc = document.getElementById('increase')
+const btnDec = document.getElementById('decrease')
 // console.log(btnInc)
 // 2. number 라는 변수에 id-num 저장
 const number = document.getElementById('num')   // const는 상수 : 변하지 않는 것
@@ -43,6 +45,11 @@ let incNum = 0    // 값 초기화
 btnInc.addEventListener('click', function(){
   incNum = incNum + 1;   // 초기화된 값을 변화
   // console.log(incNum)
+  number.textContent = incNum;
+})
+
+btnDec.addEventListener('click', function(){
+  incNum = incNum - 1;
   number.textContent = incNum;
 })
 
