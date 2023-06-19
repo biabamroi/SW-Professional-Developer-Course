@@ -31,28 +31,80 @@
 
 
 
-// 버튼을 눌렀을 때, 값이 증가한다.
+// 버튼을 눌렀을 때, 값이 증가 & 감소
 // 1. 버튼을 변수에 저장하는 과정
 const btnInc = document.getElementById('increase')
 const btnDec = document.getElementById('decrease')
 // console.log(btnInc)
 // 2. number 라는 변수에 id-num 저장
-const number = document.getElementById('num')   // const는 상수 : 변하지 않는 것
+// number -> content
+const content = document.getElementById('content')   // const는 상수 : 변하지 않는 것
 // console.log(num)
-let incNum = 0    // 값 초기화
+let originNumber = 0    // 값 초기화   // incNum -> number
 
 // btnInc 눌렀을 때 숫자 증가
-btnInc.addEventListener('click', function(){
-  incNum = incNum + 1;   // 초기화된 값을 변화
-  // console.log(incNum)
-  number.textContent = incNum;
+// btnInc.addEventListener('click', function(){
+//   incNum = incNum + 1;   // 초기화된 값을 변화
+//   // console.log(incNum)
+//   number.textContent = incNum;
+// })
+
+// // btnDec 눌렀을 때 숫자 감소
+// btnDec.addEventListener('click', function(){
+//   incNum = incNum - 1;
+//   number.textContent = incNum;
+// })
+
+
+
+// 함수 재가공
+
+// const func = function(){} -- es5
+// const func2 = () => {
+// ->
+// => fat arrow = function
+// }
+
+// btnInc.addEventListener('click', () => {
+//   incNum = incNum + 1;
+//   number.textContent = incNum;
+//   inc(incNum)   // 실행을 어디서 하고 있는가 
+// })
+// btnDec.addEventListener('click', () => {
+//   incNum = incNum - 1;
+//   number.textContent = incNum;
+//   inc(incNum)
+// })
+
+// const inc = (number) => {
+//   return
+// }
+
+// 함수 정의
+// function inc(number) {      // () parameter 매개변수 값
+//   return console.log(number)
+// }
+// // 실행
+// inc(incNum)
+
+
+btnInc.addEventListener('click', () => {
+  inc(originNumber,content,true)
+})
+btnDec.addEventListener('click', () => {
+  inc(originNumber,content,false)
 })
 
-// btnDec 눌렀을 때 숫자 감소
-btnDec.addEventListener('click', function(){
-  incNum = incNum - 1;
-  number.textContent = incNum;
-})
+function inc(number, content, check) { 
+  if(check === true){
+    number = number + 1;
+  }else{
+    number = number - 1;
+  }
+  content.textContent = number
+  return originNumber = number
+}
+inc(originNumber,content)
 
 
 
