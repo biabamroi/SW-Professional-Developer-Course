@@ -19,7 +19,10 @@ const actionElem = document.getElementById('action')
 actionElem.addEventListener('click', () => {
   // 근무시간
   const timeElem = document.getElementById('time')
-  let timeValue = +timeElem.value
+  // 숫자일 경우 +를 붙여서 변환
+  // paraInt(value) string -> number 변환
+  // == 같다. === 같다(타입 체크, 같은 형식 체크)
+  let timeValue = +timeElem.value 
 
   // 결과 계산 = 근무시간 x 최저시급
   result = timeValue * salary;
