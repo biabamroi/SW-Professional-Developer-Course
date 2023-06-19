@@ -99,7 +99,9 @@ function inc(number, content, check) {
   if(check === true){
     number = number + 1;
   }else{
-    number = number - 1;
+    if(number > 0){
+      number = number - 1;
+    }  // 감소할 때 0에서 멈추게끔 개선 
   }
   content.textContent = number
   return originNumber = number
