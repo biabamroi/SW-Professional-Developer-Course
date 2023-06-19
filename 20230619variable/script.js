@@ -95,12 +95,14 @@ btnDec.addEventListener('click', () => {
   inc(originNumber,content,false)
 })
 
+const money = 1000  // 변수 하나만 조정하여 관리 측면 용이성 더할 때
+
 function inc(number, content, check) { 
   if(check === true){
-    number = number + 1;
+    number = number + money;
   }else{
     if(number > 0){
-      number = number - 1;
+      number = number - money;
     }  // 감소할 때 0에서 멈추게끔 개선 
   }
   content.textContent = number
