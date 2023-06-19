@@ -4,13 +4,15 @@ const salaryElem = document.getElementById('salary')
 // 최저시급 content 값
 let salary = +salaryElem.textContent  // parseInt 정수로 바꿔줌, 축약어는 +
 // console.log(salary)
-// console.log(typeof salary) // 타입이 뭐냐고 - string 문자열
+// console.log(typeof salary) // 타입이 뭐냐 - string 문자열
+
 
 // 결과 DOM
 const resultElem = document.getElementById('result')
 // 결과 content 값
 let result = resultElem.textContent
 // console.log(result)
+
 
 // 계산 버튼
 const actionElem = document.getElementById('action')
