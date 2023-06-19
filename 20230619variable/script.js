@@ -48,8 +48,11 @@ btnInc.addEventListener('click', function(){
   number.textContent = incNum;
 })
 
+// btnDec 눌렀을 때 숫자 감소
 btnDec.addEventListener('click', function(){
   incNum = incNum - 1;
   number.textContent = incNum;
 })
+
+
 
