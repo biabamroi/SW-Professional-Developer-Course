@@ -97,7 +97,8 @@ btnDec.addEventListener('click', () => {
 
 const money = 1000  // 변수 하나만 조정하여 관리 측면 용이성 더할 때
 
-function inc(number, content, check) { 
+// function inc(number, content, check) {     // 기존 함수
+const inc = (number,content,check) => {     // fat arrow
   if(check === true){
     number = number + money;
   }else{
@@ -106,9 +107,12 @@ function inc(number, content, check) {
     }  // 감소할 때 0에서 멈추게끔 개선 
   }
   content.textContent = number
-  return originNumber = number
+  // return originNumber = number   // fat arrow 에서는 자동 리턴
+  originNumber = number
 }
 inc(originNumber,content)
 
+// ctrl + F 찾기
+// ctrl + H 바꾸기
 
 
