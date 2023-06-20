@@ -4,4 +4,10 @@
 const images = document.querySelector('.images')
 // const main = document.querySelector('main')
 const items = images.querySelectorAll('.image-item')
-console.log(items)
+// console.log(items)
+
+items.forEach((item)=>{
+  item.addEventListener('click', ()=>{
+    console.log(item)
+  })
+})
