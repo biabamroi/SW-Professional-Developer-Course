@@ -33,7 +33,7 @@ html, body {
   /* ease-in, ease, linear, ease-in-out */
   transition: all 200ms cubic-bezier(0.078, 0.06, 0.15, 0.93);
   /* hsl - hue / saturate 채도 / lightness */
-  filter: grayscale(90%);
+  filter: grayscale(90%) blur(2px); /* 속도 저하 주의 */
 }
 .image-item.active img {
   transform: scale(1.05);
