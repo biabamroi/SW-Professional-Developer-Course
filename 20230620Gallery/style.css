@@ -15,9 +15,11 @@ html, body {
 }
 .image-item {
   /* width: 25%; */
+  /* calculate */
   width: calc(100%/4);
   height: 100vh;
   overflow: hidden;
+  /* 크롬 개발자 도구 - transition 'S' 아이콘으로 곡선 제어, 에디터 */
   transition: all 500ms cubic-bezier(0.078, 0.06, 0.15, 0.93);
 }
 .image-item.active {
