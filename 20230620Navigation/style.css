@@ -45,5 +45,13 @@ html, body {
   padding: 1rem;
   /* em root rem / 16px = 1rem / 8px grid */
   cursor: pointer;
+  /* 사용자가 내용을 선택(드래그)할 수 없도록 만드는 기능 */
+  user-select: none;
 }
 
+.site-header nav ul li.active {
+  background-color: blue;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
