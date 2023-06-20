@@ -4,3 +4,25 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.site-header {
+  width: 800px;
+}
+
+.site-header nav {
+  display: flex;
+}
+
+.site-header ul {
+  display: flex;
+}
+
+.site-header nav ul {
+  display: flex;
+  list-style: none;
+}
+
