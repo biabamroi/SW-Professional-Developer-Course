@@ -16,10 +16,19 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: hsl(180, 30%, 80%);
+  /* hsl - hue(빨~파), saturation(무채색), lightness(명암) */
 }
 
 .site-header {
   width: 800px;
+  background-color: white;   /* ctrl + shift 추가 색 보기 */
+  /* top 1rem 좌우 2rem 하단 3rem */
+  /* top right bottom left */
+  padding: 1rem;
+  /* 브라우저 기본값 16px 1rem / 8px 0.25rem / 4px 0.25rem */
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 1px 3px rgba(0,0,0,0.1),  0 3px 10px rgba(0,0,0,0.3); /* 중첩 */
 }
 .site-header nav {
   display: flex;
@@ -28,6 +37,13 @@ html, body {
 }
 .site-header nav ul {
   display: flex;
+  /* gap: 1rem; 간격을 조정해주는 특성 */
   list-style: none;
+}
+.site-header nav ul li {
+  display: inline-flex;
+  padding: 1rem;
+  /* em root rem / 16px = 1rem / 8px grid */
+  cursor: pointer;
 }
 
