@@ -15,10 +15,34 @@ const items = Array.from(images.querySelectorAll('.image-item'))
 items.forEach((item)=>{
   // 배열 요소에서 사용자의 행동 감지
   item.addEventListener('click', ()=>{
-    // console.log(item)
-    // 모든 아이템에서 active class 제거
-    items.forEach(item => item.classList.remove('active'))
-    // 해당 아이템에 active 부여
-    item.classList.add('active')
+    // 만약 현재 클릭한 요소에 active가 있다면, 
+    // classlist.contains() 메소드는 현재 해당 클래스 보유 여부 판단 - true/false
+    const hasClassActive = item.classList.contains('active')
+
+    if(hasClassActive){
+    // if(item.classList.contains('active')){
+      // active class 제거
+      item.classList.remove('active')
+    }else{
+      // console.log(item)
+      // 모든 아이템에서 active class 제거
+      items.forEach(item => item.classList.remove('active'))
+      // 해당 아이템에 active 부여
+      item.classList.add('active')
+    }
   })
 })
+
+// classList
+
+// 여부 판단
+// classList.contains()
+
+// class 더할 때
+// classList.add()
+
+// class 제거할 때
+// classList.remove()
+
+// class toggle할 때
+// classlist.toggle()
