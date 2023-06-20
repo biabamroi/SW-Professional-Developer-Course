@@ -19,6 +19,9 @@ html, body {
   height: 100vh;
   overflow: hidden;
 }
+.image-item.active {
+  width: 80%;
+}
 .image-item img {
   width: 100%;
   height: 100%;
