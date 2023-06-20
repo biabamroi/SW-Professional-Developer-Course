@@ -4,14 +4,16 @@
 const images = document.querySelector('.images')
 // const main = document.querySelector('main')
 
+// const items = images.querySelectorAll('.image-item')
+// console.log(items)
+
 // 배열 - Array.from(배열로 만들 리스트)
 const items = Array.from(images.querySelectorAll('.image-item'))
-// const items = images.querySelectorAll('.image-item')
 // console.log(items)
 
 // items 배열을 반복문으로 실행
 // forEach = for문의 축약형, 배열길이 감지, index값도 알아서 증가
-// 배열의 길이가 몇이건 알아서 길이에 맞게 반복
+// 배열의 길이가 어떻든 알아서 길이에 맞게 반복
 items.forEach((item)=>{
   // 배열 요소에서 사용자의 행동 감지
   item.addEventListener('click', ()=>{
