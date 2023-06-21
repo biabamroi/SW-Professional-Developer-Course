@@ -1,3 +1,9 @@
+/* 전역변수 - 전체 영역에서 쓰이는 변수 */
+/* CSS 변수 */
+:root {
+  --size: 36px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,5 +22,12 @@ html, body {
 }
 
 #pointer {
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* CSS 변수 적용 */
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);;
+  border: 1px solid white;
 }
