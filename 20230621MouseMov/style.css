@@ -59,6 +59,7 @@ html, body {
   height: var(--size);
   border-radius: var(--size);
   background-color: #fff;
+  /* absolute일 경우 content 꼭 넣기 */
   content: '';
 }
 
