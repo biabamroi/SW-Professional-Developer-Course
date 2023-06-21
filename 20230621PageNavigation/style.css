@@ -9,22 +9,80 @@ html, body {
   height: 100%;
 }
 
+
 /* app */
 #app {
   width: 100%;
-  height: 100vh;  
+  height: 100vh; 
+  background-color: aliceblue; 
 }
 
+
+/* Page */
 .container {
 
 }
 .container .page {
-
+  /* fixed 상태를 가진 형제들끼리는
+  가장 마지막 요소가 위로 올라온다. */
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  background-size: 100%;
+  background-position: center center;
+  visibility: hidden;
+  opacity: 0;
+}
+.container .page:nth-child(1){
+  background-image: url(./static/catright.jpg);
+}
+.container .page:nth-child(2){
+  background-image: url(./static/cattop.jpg);
+}
+.container .page:nth-child(3){
+  background-image: url(./static/cat3.jpg);
+}
+.container .page:nth-child(4){
+  background-image: url(./static/catfront.jpg);
+}
+.container .page.active {
+  visibility: visible;
+  opacity: 1;
 }
 
-.nav {
 
+/* Navigation */
+.nav {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  /* 화면 정중앙 정렬 */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  background-color: #fff;
+  /* padding: 1rem; */
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  display: flex;
+  overflow: hidden;
 }
 .nav .button {
+  border: 0;
+  padding: 1rem;
+  background-color: transparent;
+  cursor: pointer;
 
+}
+.nav .button:active {
+  /* active - 작동하는 순간에만 효과 적용 */
+  background-color: #16165f;
+  color: white;
+}
+.nav .button.active {
+  background-color: blue;
+  color: white;
 }
