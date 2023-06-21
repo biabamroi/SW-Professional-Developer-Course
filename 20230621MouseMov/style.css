@@ -1,8 +1,8 @@
 /* 전역변수 - 전체 영역에서 쓰이는 변수 */
 /* CSS 변수 */
-:root {
+/* :root {
   --size: 36px;
-}
+} */
 
 * {
   margin: 0;
@@ -22,6 +22,10 @@ html, body {
 }
 
 #pointer {
+  --size: 36px;
+  /* --shadow: 0 3px 30px black;
+  background-color: #fff;
+  box-shadow: var(--shadow); */
   position: fixed;
   top: 0;
   left: 0;
