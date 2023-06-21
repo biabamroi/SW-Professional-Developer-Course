@@ -1,8 +1,8 @@
 /* 전역변수 - 전체 영역에서 쓰이는 변수 */
 /* CSS 변수 */
-/* :root {
+:root {
   --size: 36px;
-} */
+}
 
 * {
   margin: 0;
@@ -48,4 +48,32 @@ html, body {
   border-radius: var(--size);
   background-color: #fff;
   content: '';
+}
+
+/* 포스 스테이트 확인
+  코드 수정 필요 */
+
+#pointer #bubble {
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  background-color: #fff;
+  opacity: 0;
+}
+
+#pointer:active #bubble {
+  opacity: 0;
+  animation: bubble 1s ease-in-out forwards;
+}
+
+@keyframes bubble {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
