@@ -62,7 +62,7 @@ html, body {
   opacity: 0;
 }
 
-#pointer:active #bubble {
+#pointer:active {
   opacity: 0;
   animation: bubble 1s ease-in-out forwards;
 }
