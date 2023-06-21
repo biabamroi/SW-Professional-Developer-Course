@@ -34,4 +34,18 @@ html, body {
   height: var(--size);
   border-radius: var(--size);;
   border: 1px solid white;
+  cursor: none;
+}
+
+#pointer::after {
+  --size: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  background-color: #fff;
+  content: '';
 }
