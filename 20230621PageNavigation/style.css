@@ -63,6 +63,12 @@ html, body {
   /* 상, 좌우, 하 */
   padding: 2rem 2rem 5rem;
   text-shadow: 0 1px 3px rgba(0,0,0,1);
+  opacity: 0;
+}
+.container .page.active .content {
+  opacity: 0;
+  /* keyframes 속도 방식 딜레이 방식 */
+  animation: slideUp 1s linear 0.5s forwards; 
 }
 
 
@@ -97,4 +103,20 @@ html, body {
 .nav .button.active {
   background-color: blue;
   color: white;
+}
+
+
+@keyframes slideUp {
+  /* from{} to{} */
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  50% {
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
