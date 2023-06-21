@@ -39,6 +39,18 @@ html, body {
 
 #pointer::after {
   --size: 4px;
+  /* 가운데 정렬
+  absolute, fixed와 같은 고정 위치를 가질 때 사용
+  top, left │ bottom, right - 각각 50%
+  x = 좌우 이동 값, y = 상하 이동 값
+  transform: translate(x, y)
+  -------------------------------------------------
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -------------------------------------------------
+  */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -49,9 +61,6 @@ html, body {
   background-color: #fff;
   content: '';
 }
-
-/* 포스 스테이트 확인
-  코드 수정 필요 */
 
 #pointer #bubble {
   display: block;
@@ -74,6 +83,6 @@ html, body {
   }
   100% {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
 }
