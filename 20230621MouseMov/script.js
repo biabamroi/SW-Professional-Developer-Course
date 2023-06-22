@@ -24,11 +24,24 @@ window.addEventListener('mousemove',(event)=>{
   // console.log(pointer.offsetWidth) 
 })
 
-window.addEventListener('click', () => {
+
+
+let posX;  // undefined, Position X (정의되지 않은 상태)
+let posY;  // undefined
+
+// 클릭할 때마다 생성
+window.addEventListener('click', (event) => {
   // console.log('click')
+  posX = event.clientX  // 가져와서 할당
+  posY = event.clientY
+  
   const bubble = document.createElement('span')
   bubble.classList.add('bubble')
   app.appendChild(bubble)
+
+  bubble.style.top = posY+'px'
+  bubble.style.left = posX+'px'
+
   console.log(bubble)
 })
 
