@@ -1,3 +1,7 @@
+/* CSS 초기화 종류 */
+/* CSS Normalize */
+/* CSS Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +11,29 @@
 html, body {
   width: 100%;
   height: 100%;
-  background-color: black;
+  /* background-color: black; */
 }
 
+#app {
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+.container .number {
+  font-size: 3rem;
+}
+.container .graph {
+  width: 100%;
+  height: 36px;
+  background-color: gray;
+  border-radius: 0.5rem;
+}
+.container .graph .bar {
+
+}
