@@ -37,13 +37,18 @@ window.addEventListener('click', (event) => {
 
   const bubble = document.createElement('span')
   bubble.classList.add('bubble')
+  bubble.classList.add('active')
   app.appendChild(bubble)
 
   bubble.style.top = posY - (bubble.offsetHeight/2) +'px'
   bubble.style.left = posX - (bubble.offsetWidth/2) +'px'
 
+  setTimeout(()=>{
+    
+  }, 200)
+
   console.log(bubble)
 })
 
 // 자동완성 주의!!! 오타 주의!!!
-
+// html 정적인 문서를 javascript로 동적인 문서

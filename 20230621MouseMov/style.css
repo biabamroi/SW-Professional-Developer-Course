@@ -72,7 +72,7 @@ html, body {
   height: var(--size);
   border-radius: var(--size);
   background-color: #fff;
-  /* opacity: 0; */
+  opacity: 0;
 }
 
 #app .bubble.active {
