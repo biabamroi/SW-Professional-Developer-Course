@@ -20,6 +20,20 @@ container.forEach(item => {
   number.textContent = dataNumber;
   // bar 그래프의 width 값으로 퍼센트 표현
   bar.style.width = dataNumber + '%'
+
+  // console.log(dataNumber)
+
+  // 차오르는 그래프
+  let index = 0;
+  let Interval;
+  setInterval(() => {
+    index++
+    if(index < dataNumber){
+      bar.style.width = index + '%'
+    }
+  }, 30)
+  // clearInterval(Interval)
+
 })
 
 
