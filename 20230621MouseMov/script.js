@@ -44,8 +44,9 @@ window.addEventListener('click', (event) => {
   bubble.style.left = posX - (bubble.offsetWidth/2) +'px'
 
   setTimeout(()=>{
-    
-  }, 200)
+    bubble.remove()
+  }, 1000)  
+  // bubble.remove() 시간을 1000으로 주면 1초 뒤에 사라짐
 
   console.log(bubble)
 })
