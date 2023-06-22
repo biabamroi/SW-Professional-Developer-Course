@@ -1,3 +1,4 @@
+const app = document.getElementById('app')
 const pointer = document.getElementById('pointer')
 // console.log(pointer)
 
@@ -22,4 +23,14 @@ window.addEventListener('mousemove',(event)=>{
   // offserWidth는 border 사이즈도 포함해서 가져온다.
   // console.log(pointer.offsetWidth) 
 })
+
+window.addEventListener('click', () => {
+  // console.log('click')
+  const bubble = document.createElement('span')
+  bubble.classList.add('bubble')
+  app.appendChild(bubble)
+  console.log(bubble)
+})
+
+// 자동완성 주의!!! 오타 주의!!!
 

@@ -63,17 +63,17 @@ html, body {
   content: '';
 }
 
-#pointer #bubble {
+#app .bubble {
   display: block;
   width: var(--size);
   height: var(--size);
   border-radius: var(--size);
   background-color: #fff;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
-#pointer:active {
-  opacity: 0;
+#app .bubble.active {
+  opacity: 1;
   animation: bubble 1s ease-in-out forwards;
 }
 
