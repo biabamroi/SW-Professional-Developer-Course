@@ -11,22 +11,26 @@ html, body {
 
 main {
   width: 100%;
-  height: 100%;
+  height: 100vh;  /* 100% 상태일 때는 왜 세로축 가운데 정렬이 안 될까? */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.title {
+#title {
   font-size: 3rem;  /* 16 * 3 = 48px */
-  opacity: 0;
-  transition: all 500ms ;
+  /* opacity: 0;
+  transition: all 500ms ease-in-out; */
 }
 
 /* .title span {
   display: none;
 } */
 
-#title.active {
-
+.char {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+.char.active {
+  opacity: 1;
 }
