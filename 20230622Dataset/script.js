@@ -23,15 +23,22 @@ container.forEach(item => {
 
   // console.log(dataNumber)
 
-  // 차오르는 그래프
+  // interval에 setInterval 할당
+  // setInterval은 정해진 시간마다 반복하는 메소드
   let index = 0;
   let Interval;
   setInterval(() => {
+    // index +1씩 증가
     index++
-    if(index < dataNumber){
+    // dataNumber 보다 작거나 같을 때까지 반복
+    if(index <= dataNumber){
+      // bar의 길이를 index 퍼센트만큼 할당
       bar.style.width = index + '%'
+      // 목표치까지 숫자로 표기 
+      number.textContent = index
     }
-  }, 30)
+  }, 30) // 0.030초마다 반복
+  
   // clearInterval(Interval)
 
 })
