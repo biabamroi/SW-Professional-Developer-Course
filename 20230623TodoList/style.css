@@ -41,6 +41,7 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 1rem;
 }
 #header h1 {
   display: flex;
@@ -83,8 +84,9 @@ html, body {
 
 #list {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   list-style: none;
-  padding-top: 0.5rem;
 }
 #list .list-item {
   display: flex;
