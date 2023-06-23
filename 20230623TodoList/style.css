@@ -110,9 +110,12 @@ html, body {
   opacity: 0.4;
 }
 #list .list-item .list-delete {
+  position: absolute; /* line-through 영향 안 받으려면 */
+  top:0;
+  right:0;
   display: flex;
-  width: 36px;
-  height: 36px;
+  width: 24px;
+  height: 24px;
   background-color: hsla(9, 100%, 50%, 0.938);
   color: #fff;
   border: 0;
