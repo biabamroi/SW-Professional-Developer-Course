@@ -12,6 +12,9 @@ startBtn.addEventListener('click',() => {
   },100)
 })
 
+stopBtn.addEventListener('click',()=>{
+  clearInterval(timerId)
+})
 
 // let index = 0;
 // // 1000 milliseconds - 1 second
