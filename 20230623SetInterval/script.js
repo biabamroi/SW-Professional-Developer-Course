@@ -6,6 +6,7 @@ let index = 0;
 let timerId;
 
 startBtn.addEventListener('click',() => {
+  index = 0;
   timerId = setInterval(()=>{
     index++
     number.textContent = index;
