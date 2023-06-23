@@ -17,3 +17,12 @@ html, body {
   font-family: 'Ansungtangmyun-Bold', sans-serif;
 }
 
+#app {}
+.list-container {}
+#header {}
+.input-wrapper {}
+#add-todo {}
+#add-button {}
+#list {}
+.list-item {}
+.list-delete {}
