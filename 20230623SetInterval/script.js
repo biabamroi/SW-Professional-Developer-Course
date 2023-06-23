@@ -1,6 +1,7 @@
 const number = document.querySelector('.number')
 const startBtn = document.getElementById('start')
 const stopBtn = document.getElementById('stop')
+const list = document.getElementById('list')
 
 let index = 0;
 let timerId;
@@ -15,6 +16,9 @@ startBtn.addEventListener('click',() => {
 
 stopBtn.addEventListener('click',()=>{
   clearInterval(timerId)
+  const li = document.createElement('li')
+  li.textContent = index
+  list.appendChild(li)
 })
 
 // let index = 0;
