@@ -105,6 +105,10 @@ html, body {
   height: 100%;
   background: url('https://api.iconify.design/ci/wavy-check.svg?color=red') no-repeat 0 center / contain; /* alt + z 자동 줄바꿈 */
 }
+#list .list-item.checked {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
 #list .list-item .list-delete {
   display: flex;
   width: 36px;
