@@ -1,0 +1,39 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@100;200;300;500;800;900;1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Ysabeau SC', sans-serif;
+}
+
+button {
+  font-family: 'Ysabeau SC', sans-serif;
+  text-transform: uppercase;  /* 대문자 */
+  /* text-transform: capitalize; 앞 글자만 대문자 */ 
+  /* text-transform: lowercase; 소문자 */
+  border: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+}
+
+button#start {
+  background-color: hsl(0, 0%, 0%);
+  color: antiquewhite;
+}
+
+.number {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+#app {
+  padding: 1rem;
+}
