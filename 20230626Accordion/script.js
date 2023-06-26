@@ -20,4 +20,9 @@ listItem.forEach((item)=>{
   })
 })
 
+// items.forEach((e)=>{
+//   //하나만 선택되도록 기존의 효과를 지워준다.
+//     e.classList.remove('active');
+// })
+
 
