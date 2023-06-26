@@ -63,6 +63,8 @@ const saveData = ()=>{
 const loadData = ()=>{
   list.innerHTML = localStorage.getItem('list')
 }
+// 
+// document.addEventListener('load', ()=> loadData())
 
 loadData()
 
