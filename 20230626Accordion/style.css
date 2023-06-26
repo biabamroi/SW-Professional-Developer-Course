@@ -22,12 +22,11 @@
 }
 .list__button {
   display: flex;
-  justify-content: space-between;
   border: 0;
   padding: 1rem;
-  margin-bottom: 1rem;
   background-color: #fff;
   cursor: pointer;
+  justify-content: space-between;
 }
 .list__button .icon {
   transform: rotate(0deg);
@@ -36,7 +35,7 @@
   background-color: hsl(220, 50%, 90%);
 }
 .list__content {
-  display: flex;
+  display: none;
   padding: 1rem;
 }
 
