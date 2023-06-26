@@ -1,6 +1,11 @@
-const start = document.getElementById('.start')
-const stop = document.getElementById('.stop')
+const start = document.getElementById('start')
+const stop = document.getElementById('stop')
+const app = document.getElementById('app')
 
-Button = addEventListener('click', ()=>{
-  console.log(start, stop)
+start.addEventListener('click', ()=>{
+  console.log(start.innerText)
 })
+stop.addEventListener('click', ()=>{
+  console.log(stop.innerText)
+})
+
