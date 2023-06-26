@@ -1,5 +1,19 @@
 // .scss 사스 (sass)
 // 확장 프로그램 Live Sass Compiler
+// 개발 단계에서 필요하고 브라우저 x
+
+// BEM
+// block - block list
+// Element - item, button
+// Modifier - active, disable
+// list__item
+// list__item--active
+// button__icon--primary
+// button--alert
+// button--info
+
+@import "list.scss";
+// 파일 저장 시 언더바(_)를 붙이면 인식하지 않고, 그대로 불러와서 적용
 
 * {
   margin: 0;
@@ -11,4 +25,10 @@ html, body {
   width: 100%;
   height: 100%;
 }
+
+#app {
+  padding: 1rem;
+}
+
+
 
