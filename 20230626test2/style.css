@@ -9,3 +9,18 @@ html, body {
   height: 100%;
 }
 
+main {
+  padding: 1rem;
+}
+
+h1 {
+  padding-bottom: 1rem;
+}
+
+#title {
+  font-size: 16px;
+}
+
+#title.active {
+  color: red;
+}
