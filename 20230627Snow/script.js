@@ -5,7 +5,7 @@ let count = 0;
 const addSnow = ()=>{
 
   let size = (Math.random() * (5 - 1) + 1) + 'px';
-  let blur = Math.random() * (3 - 1) + 1 + 'px';
+  let blur = Math.random() * (3 - 0) + 0 + 'px';
 
   // 1. createElement로 span 태그 생성
   const span = document.createElement('span')
