@@ -45,22 +45,36 @@
 const app = document.getElementById('app')
 // 코드 재활용하지 말고 그냥 새로 작성하자...
 
-let todo = fetch('https://jsonplaceholder.typicode.com/users') // User email 주소 출력
+let todo = fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=10') // 사진첩
+// let todo = fetch('https://jsonplaceholder.typicode.com/users') // User email 주소 출력
 // let todo = fetch('https://jsonplaceholder.typicode.com/posts') // 포스트 100여개
 // todo.then(response => response.json()).then(json => json.forEach(item => posts.push(item)))
 todo
 .then(response => response.json())
 .then(json => {
-  json.forEach(item => {
-    const h2 = document.createElement('h2')
-    const p = document.createElement('p')
-    // console.log(item)
-    h2.textContent = item.name;
-    p.textContent = item.email;
-    app.appendChild(h2)
-    app.appendChild(p)
+  json.forEach(imageData => {
+    const img = document.createElement('img')
+    img.src = imageData.url;
+    app.appendChild(img)
   })
+  // json.forEach(item => {
+  //   const img = document.createElement('img')
+  //   img.src = item.url;
+  //   app.appendChild(img)
+  // })
 })
+// todo
+// .then(response => response.json())
+// .then(json => {
+//   json.forEach(item => {
+//     const h2 = document.createElement('h2')
+//     const p = document.createElement('p')
+//     h2.textContent = item.name;
+//     p.textContent = item.email;
+//     app.appendChild(h2)
+//     app.appendChild(p)
+//   })
+// })
 
 // console.log(posts)
 
