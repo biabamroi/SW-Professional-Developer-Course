@@ -13,7 +13,10 @@ listItem.forEach((item)=>{
   // 불러온 item을 클릭할 때마다 active 클래스 추가 또는 삭제
   item.addEventListener('click',()=>{
     // item 하나만 active class를 가질 수 있다.
-    listItem.forEach(e => e.classList.remove('active'))
+    listItem.forEach((e) => {e.classList.remove('active')
+    // const content = document.querySelectorAll('.list__content')
+    // content.style.display = none;  혼자 해 보다가 시간 부족,, 
+  })
     // item에 active 클래스를 추가 또는 삭제
     // item.classList.toggle('active')
     item.classList.add('active')
