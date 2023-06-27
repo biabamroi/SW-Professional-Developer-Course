@@ -4,7 +4,7 @@ let count = 0;
 
 const addSnow = ()=>{
 
-  let size = Math.random() * (5 - 1) + 1 + 'px';
+  let size = (Math.random() * (5 - 1) + 1) + 'px';
   let blur = Math.random() * (3 - 1) + 1 + 'px';
 
   // 1. createElement로 span 태그 생성
@@ -21,6 +21,8 @@ const addSnow = ()=>{
   span.style.height = size
   span.style.opacity = Math.random();
   span.style.filter = `blur(${blur})`
+  span.style.animationDelay = Math.random() * (10 - 1) + 1 + 's';
+  span.style.animationDuration = Math.random() * (10 - 1) + 1 + 's';
   // let random = Math.random() // 0부터 1의 난수
   // // 최대값과 최소값 범위 지정 필요
   // function getRandom(min, max){
