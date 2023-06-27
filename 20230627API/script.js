@@ -23,8 +23,6 @@
 // },2000)
 // ---------------------------------------------
 
-// const app = document.getElementById('#app')
-
 // // promise 안에 약속(Promise)를 담은 상태
 // // promise는 비동기처리 → 동기처럼 순서를 기다리기 위해서
 // let Promis = new Promise((resolve, reject)=>{ // 약속, 익명 함수, 매개 변수 순서 주의
@@ -39,5 +37,16 @@
 
 // https://jsonplaceholder.typicode.com/
 
-let todo = fetch('https://jsonplaceholder.typicode.com/todos/1')
-todo.then(response => response.json()).then(json => console.log(json))
+// fetch - 서버로부터 데이터를 받아올 때 사용하는 API
+// let todo = fetch('https://jsonplaceholder.typicode.com/todos') // 할 일 목록 200여개
+// todo.then(response => response.json()).then(json => console.log(json))
+
+let posts = [];
+
+let todo = fetch('https://jsonplaceholder.typicode.com/posts') // 포스트 100여개
+todo.then(response => response.json()).then(json => json.forEach(item => posts.push(item)))
+
+console.log(posts)
+const app = document.getElementById('#app')
+
+
