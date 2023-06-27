@@ -9,11 +9,19 @@ toggle.addEventListener('click',(e)=>{
   e.preventDefault()
   // 2. toggle-container 클릭 시 active 클래스 추가/삭제
   toggle.classList.toggle('active')
-  if(check){
-    check = false
-    console.log(check)
-  }else{
-    check = true
-    console.log(check)
-  }
+
+  // 활성화 input#toggle:checked + .switch
+  const input = e.currentTarget.querySelector('input')
+  input.checked = check;
+  
+  // true, false 뒤집는 역할
+  check = !check
+  console.log(check)
+  // if(check){
+  //   check = false
+  //   console.log(check)
+  // }else{
+  //   check = true
+  //   console.log(check)
+  // }
 })
