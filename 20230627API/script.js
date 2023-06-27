@@ -45,15 +45,19 @@
 const app = document.getElementById('app')
 // 코드 재활용하지 말고 그냥 새로 작성하자...
 
-let todo = fetch('https://jsonplaceholder.typicode.com/posts') // 포스트 100여개
+let todo = fetch('https://jsonplaceholder.typicode.com/users') // User email 주소 출력
+// let todo = fetch('https://jsonplaceholder.typicode.com/posts') // 포스트 100여개
 // todo.then(response => response.json()).then(json => json.forEach(item => posts.push(item)))
 todo
 .then(response => response.json())
 .then(json => {
   json.forEach(item => {
+    const h2 = document.createElement('h2')
     const p = document.createElement('p')
     // console.log(item)
-    p.textContent = item.title
+    h2.textContent = item.name;
+    p.textContent = item.email;
+    app.appendChild(h2)
     app.appendChild(p)
   })
 })
