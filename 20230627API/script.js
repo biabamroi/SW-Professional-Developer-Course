@@ -41,12 +41,29 @@
 // let todo = fetch('https://jsonplaceholder.typicode.com/todos') // 할 일 목록 200여개
 // todo.then(response => response.json()).then(json => console.log(json))
 
-let posts = [];
+// let posts = [];
+const app = document.getElementById('app')
+// 코드 재활용하지 말고 그냥 새로 작성하자...
 
 let todo = fetch('https://jsonplaceholder.typicode.com/posts') // 포스트 100여개
-todo.then(response => response.json()).then(json => json.forEach(item => posts.push(item)))
+// todo.then(response => response.json()).then(json => json.forEach(item => posts.push(item)))
+todo
+.then(response => response.json())
+.then(json => {
+  json.forEach(item => {
+    const p = document.createElement('p')
+    // console.log(item)
+    p.textContent = item.title
+    app.appendChild(p)
+  })
+})
 
-console.log(posts)
-const app = document.getElementById('#app')
+// console.log(posts)
+
+// posts.forEach(post => {
+//   // 받아와서 let posts = []; 구문 처리하기 전에 forEach가 돌면서 비활성화
+//   console.log(post)
+// })
+
 
 
