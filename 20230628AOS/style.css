@@ -10,7 +10,7 @@ html, body {
 }
 
 main {
-  background-image: url('https://images.pexels.com/photos/1028600/pexels-photo-1028600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-image: url('https://images.pexels.com/photos/268892/pexels-photo-268892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -32,8 +32,8 @@ section:nth-child(even) {
 section p {
   width: 50ch; /* 50글자 */ /* 35~50글자 이내가 좋다 */
   font-size: 2rem;
-  color: black;
-  text-shadow: 1px 1px 3px white;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px black;
 }
 
 
