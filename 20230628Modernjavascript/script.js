@@ -154,6 +154,7 @@ console.log(num)
 /**
  * rest 연산자
  * args = arguments (인수)
+ * arguments 객체는 모든 함수 내에서 이용 가능한 지역 변수
  */
 
 // const numbers = [1,2,3]
@@ -177,5 +178,16 @@ const filterAlphabet = (...args) => {
   return args.filter(alphabet => alphabet === 'a')
 }
 console.log(filterAlphabet('a','b','c','d'))
+// ['a'] filter 메소드는 결과를 배열로 만들어 준다.
 
+
+// const pokemons = ['피카츄','고라파덕','이상해씨]
+// 변수명 : filterPokemon
+// 조건 : "피카츄"만 출력
+// 결과 : ['피카츄']
+
+const filterPokemons = (...args) => {
+  return args.filter(pokemon => pokemon === '피카츄')
+}
+console.log(filterPokemons(...pokemons))
 
