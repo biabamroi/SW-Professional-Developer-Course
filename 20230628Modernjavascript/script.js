@@ -198,3 +198,75 @@ console.log(filterPokemons(...pokemons))
 
 
 
+// console.log(1+'2')
+// console.log(1+2)
+
+// let res = 1+'2'
+// console.log(res) // '12'
+// console.log(typeof res)
+
+
+
+/**
+ * 구조분해 - Destructuring
+ * structure - 구조
+ * de - 분해
+ */
+
+const [a, b] = [1, 2]
+console.log(a)
+console.log(b)
+
+
+// const pokemons = ['피카츄','고라파덕','이상해씨]
+// 변수 3개 구조 분해해서 담아주세요.
+// console.log() 결과 출력
+
+const [c,d,e] = pokemons
+console.log(c,d,e)
+
+// const newMons = [...pokemons, '파이리']
+// const newMons2 = [pokemons, '파이리']
+// console.log(newMons2) // [[],]
+// console.log(newMons2.length) // 2
+
+// 공백 부분은 skip (건너뛴다)
+const [first, , ,second] = pokemons
+console.log(first, second) // ['피카츄', undefined]
+// 배열 중 정해진 순서대로 출력
+
+
+
+/**
+ * 객체 구조분해
+ */
+
+const { nickname, age } = {
+  nickname: '홍길동',
+  age: 16
+}
+console.log(nickname, age)
+
+
+/**
+ * map 배열 메소드
+ * forEach / Map의 차이
+ * map은 결과를 새로운 배열로 반환해 준다.
+ */
+
+// const numbers = [1,2,3]
+const doubleNumbers = numbers.map(num=>num*2)
+console.log(doubleNumbers) // [2, 4, 6]
+
+
+// const pokemons = ['피카츄','고라파덕','이상해씨]
+// map 활용하여 문자열을 더해주세요.
+// '너로 정했다!'
+// namedPokemon
+
+const namedPokemon = pokemons.map(pokemon=>pokemon+', 너로 정했다!')
+// const namedPokemon = pokemons.map(pokemon=>pokemons+', 너로 정했다!')
+console.log(namedPokemon)
+
+
+
