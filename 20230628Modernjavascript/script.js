@@ -65,10 +65,10 @@ class Pokemon {
   }
 }
 
-class Trainer extends Pokemon {
+class Trainer extends Pokemon { // ----------------extends ★
   // 초기화, trainerName 기본값 = '지우'
   constructor(trainerName = '지우'){
-    super()
+    super()  //------------------------------------super ★
     this.name = trainerName
   }
   // trainer 이름 출력하는 메소드
