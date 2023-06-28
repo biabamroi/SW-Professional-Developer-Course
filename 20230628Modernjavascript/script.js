@@ -93,3 +93,24 @@ trainer.showPokemonName()
 // // console.log(evolution.name)
 // evolution.showEvolutionName() // ★
 
+
+
+/**
+ * 스프레드 연산자
+ */
+
+const pokemons = ['피카츄', '고라파덕', '이상해씨']
+// 스프레드 연산자 '...' 배열을 통째로 가져와서 펼치는 역할 
+const newPoke = [...pokemons, '파이리']
+// 기존 방식
+// pokemons.forEach(pokemon => newPoke.push(pokemon))
+// newPoke.push('파이리')
+// console.log(newPoke)
+console.log(pokemons)
+
+const numbers = [1,2,3]
+// 4, 5를 추가해서 newNumbers 배열을 새로 생성하세요.
+const newNumbers = [...numbers, 4, 5]
+console.log(newNumbers)
+
+
