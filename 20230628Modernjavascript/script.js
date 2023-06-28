@@ -73,14 +73,19 @@ class Trainer extends Pokemon { // ----------------extends ★
   }
   // trainer 이름 출력하는 메소드
   showTrainerName(){
-    console.log(this.name)
+    console.log(this.name) // this = class 
+  }
+  another(){
+    // 내부 메소드를 끌어다 쓰는 방법
+    this.showTrainerName()
   }
 }
 const trainer = new Trainer('웅이')
 // trainer.name = '웅이'
 // console.log(trainer.name)
-trainer.showTrainerName()
+trainer.showTrainerName() 
 trainer.showPokemonName()
+trainer.another()
 
 // class Pokemon {
 //   // 초기화, trainerName 기본값 = '지우'
