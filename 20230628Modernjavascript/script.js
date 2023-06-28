@@ -165,6 +165,17 @@ const filterNumbers = (...args) => {
     // return number
   // }
 // })
-console.log(filterNumbers(1,3,6,7,8))
+console.log(filterNumbers(1,3,6,7,8)) // [1]
+
+
+// filterAlphabet 생성
+// a,b,c,d 인수 필터링
+// 조건 : alphabet === 'a' 
+// 결과 : ['a']
+
+const filterAlphabet = (...args) => {
+  return args.filter(alphabet => alphabet === 'a')
+}
+console.log(filterAlphabet('a','b','c','d'))
 
 
