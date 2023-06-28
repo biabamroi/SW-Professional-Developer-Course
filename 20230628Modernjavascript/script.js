@@ -161,6 +161,11 @@ console.log(num)
 const filterNumbers = (...args) => {
   return args.filter(number => number === 1)
 }
+
+// 조건을 두 가지 걸러낼 때 
+// OR 
+// if(number === 1 || number === 3){}
+
 // return args.filter(number=>{
   // if(number===1){
     // return number
@@ -190,4 +195,6 @@ const filterPokemons = (...args) => {
   return args.filter(pokemon => pokemon === '피카츄')
 }
 console.log(filterPokemons(...pokemons))
+
+
 
