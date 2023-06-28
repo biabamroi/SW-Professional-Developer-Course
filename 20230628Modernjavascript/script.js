@@ -1,3 +1,8 @@
+/** 
+ * 자바스크립트 공부하기 좋은 사이트
+ * https://ko.javascript.info/
+ */
+
 // 상수, 변수
 // 기존 자바스크립트 ES5
 // ES6, ES7, ES2019... ES6 → ESNEXT
