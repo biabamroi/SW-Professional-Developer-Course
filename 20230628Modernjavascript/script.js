@@ -95,8 +95,18 @@ trainer.showPokemonName()
 
 
 
+
+// 함수가 클래스 안에 들어가면 메소드
+// 변수가 클래스 안에 들어가면 프로퍼티
+
+
+
+
 /**
  * 스프레드 연산자
+ * 배열에서 쓸 수 있고 
+ * 객체에서도 쓸 수 있다.
+ * 반드시 ... (점 세 개)
  */
 
 const pokemons = ['피카츄', '고라파덕', '이상해씨']
@@ -112,5 +122,49 @@ const numbers = [1,2,3]
 // 4, 5를 추가해서 newNumbers 배열을 새로 생성하세요.
 const newNumbers = [...numbers, 4, 5]
 console.log(newNumbers)
+
+
+// 객체 {}
+const pokemonTrainer = {
+  name:'지우',
+  pokemon:"피카츄"
+}
+console.log(pokemonTrainer.name)
+const newTrainer = {
+  ...pokemonTrainer, // 내용을 가져와서 뿌리는
+  age:20
+}
+console.log(newTrainer)
+
+
+//
+const char = {
+  enLength: 26,
+}
+// char의 내용을 복사해서
+// alphabet: characters 속성을 추가하여 출력
+const num = {
+  ...char,
+  alphabet: 'characters'
+}
+console.log(num)
+
+
+
+/**
+ * rest 연산자
+ * args = arguments (인수)
+ */
+
+// const numbers = [1,2,3]
+const filterNumbers = (...args) => {
+  return args.filter(number => number === 1)
+}
+// return args.filter(number=>{
+  // if(number===1){
+    // return number
+  // }
+// })
+console.log(filterNumbers(1,3,6,7,8))
 
 
