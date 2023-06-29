@@ -107,5 +107,5 @@ console.log(calc.double(2))
 // npm create vite@latest exam
 // vite 최신버전을 가져와서 설치하겠다 
 // 설치하려는 프레임워크 선택 - 화면 안 움직여도 화살표 숫자대로
-
+// 해당 폴더에서 npm install
 
