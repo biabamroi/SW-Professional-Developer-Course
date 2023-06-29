@@ -54,11 +54,20 @@
 // util.js
 // 두 가지 이상 함수를 불러올 때
 
-import {add, multiply} from './util.js'
+// import {add, multiply} from './util.js'
 // 이름 바꿀 때, as 
 // ex. add as plus 부를 때 console.log(plus(2))
 
-console.log(add(4)) // 8
-console.log(multiply(5)) // 10
+// console.log(add(4)) // 8
+// console.log(multiply(5)) // 10
 
+// * 전체 묶음 가져올 때
+import * as calc from './util.js'
+// 임의 이름 지정
+
+console.log(calc.add(6)) // 12
+console.log(calc.multiply(7)) //14
+// 자식 요소처럼 임의 이름 '.''함수이름'(출력할 수)
+
+// 네트워크 비용 감소,,, 
 
