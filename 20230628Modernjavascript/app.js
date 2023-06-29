@@ -83,3 +83,29 @@ console.log(calc.multiply(7)) //14
 // }
 
 console.log(calc.double(2))
+
+
+// node.js
+// nodejs.org/ko
+// 브라우저 밖으로 자바
+// lTS 장기간 유지보수 보안 안정화
+// 최신버전 변환 변동 
+// 설치 후 
+// git bash 에 node --version 버전 뜨면 잘 된 것.
+// npm --version
+// 자바스크립트 번들러 
+// webpack.kr
+// 뭉탱이 효율적으로 가져와서 쓰게끔 
+// 프론트엔드 3대장 
+// https://yozm.wishket.com/magazine/detail/1261/
+// vite https://ko.vitejs.dev/guide/
+// reatc.dev/learn  // Next.js React 프레임워크
+// parcel ko.parceljs.org
+// 뷰, 엥글러 
+
+// folder - git bash - li -al 
+// npm create vite@latest exam
+// vite 최신버전을 가져와서 설치하겠다 
+// 설치하려는 프레임워크 선택 - 화면 안 움직여도 화살표 숫자대로
+
+
