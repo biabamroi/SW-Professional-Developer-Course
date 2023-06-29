@@ -109,3 +109,6 @@ console.log(calc.double(2))
 // 설치하려는 프레임워크 선택 - 화면 안 움직여도 화살표 숫자대로
 // 해당 폴더에서 npm install
 
+// 준비 끝난 상태에서
+// 명령어 npm run dew
+// 프롬프트 ctrl + 주소 클릭하면 창 뜸
