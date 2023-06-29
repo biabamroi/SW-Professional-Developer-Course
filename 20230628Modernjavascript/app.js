@@ -32,9 +32,9 @@
 // 함수를 다른 프로젝트에서도 쓰고 싶을 때
 // 잘라내서 다른 script 파일로 --> app copy.js
 
-import add from './add.js'
+// import add from './add.js'
 
-console.log(add(2))
+// console.log(add(2)) // 4
 
 // multiply
 // 매개변수 number를 받아서 *2한 값을 반환
@@ -45,15 +45,20 @@ console.log(add(2))
 //   return number *2
 // }
 
-import multiply from './multiply.js'
+// import multiply from './multiply.js'
 
-console.log(multiply(3))
-
-
+// console.log(multiply(3)) // 6
 
 
 
+// util.js
+// 두 가지 이상 함수를 불러올 때
 
+import {add, multiply} from './util.js'
+// 이름 바꿀 때, as 
+// ex. add as plus 부를 때 console.log(plus(2))
 
+console.log(add(4)) // 8
+console.log(multiply(5)) // 10
 
 
