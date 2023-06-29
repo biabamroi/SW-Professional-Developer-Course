@@ -9,3 +9,6 @@ export const add = (number)=>{
   return number + number
 }
 
+export const double = (number)=>{
+  return number * number
+}

@@ -71,3 +71,15 @@ console.log(calc.multiply(7)) //14
 
 // 네트워크 비용 감소,,, 
 
+
+// util.js
+// 함수 - double을 export
+// 매개변수 - number
+// double은 매개변수 number * number
+// app.js 결과 
+
+// export const double = (number)=>{
+//   return number * number
+// }
+
+console.log(calc.double(2))
