@@ -23,7 +23,7 @@
 // ESNEXT
 /**
  * import / export
- * 
+ * export default는 1개의 값만 
  */
 
 // const add = (number)=>{
@@ -47,6 +47,13 @@ console.log(add(2))
 
 import multiply from './multiply.js'
 
-console.log(multiply(2))
+console.log(multiply(3))
+
+
+
+
+
+
+
 
 
