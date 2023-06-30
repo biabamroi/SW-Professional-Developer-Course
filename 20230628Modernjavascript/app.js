@@ -110,5 +110,5 @@ console.log(calc.double(2))
 // 해당 폴더에서 npm install
 
 // 준비 끝난 상태에서
-// 명령어 npm run dew
+// 명령어 npm run dev
 // 프롬프트 ctrl + 주소 클릭하면 창 뜸
