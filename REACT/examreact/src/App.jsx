@@ -16,6 +16,15 @@ import Heading from './components/Heading.jsx'
 
 import Flex from './components/Flex.jsx'
 
+// 싱글 페이지 애플리케이션 SPA : 1개의 페이지에서 모두 함.
+// CSR 클라이언트 사이드 렌더링, SSR 서버 사이드 렌더링
+// Client Side Rendering 고객 위치에서 렌더링
+// Server Side Rendering 서버에서 렌더링하고 던짐
+// 네이버 같은 검색엔진들이 제대로 못 읽고 감 → NEXTJS
+// 구글은 전체 페이지 실행될 때까지 기다렸다가 읽고 감 
+
+// 웹 컴포넌트 - YOUTUBE
+
 function App(){
   return (
     <>
