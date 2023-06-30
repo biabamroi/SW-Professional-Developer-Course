@@ -112,3 +112,13 @@ console.log(calc.double(2))
 // 준비 끝난 상태에서
 // 명령어 npm run dev
 // 프롬프트 ctrl + 주소 클릭하면 창 뜸
+
+
+// npm은 자바스크립트 프로그래밍 언어를 위한 패키지 관리자이다.
+
+// https://www.npmjs.com/
+
+// 관리자모드에서 확장프로그램 추가
+// > React 작동하려면 Git Bash로 열어야..
+// React Developer Tools
+// Hot Module R...
