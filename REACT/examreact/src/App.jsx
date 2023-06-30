@@ -44,6 +44,7 @@ function App(){
       <Button title="3번" color="blue" size="24px" border="black" bgc="#9de8ffbb" right="1rem"/> */}
       
       <Button title="1번" primary/>
+      {/* <Button title="1번" primary={true}/> */}
       <Button title="2번" secondary/>
       <Button title="3번"/>
       
