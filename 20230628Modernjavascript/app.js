@@ -114,6 +114,10 @@ console.log(calc.double(2))
 // 프롬프트 ctrl + 주소 클릭하면 창 뜸
 
 
+
+
+// 검색
+
 // npm은 자바스크립트 프로그래밍 언어를 위한 패키지 관리자이다.
 
 // https://www.npmjs.com/
@@ -122,3 +126,18 @@ console.log(calc.double(2))
 // > React 작동하려면 Git Bash로 열어야..
 // React Developer Tools
 // Hot Module R...
+
+// npm trends: Compare NPM package downloads
+
+// npmtrends.com
+// https://npmtrends.com
+// Which NPM package should you use? Compare packages download stats, bundle sizes, github stars and more. Spot trends, pick the winner.
+// Angular vs react vs vue
+// Comparing trends for angular 1.8.3 which has 523598 weekly ...
+// React
+// Comparing trends for react 18.2.0 which has 19944987 weekly ...
+// Cypress
+// Comparing trends for cypress 12.16.0 which has 5123712 weekly ...
+// React vs vue
+// npm trends. react vs vue. Popular Searches. angular vs react vs ...
+// npmtrends.com 검색결과 더보기 »
