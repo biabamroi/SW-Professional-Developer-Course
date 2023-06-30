@@ -39,9 +39,13 @@ function App(){
 
       <Flex>
 
-      <Button title="1번" color="red" size="16px" border="black" bgc="#9de8ffbb" right="1rem"/>
+      {/* <Button title="1번" color="red" size="16px" border="black" bgc="#9de8ffbb" right="1rem"/>
       <Button title="2번" color="green" size="18px" border="black" bgc="#9de8ffbb" right="1rem"/>
-      <Button title="3번" color="blue" size="24px" border="black" bgc="#9de8ffbb" right="1rem"/>
+      <Button title="3번" color="blue" size="24px" border="black" bgc="#9de8ffbb" right="1rem"/> */}
+      
+      <Button title="1번"/>
+      <Button title="2번"/>
+      <Button title="3번"/>
       
       </Flex>
       </div>

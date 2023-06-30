@@ -22,13 +22,23 @@
 //   )
 // }
 
-export default function Button(props){
+// export default function Button(props){
+//   return(
+//     <button style={{color:props.color,
+//       fontSize:props.size,
+//       borderColor:props.border,
+//       backgroundColor:props.bgc,
+//       marginBottom:props.right
+//     }}>{props.title}</button>
+//   )
+// }
+
+
+import style from './Button.module.css'
+
+export default function Button({title}){
   return(
-    <button style={{color:props.color,
-      fontSize:props.size,
-      borderColor:props.border,
-      backgroundColor:props.bgc,
-      marginBottom:props.right
-    }}>{props.title}</button>
+  <button className={style.button}>{title}</button>
   )
 }
+
