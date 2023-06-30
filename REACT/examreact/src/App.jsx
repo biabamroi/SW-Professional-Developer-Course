@@ -20,6 +20,8 @@ function App(){
     {/* key값 필수 부모가 있을 때는 부모한테 */}
     
     <Flex>
+      {/* 풀옵 드릴링 */}
+      {/* atomic design */}
     {images && images.map(image =>
       (
       <div key={image.id}>
