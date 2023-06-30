@@ -11,3 +11,7 @@
   background-color: black;
   color: white;
 }
+.button.secondary {
+  background-color: gray;
+  color: white;
+}
