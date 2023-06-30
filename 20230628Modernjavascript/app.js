@@ -141,3 +141,9 @@ console.log(calc.double(2))
 // React vs vue
 // npm trends. react vs vue. Popular Searches. angular vs react vs ...
 // npmtrends.com 검색결과 더보기 »
+
+
+// [ 특정 패키지 설치할 때
+//   npm install prettier -D
+//   (Dev 개발 환경에만 쓰겠다)
+  
