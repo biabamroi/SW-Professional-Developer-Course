@@ -38,7 +38,10 @@ import style from './Button.module.css'
 
 export default function Button({title}){
   return(
-  <button className={style.button}>{title}</button>
+  <button className={[style.button, style.primary].join(' ')}>{title}</button>
   )
 }
+
+// 두 가지 이상 - 배열 []
+// css 작동을 위한 ].join(' ') 띄어쓰기 합체 ex. button primary 
 
