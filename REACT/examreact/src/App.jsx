@@ -21,7 +21,7 @@ function App(){
     
     <Flex>
       {/* 풀옵 드릴링 */}
-      {/* atomic design */}
+      {/* atomic design */} {/* useState? */}
     {images && images.map(image =>
       (
       <div key={image.id}>
