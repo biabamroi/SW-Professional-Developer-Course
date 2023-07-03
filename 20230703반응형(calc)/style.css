@@ -42,18 +42,46 @@ body {
   display: inline-block;
   width: calc((100% - 80px)/4);
   /* 마진 값 : 4개 합쳐서 80 */
-  border: 1px solid red;
+  margin: 20px 10px;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #fff;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
+.img_box {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
 }
 
 .img_box img {
-  width: 200px;
+  /* width: 200px; 임시로 줬던 값 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .menu_title {
-  padding: 10px 0;
+  /* 내용이 길어서 떨어질 경우 한 줄로 표시 */
+  white-space: nowrap;
+  /* 사이즈보다 넘치는 분량을 숨김 */
+  overflow: hidden;
+  /* 넘어가는 글자를 ... 으로 표기 */
+  text-overflow: ellipsis;
+  margin-top: 20px;
 }
 
 .menu_info {
   display: flex;
   justify-content: space-between;
+  padding: 10px 0;
+}
+
+.date,
+.count {
+  font-size: 14px;
+  color: #666;
 }
