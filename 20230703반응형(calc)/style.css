@@ -51,7 +51,10 @@ body {
 }
 .menu_box:hover {
   transform: scale(1.04);
-  box-shadow: 0 10px 15px rgba(0,0,0,0.6);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.6);
+}
+.menu_box:hover .img_box img {
+  filter: blur(0);
 }
 
 .img_box {
@@ -68,9 +71,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   filter: blur(1px);
-}
-.img_box img:hover {
-  filter: none;
+  transition: filter 300ms ease-in-out;
 }
 
 .menu_title {
