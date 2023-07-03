@@ -47,6 +47,11 @@ body {
   border-radius: 7px;
   background-color: #fff;
   box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+  transition: transform 300ms ease-in-out;
+}
+.menu_box:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.6);
 }
 
 .img_box {
@@ -62,6 +67,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  filter: blur(1px);
+}
+.img_box img:hover {
+  filter: none;
 }
 
 .menu_title {
