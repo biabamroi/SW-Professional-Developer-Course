@@ -18,6 +18,20 @@ function openSidebar() {
   sidebarOverlay.classList.add('is-active');
 }
 
+// jQuery
+// .addClass(className)
+
+// $('h1').addClass('abc');
+// $('h1').addClass('ab cd ef');
+
+// $(document).ready(funciton(){
+//  $('h1').addClass('bg');
+//  $('h1').addClass('bg bd');
+// });
+
+// .removeClass()
+// .toggleClass()
+
 sidebarMenuButton.addEventListener('click', openSidebar)
 
 function closeSidebar() {
