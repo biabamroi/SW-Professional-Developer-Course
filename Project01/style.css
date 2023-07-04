@@ -9,3 +9,41 @@ html, body {
   height: 100%;
 }
 
+.main-board {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 70%;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 4mm ridge rgba(180, 180, 177, 0.6);
+  background-color: rgb(4, 71, 4);
+}
+.main-board .eraser {
+  width: 100px;
+  height: 50px;
+  background-color: blue;
+}
+.main-board .white {
+  width: 5px;
+  height: 2px;
+  background-color: #fff;
+}
+.main-board .yellow {
+  width: 5px;
+  height: 2px;
+  background-color: yellow;
+}
+.main-board .red {
+  width: 5px;
+  height: 2px;
+  background-color: red;
+}
+.main-leg {
+  display: flex;
+  justify-content: space-around;
+}
+.main-leg span {
+  border: 3mm ridge rgb(65, 55, 4);
+}
