@@ -216,6 +216,7 @@ button {
   transition: transform 200ms ease-in-out;
 }
 
+/* 클릭 후 보이기 위해 높이값을 0으로 잡고 숨김 */
 .drawer-menu-content {
   max-height: 0;
   overflow: hidden;
