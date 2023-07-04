@@ -23,21 +23,25 @@ html, body {
 .main-board .eraser {
   width: 100px;
   height: 50px;
+  border-radius: 5px;
   background-color: blue;
 }
 .main-board .white {
-  width: 5px;
-  height: 2px;
+  width: 30px;
+  height: 15px;
+  border-radius: 3px;
   background-color: #fff;
 }
 .main-board .yellow {
-  width: 5px;
-  height: 2px;
+  width: 30px;
+  height: 15px;
+  border-radius: 3px;
   background-color: yellow;
 }
 .main-board .red {
-  width: 5px;
-  height: 2px;
+  width: 30px;
+  height: 15px;
+  border-radius: 3px;
   background-color: red;
 }
 .main-leg {
