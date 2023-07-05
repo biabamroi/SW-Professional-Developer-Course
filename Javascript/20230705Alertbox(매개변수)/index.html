@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="alert box">
+  <meta name="keywords" content="html, java, script">
+  <meta name="author" content="kai">
+  <title>Alert box 띄우기</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- UI를 변경할 때 
+    1. HTML, CSS로 디자인 (필요 시 화면 상에서 숨김)
+    2. 필요할 때 Javascript로 숨긴 요소를 보여달라고 코드 작성 -->
+  <div class="wrapper">
+    <div id="alert" class="alert-box">
+      <p>Alert</p>
+      <button onclick="openNclose('none')" id="close-btn" type="button">X</button>
+    </div>
+    <button onclick="openNclose('flex')" id="open-btn" type="button">Open</button>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
