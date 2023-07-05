@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="querySelectorAll">
+  <meta name="keywords" content="html, jQuery">
+  <meta name="author" content="kai">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+  <title>querySelectorAll</title>
+</head>
+<body>
+  <div class="wrapper">
+    <p class="hello">안녕</p>
+    <p class="hello">안녕</p>
+    <p class="hello">안녕</p>
+  </div>
+  <script>
+    // javascirpt와 jQuery로 HTML안 글자를 '안녕' → 'hello'
+    
+    // javascript
+    // 1. querySelectorAll - 인덱싱 (순번)
+    // document.querySelectorAll('.hello')[0].innerHTML = 'Hello?';
+    // document.querySelectorAll('.hello')[1].innerHTML = 'Hello?';
+    // document.querySelectorAll('.hello')[2].innerHTML = 'Hello?';
+
+    // 2. forEach
+    // let hello = document.querySelectorAll('.hello')
+    // hello.forEach((txt)=>{
+    //   txt.textContent = 'hello?';
+    // })
+    // hello.forEach(function(changeColor){
+    //   changeColor.style.color = 'red';
+    // })
+
+    // jQuery
+    $('.hello').html('jQuery!');
+    // $('.hello').text('Hello!');
+    $('.hello').css('color','blue');
+    $('.hello').css('font-weight','700');
+
+
+    // document.write
+    let names = ['사과','딸기','수박','참외']
+    // names.forEach(()=>{
+    //   document.write(names+'<br>');
+    //   document.writeln(names);
+    // })
+    names.forEach(function(name){
+      document.write(`<h1>${name}</h1>`);
+      document.write('<h2>'+name+'</h2>');
+    })
+
+  </script>
+</body>
+</html>
