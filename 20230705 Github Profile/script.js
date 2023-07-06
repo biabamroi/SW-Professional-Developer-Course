@@ -5,7 +5,8 @@ const dropdownBtn = document.querySelector('.dropdown-btn')
 const dropdownMenu = document.querySelector('.dropdown-menu')
 // console.log(dropdownBtn, dropdownMenu)
 
-dropdownBtn.addEventListener('click', function(){
+dropdownBtn.addEventListener('click', function(e){
+  e.preventDefault() // 이벤트값 초기화
   dropdownMenu.classList.toggle('active');
 })
 // dropdownBtn.addEventListener('click', ()=>{
