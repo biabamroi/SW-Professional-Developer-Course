@@ -36,12 +36,13 @@ a, a:visited, a:hover, a:active {
   border-radius: 50%;
 }
 .kai img:hover {
+  opacity: 0.9;
   box-shadow: 1px 3px 3px black;
 }
 .kai img:hover .hidden {
   display: "";
   /* visibility: visible; */
-}
+} /* css로 안 되면 java로... */
 
 .hidden {
   /* visibility: hidden; */
