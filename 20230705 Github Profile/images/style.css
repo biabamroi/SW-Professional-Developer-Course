@@ -35,9 +35,17 @@ a, a:visited, a:hover, a:active {
   height: 100px;
   border-radius: 50%;
 }
+.kai img:hover {
+  box-shadow: 1px 3px 3px black;
+}
+.kai img:hover .hidden {
+  display: "";
+  /* visibility: visible; */
+}
 
 .hidden {
-  /* display: none; */
+  /* visibility: hidden; */
+  display: none;
 }
 
 hr {
