@@ -46,7 +46,7 @@ li {
 .dropdown-menu {
   position: absolute;
   right: 0;
-  /* display: none; */
+  display: none;
   width: 200px;
   border-radius: 4px;
   background-color: #fff;
