@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.slide-wrapper {
+  transition: 300ms ease-in-out;
+}
+
+.slide-list {
+  display: flex;
+  overflow: hidden;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-group button {
+  margin: 20px 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 30%;
+  color: aliceblue;
+  background-color: black;
+  cursor: pointer;
+}
+.btn-group button:first-child{
+  margin-left: 0;
+}
+.btn-group button:last-child {
+  margin-right: 0;
+}
+.btn-group button:hover {
+  opacity: 0.8;
+}
