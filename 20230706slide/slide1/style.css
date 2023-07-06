@@ -3,3 +3,50 @@
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
+.slide-wrapper {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.slide-list {
+  display: flex;
+  /* viewport width *3 (사진 개수) */
+  width: 300vW;
+  height: 600px;
+  transform: translateX(-100vw);
+  transition: transform 1s;
+}
+
+.slide-list li {
+  width: 100vW;
+  height: 100%;
+}
+
+.slide-list li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-group button {
+  margin-right: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #888;
+}
+.btn-group button:last-child {
+  margin-right: 0;
+}
+
