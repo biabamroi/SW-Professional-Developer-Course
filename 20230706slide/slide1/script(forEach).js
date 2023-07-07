@@ -22,6 +22,7 @@ buttons.forEach(function(btn, index){
     let xValue = -index * 100 + 'vw';
     // slideList.style.transform = 'translateX('+xValue+')';
     slideList.style.transform = `transLateX(${xValue})`
+    // console.log(btn, index);
   })
 })
 
