@@ -50,6 +50,10 @@ li {
   border-radius: 50%;
   background-color: #fff;
 }
+.btn-group button.active {
+  background-color: aquamarine;
+}
+
 .btn-group button:last-child {
   margin-right: 0;
 }
