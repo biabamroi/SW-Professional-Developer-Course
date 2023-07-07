@@ -17,7 +17,7 @@ li {
   /* viewport width *3 (사진 개수) */
   width: 300vW;
   height: 600px;
-  transform: translateX(-100vw);
+  /* transform: translateX(-200vw); */
   transition: transform 1s;
 }
 
@@ -49,4 +49,3 @@ li {
 .btn-group button:last-child {
   margin-right: 0;
 }
-
