@@ -8,3 +8,13 @@ btnGroup.forEach((btn,index)=>{
     slideList.style.transform = `translateX(${xValue})`;
   })  
 })
+
+let sBtnL = document.querySelector('.side-button-left');
+let sBtnR = document.querySelector('.side-button-right');
+
+btnGroup.forEach((btn,index)=>{
+  btn.addEventListener('click', ()=>{
+    let xValue = -index * 100 + 'vw';
+    slideList.style.transform = `translateX(${xValue})`;
+  })  
+})

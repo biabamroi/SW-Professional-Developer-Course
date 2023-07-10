@@ -35,6 +35,27 @@ li {
   object-fit: cover;
 }
 
+.side-button-left {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+.side-button-left:hover {
+  opacity: 0.5;
+}
+.side-button-right {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+.side-button-right:hover {
+  opacity: 0.5;
+}
+
 .btn-group {
   position: absolute;
   bottom: 25px;
@@ -59,5 +80,5 @@ li {
 }
 
 .btn-group button:hover {
-  box-shadow: 2px 2px 3px #888;
+  opacity: 0.5;
 }
