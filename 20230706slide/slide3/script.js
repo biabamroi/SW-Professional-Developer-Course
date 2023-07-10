@@ -1,4 +1,20 @@
 let slideList = document.querySelector('.slide-list');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 내 코드
+
 let sBtnL = document.querySelector('.side-button-left');
 let sBtnR = document.querySelector('.side-button-right');
 
