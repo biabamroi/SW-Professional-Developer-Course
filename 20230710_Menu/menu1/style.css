@@ -4,7 +4,42 @@
   box-sizing: border-box;
 }
 
-.wrapper {
-
+li {
+  list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.visually-hidden { display: none; }
+
+.gnb {
+  display: flex;
+  justify-content: center;
+}
+
+.gnb > li {
+  width: 100%;
+  text-align: center;
+}
+
+.gnb > li > a {
+  display: block;
+  padding: 20px 0;
+  background-color: rgb(28, 112, 238);
+  color: white;
+}
+
+.gnb > li > a:hover {
+  background-color: rgb(228, 46, 46);
+}
+
+.sub {
+  background-color: rgb(187, 187, 187);
+}
+
+.sub li {
+  padding: 20px 0;
+}
