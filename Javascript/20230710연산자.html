@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="연산자">
+  <meta name="keywords" content="html, script">
+  <meta name="author" content="kai">
+  <title>연산자</title>
+</head>
+<body>
+  <script>
+    // 연산자
+    // 1. 비교 연산자 2. 논리 연산자
+    
+    // 비교 연산자
+    // if문 내부 조건이 true(참)일 경우 중괄호 코드 실행
+    // A > B, A < B
+    // A <= B : A가 B보다 작거나 같다.
+    
+    // 느슨한 비교
+    // A == B : A와 B가 같다.
+    // A != B : A와 B가 같지 않다.
+    
+    // 엄격한 비교
+    // A === B : A와 B가 같다.
+    // 데이터와 형이 모두 일치해야 true를 반환한다.
+    // 2 == '2' > 참, 2 === '2' > 거짓으로 판별
+    
+    // A !== B : A와 B가 같지 않다.
+    // 데이터와 형이 모두 불일치해야 true를 반환한다.
+    // 2 != '2' > 같다고 판단해서 false 값인 바보를 출력
+    // 2 !== '2' > 같지 않다고 판단해서 true 값인 정답을 출력
+
+    if( 2 !== '2' ){
+      // 조건 true (참일 경우)
+      console.log('정답!')
+    }else{
+      // 조건 false (참이 아닐 경우)
+      console.log('바보!')
+    }
+  </script>
+</body>
+</html>
