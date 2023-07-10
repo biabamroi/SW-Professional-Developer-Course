@@ -14,6 +14,8 @@ buttons.forEach((btn,index)=>{
     // 클릭된 버튼에만 active class add 
     btn.classList.add('active');
 
+    // ↑ 전체적으로 삭제 ↓ 조건식으로 삭제
+
     // 조건문
     // 현재 클릭된 버튼이 아닐 때 && active라는 class를 포함하고 있다면
     // 위 조건이 true일 때 active class remove
@@ -28,14 +30,9 @@ buttons.forEach((btn,index)=>{
 
 
 
+let sBtnL = document.querySelector('.side-button-left');
+let sBtnR = document.querySelector('.side-button-right');
 
-
-// let sBtnL = document.querySelector('.side-button-left');
-// let sBtnR = document.querySelector('.side-button-right');
-
-// btnGroup.forEach((btn,index)=>{
-//   btn.addEventListener('click', ()=>{
-//     let xValue = -index * 100 + 'vw';
-//     slideList.style.transform = `translateX(${xValue})`;
-//   })  
-// })
+sBtnR.addEventListener('click', ()=>{
+  slideList.style.transform = 'translateX(-100vw)';
+})
