@@ -46,7 +46,13 @@ a {
   width: 100%;
   /* jQuery */
   /* display: none; */
-  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 500ms ease-in-out;
+}
+
+.sub.active {
+  max-height: 270px;
 }
 
 .sub li a {
@@ -59,4 +65,5 @@ a {
 .sub li a:hover {
   background-color: #ccc;
 }
+
 
