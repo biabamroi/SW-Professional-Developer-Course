@@ -41,7 +41,9 @@ a {
 }
 
 .sub {
-  display: none;
+  /* jQuery */
+  /* display: none; */
+  visibility: hidden;
 }
 
 .sub li a {
@@ -54,3 +56,4 @@ a {
 .sub li a:hover {
   background-color: #ccc;
 }
+
