@@ -16,30 +16,41 @@ a {
 .visually-hidden { display: none; }
 
 .gnb {
+  width: 100%;
   display: flex;
-  justify-content: center;
 }
 
 .gnb > li {
-  width: 100%;
+  width: 25%;
   text-align: center;
 }
 
 .gnb > li > a {
   display: block;
   padding: 20px 0;
-  background-color: rgb(28, 112, 238);
   color: white;
+  font-weight: 700;
+  background-color: dodgerblue;
+  transition: background-color 300ms ease-in-out;
 }
 
-.gnb > li > a:hover {
-  background-color: rgb(228, 46, 46);
+.gnb > li > a:hover,
+.gnb > li > a.on {
+  /* subMenu hover 배경색 유지 */
+  background-color: red;
 }
 
 .sub {
-  background-color: rgb(187, 187, 187);
+  display: none;
 }
 
-.sub li {
-  padding: 20px 0;
+.sub li a {
+  display: block;
+  padding: 16px 0;
+  background-color: #eeeded;
+  transition: background-color 300ms ease-in-out;
+}
+
+.sub li a:hover {
+  background-color: #ccc;
 }
