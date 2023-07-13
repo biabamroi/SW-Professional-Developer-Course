@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HSFF 실습">
+  <meta name="keywords" content="html, CSS, javascript">
+  <meta name="author" content="kai">
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/6105f934ac.js" crossorigin="anonymous"></script>
+
+  <title>HSFF 실습</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <h1 class="visually-hidden">로그인 메뉴</h1>
+        <div class="log-in-bar">
+          <div id="login"><a href=""><i class="fa-solid fa-arrow-right-to-bracket"></i> 로그인</a></div>
+          <div id="join"><a href=""><i class="fa-solid fa-user-group"></i> 회원가입</a></div>
+          <div id="password"><a href=""><i class="fa-solid fa-key"></i> 아이디/비밀번호 찾기</a></div>
+        </div>
+        <h1 class="visually-hidden">메인 메뉴</h1>
+        <div class="container">
+          <h1 class="logo"><img src="./images/logo.svg" alt="logo"></h1>
+          <ul class="gnb">
+            <li><a href="">포럼소개</a>
+              <ul class="sub">
+                <li><a href="">취지문</a></li>
+                <li><a href="">주요사업</a></li>
+                <li><a href="">조직위원회</a></li>
+                <li><a href="">정관</a></li>
+                <li><a href="">건강기능식품연구회</a></li>
+              </ul>
+            </li>
+            <li><a href="">포럼신청</a>
+              <ul class="sub">
+                <li><a href="">포럼공지</a></li>
+                <li><a href="">포럼일정 및 참가</a></li>
+              </ul>
+            </li>
+            <li><a href="">포럼활동</a>
+              <ul class="sub">
+                <li><a href="">포럼자료</a></li>
+                <li><a href="">포토갤러리</a></li>
+              </ul>
+            </li>
+            <li><a href="">정보마당</a>
+              <ul class="sub">
+                <li><a href="">e-News</a></li>
+              </ul>
+            </li>
+            <li><a href="">고객센터</a>
+              <ul class="sub">
+                <li><a href="">공지사항</a></li>
+                <li><a href="">자주하는 질문</a></li>
+                <li><a href="">1:1 문의</a></li>
+              </ul>
+            </li>
+          </ul>
+          <h1 class="lnb-icon"><img src="./images/btn_nav.svg" alt="navi"></h1>
+        </div>
+      </nav>
+    </header>
+    
+    <ul class="lnb-sub-menu">
+      <li><a href="">포럼소개</a>
+        <ul class="lnb-sub">
+          <li><a href="">취지문</a></li>
+          <li><a href="">주요사업</a></li>
+          <li><a href="">조직위원회</a></li>
+          <li><a href="">정관</a></li>
+          <li><a href="">건강기능식품연구회</a></li>
+        </ul>
+      </li>
+      <li><a href="">포럼신청</a>
+        <ul class="lnb-sub">
+          <li><a href="">포럼공지</a></li>
+          <li><a href="">포럼일정 및 참가</a></li>
+        </ul>
+      </li>
+      <li><a href="">포럼활동</a>
+        <ul class="lnb-sub">
+          <li><a href="">포럼자료</a></li>
+          <li><a href="">포토갤러리</a></li>
+        </ul>
+      </li>
+      <li><a href="">정보마당</a>
+        <ul class="lnb-sub">
+          <li><a href="">e-News</a></li>
+        </ul>
+      </li>
+      <li><a href="">고객센터</a>
+        <ul class="lnb-sub">
+          <li><a href="">공지사항</a></li>
+          <li><a href="">자주하는 질문</a></li>
+          <li><a href="">1:1 문의</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <main id="app">
+      <section class="slide">
+        <ul class="slide-list">
+          <li class="slide-item"><img src="./images/img1.jpg" alt="초원에서 뛰어노는 아이"></li>
+          <li class="slide-item"><img src="./images/img2.jpg" alt="청중을 향해 연설하는 남자"></li>
+          <li class="slide-item"><img src="./images/img3.jpeg" alt="스트레칭하는 사람들"></li>
+        </ul>
+      </section>
+
+      <div class="box"></div>
+
+      <div class="btn-group">
+        <button class="btn1" type="button">첫번째</button>
+        <button class="btn2" type="button">두번째</button>
+        <button class="btn3" type="button">세번째</button>
+      </div>
+    </main>
+    
+    <footer>
+      <div class="gloobal-footer">
+        <div class="global-left">
+          <p><a href="">이용약관</a></p>
+          <p><a href="">개인정보 처리방침</a></p>
+          <p><a href="">이메일무단수집거부</a></p>
+        </div>
+        <div class="global-right">
+          <p>대표번호</p>
+          <p><a href="">031.5171.5289</a></p>
+          <span>&#40;평일 09:00 ~ 18:00&#41;</span>
+        </div>
+      </div>
+      <div class="gloobal-footer-bottom">
+        <h1 class="logo"><img src="./images/logo_spot.svg" alt="logo"></h1>
+        <span>13488 경기도 성남시 분당구 대왕판교로 700 B동 102호&#40;삼평동, 코리아바이오파크&#41;</span>
+        <span>건강기능식품미래포럼</span>
+        <span>고유번호 &#58; 855&#45;80&#45;01319</span>
+        <span>대표자 &#58; 박영인</span>
+        <p>Copyright&#169; 2017 Health Supplements Future Forum, All rights reserved.</p>
+      </div>
+    </footer>
+
+    <aside></aside>
+    <div class="overlay"></div>
+
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+</html>
