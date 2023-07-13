@@ -79,10 +79,18 @@ li {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  display: none;
+  /* display: none; */
+  /* vanilla JS */
+  max-height: 0;
+  overflow: hidden;
+  /* 가상요소가 잘려서 hidden 됨 */
   width: 200px;
   background-color: rgba(255,255,255,0.9);
   box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+}
+
+.sub.active {
+  max-height: 265px;
 }
 
 .sub::before {
