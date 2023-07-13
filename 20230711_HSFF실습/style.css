@@ -26,7 +26,10 @@ li {
 }
 
 header {
-  position: relative;
+  position: sticky;
+  top:0;
+  z-index: 1;
+  background-color: #fff;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -35,12 +38,10 @@ header a {
 }
 
 nav {
-
+  height: 137px;
 }
 
 .container {
-  position: sticky;
-  top:0;
   display: flex;
   justify-content: space-evenly;
   padding: 20px 0;
@@ -53,27 +54,64 @@ nav {
 .gnb {
   display: flex;
 }
+
 .gnb > li {
-  padding-right: 30px;
+  padding-right: 40px;
+}
+.gnb > li > a:hover {
+  display: block;
+  color: white;
+  background-color: darkblue;
+  transition: all 300ms ease-in-out;
 }
 
-.sub {
-  display: none;
+.gnb > ul > li {
+  position: relative;
+  display: table-cell;
+  font-size: 16px;
+  vertical-align: top;
+  text-align: left;
 }
 
-.sub::before {
+.gnb > ul > li:active ul:before {
   content: '';
-  width: 3px;
-  height: 3px;
-  text-align: center;
-  background-color: black;
+  width: 10px;
+  height: 10px;
+  background-color: #113676;
+}
+
+.gnb > ul ul:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-out;
 }
 
 .active {
   display: block;
 }
 
+.sub {
+  display: none;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+
 .lnb-icon {
+  display: none;
+}
+
+
+
+.lnb-sub-menu {
   display: none;
 }
 
@@ -140,7 +178,6 @@ nav {
 .gloobal-footer a {
   color: gray;
 }
-
 .global-left {
   display: flex;
 }
@@ -178,6 +215,36 @@ nav {
   background-color: #2d2d30;
 }
 
-.gloobal-footer-bottom span:not(:last-child)::after {
+.gloobal-footer-bottom span::after {
   content: '　/　';
+}
+.gloobal-footer-bottom span:nth-child(5)::after{
+  content: none;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .gnb {
+    display: none;
+  }
+  .lnb-icon {
+    display: block;
+    cursor: pointer;
+  }
+  .lnb-sub-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    display: block;
+    background-color: #fff;
+    z-index: 10;
+    /* transform: translateX(-240px); */
+    transition: transform 300ms ease-in-out;
+  }
 }
