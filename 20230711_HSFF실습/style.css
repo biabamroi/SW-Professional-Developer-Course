@@ -182,7 +182,8 @@ nav {
   display: flex;
 }
 .global-left > p {
-  padding-right: 10px;
+  padding-right: 20px;
+  position: relative;
 }
 .global-left > p:nth-child(2) {
   font-weight: 700;
@@ -192,6 +193,22 @@ nav {
 }
 .global-left > p:last-child {
   padding-right: 0;
+}
+.global-left > p::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  height: 59px;
+  left: -10px;
+  border: 0.25px solid grey;
+}
+.global-left > p:last-child::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  height: 59px;
+  right: -10px;
+  border: 0.25px solid grey;
 }
 
 .global-right {
