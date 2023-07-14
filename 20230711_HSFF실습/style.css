@@ -93,7 +93,7 @@ li {
   max-height: 265px;
 }
 
-.sub::before {
+/* .sub::before {
   content: '';
   position: absolute;
   top: -5px;
@@ -102,8 +102,21 @@ li {
   width: 10px;
   height: 10px;
   background-color: #113676;
-}
+} */
 
+/* Vanilla JS styling */
+
+.acbox {
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #113676;
+  display: none;
+  z-index: 10;
+}
 
 
 .slide-wrapper {
