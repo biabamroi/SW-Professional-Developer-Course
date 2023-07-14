@@ -12,6 +12,15 @@ buttons.forEach(function(button, index){
     // translasteX(-100vw)
     // slideList.style.transform = 'translateX('+translateValue+')';
     slideList.style.transform = `translateX(${translateValue})`;
+
+    // buttons라는 배열 내부 모든 요소
+    // 클릭된 이미지 페이지에서 버튼(hover) 색상 유지
+    buttons.forEach(function(otherBtn){
+      // 전체 클래스에서 제거 후
+      otherBtn.classList.remove('active');
+    })
+    // 현재 클릭 이벤트 내부 : 클릭된 요소에만 active class add 
+    button.classList.add('active');
   })
 })
 
