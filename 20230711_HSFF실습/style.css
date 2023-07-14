@@ -338,4 +338,18 @@ footer {
   .sidebar-item:first-child a {
     border-top: 1px solid #ccc;
   }
+
+  .foot-left li a {
+    font-size: 16px;
+  }
+
+  .foot-right {
+    justify-content: space-evenly;
+    font-size: 14px;
+  }
+
+  .foot-right .time {
+    font-size: 12px;
+  }
+  
 }
