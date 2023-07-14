@@ -15,7 +15,6 @@ let gnbItems = document.querySelectorAll('.gnb-main-item');
 
 gnbItems.forEach(function(item){
   let subMenu = item.querySelector('.sub');
-  let acbox = item.querySelector('.acbox');
   
   item.addEventListener('mouseover', function(){
     // sub Menu 보이게 max-height : 265px;
@@ -23,14 +22,14 @@ gnbItems.forEach(function(item){
     // gnb-main-item a 태그에 on class 추가 시 
     // Main Menu 변경된 색상 유지 (hover)
     this.querySelector('a').classList.add('on');
-    acbox.style.display = 'block';
+    this.querySelector('span').classList.add('is-active');
   })
 
   item.addEventListener('mouseleave', function(){
     // sub Menu 보이지 않게 max-heigh : 0;
     subMenu.classList.remove('active');
     this.querySelector('a').classList.remove('on');
-    acbox.style.display = 'none';
+    this.querySelector('span').classList.remove('is-active');
   })
 })
 
