@@ -74,6 +74,23 @@ li {
 
 
 
+/* Vanilla JS styling */
+
+.square {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+  display: none;
+  width: 10px;
+  height: 10px;
+  background-color: #113676;
+}
+
+.square.is-active {
+  display: inline-block;
+}
 
 .sub {
   position: absolute;
@@ -84,6 +101,7 @@ li {
   max-height: 0;
   overflow: hidden;
   /* 가상요소가 잘려서 hidden 됨 */
+  transition: max-height 300ms ease-in-out;
   width: 200px;
   background-color: rgba(255,255,255,0.9);
   box-shadow: 0 3px 15px rgba(0,0,0,0.3);
@@ -104,19 +122,6 @@ li {
   background-color: #113676;
 } */
 
-/* Vanilla JS styling */
-
-.acbox {
-  position: absolute;
-  top: 48px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-  background-color: #113676;
-  display: none;
-  z-index: 10;
-}
 
 
 .slide-wrapper {
