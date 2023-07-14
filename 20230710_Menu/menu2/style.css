@@ -5,9 +5,82 @@
 }
 
 a {
-  
+  text-decoration: none;
 }
 
 li {
   list-style: none;
+}
+
+
+
+/* .main-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-wrapper > li {
+  padding: 20px;
+  color: black;
+  background-color: aquamarine;
+}
+
+.main-wrapper > li:hover,
+.main-wrapper > li.on
+ {
+  background-color: rgb(226, 226, 226);
+}
+
+.wrapper .sub-wrapper {
+  visibility: hidden;
+}
+
+.sub-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(27, 124, 250);
+}
+
+.sub > a {
+  display: block;
+  padding: 20px;
+  color: white;
+}
+
+.sub > a:hover {
+  background-color: rgb(226, 226, 226);
+} */
+
+
+
+
+.gnb {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.gnb > div > a {
+  display: block;
+  padding: 20px;
+  color: black;
+  background-color: aquamarine;
+}
+
+.gnb > div > a:hover,
+.gnb > div > a.on {
+  background-color: rgb(226, 226, 226);
+}
+
+.sub {
+  display: none;
+  background-color: rgb(27, 124, 250);
+}
+
+.sub > div {
+  padding: 20px;
+  color: white;
+}
+
+.sub > div:hover {
+  background-color: rgb(226, 226, 226);
 }
