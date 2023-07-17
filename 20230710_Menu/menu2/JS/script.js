@@ -7,6 +7,15 @@
 //     - 서브메뉴 li index
 //     - 메인메뉴 li eq(서브메뉴인덱스값)에 class 추가 제거
 
+$('.main-menu li, .submenu-wrapper').hover(function(){
+  // hover시 실행할 함수
+  $('.submenu-wrapper').stop().slideDown(500);
+}, function(){
+  // leave 됐을 때 실행할 함수
+  $('.submenu-wrapper').stop().slideUp(500);
+})
+
+
 
 
 
