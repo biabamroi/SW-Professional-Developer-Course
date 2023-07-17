@@ -31,13 +31,3 @@ $('.submenu-list > li').hover(function(){
   let i = $(this).index();
   $('.main-menu').find('a').eq(i).removeClass('on');
 })
-
-
-
-
-
-
-
-// $('.main-wrapper > li').hover(function(){
-//   $('.sub-wrapper').css('visibility','visible');
-// })
