@@ -7,6 +7,11 @@
 //   $('.sub-wrapper').css('visibility','visible');
 // })
 
+// - **index, eq( ) 사용**
+//     - 서브메뉴 li index
+//     - 메인메뉴 li eq(서브메뉴인덱스값)에 class 추가 제거
+
+
 
 $('.gnb > div > a').hover(function(){
   $(this).find('.sub > div').stop().slideDown(500);
