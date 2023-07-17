@@ -20,7 +20,7 @@ li {
 }
 
 .main-wrapper > li {
-  padding: 20px;
+  padding: 20px 40px;
   color: black;
   background-color: aquamarine;
 }
@@ -32,7 +32,7 @@ li {
 }
 
 .wrapper .sub-wrapper {
-  visibility: hidden;
+  /* display: none; */
 }
 
 .sub-wrapper {
@@ -43,7 +43,7 @@ li {
 
 .sub > a {
   display: block;
-  padding: 20px;
+  padding: 20px 40px;
   color: white;
 }
 
@@ -52,35 +52,43 @@ li {
 } */
 
 
+/*  */
 
-
-.gnb {
+/* .gnb {
   display: flex;
   justify-content: flex-end;
 }
 
-.gnb > div > a {
+.gnb > ul > a {
   display: block;
-  padding: 20px;
+  padding: 20px 40px;
   color: black;
   background-color: aquamarine;
 }
 
-.gnb > div > a:hover,
-.gnb > div > a.on {
+.gnb > ul > a:hover,
+.gnb > ul > a.on {
   background-color: rgb(226, 226, 226);
 }
 
 .sub {
-  display: none;
+  /* display: none; */
+}
+
+.sub a {
+  display: block;
+  padding: 20px 40px;
+  color: white;
   background-color: rgb(27, 124, 250);
 }
 
 .sub > div {
-  padding: 20px;
-  color: white;
+  padding-bottom: 20px;
+}
+.sub > div:last-child {
+  padding-bottom: 0;
 }
 
-.sub > div:hover {
+.sub > li:hover {
   background-color: rgb(226, 226, 226);
-}
+} */
