@@ -316,12 +316,16 @@ footer {
   transform: translate(-50%,-50%) rotate(45deg);
 }
 
-.popup-btn:hover::before {
+.popup-btn:hover {
+  transform: scale(1.25);
+}
+
+/* .popup-btn:hover::before {
   transform: skew(45deg,-45deg);
 }
 .popup-btn:hover::after {
   transform: skew(-45deg,45deg);
-}
+} */
 
 
 .popup h2 {
