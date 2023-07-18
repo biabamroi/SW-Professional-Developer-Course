@@ -58,10 +58,18 @@ function rand(min, max){
   return Math.round(Math.random() * (max-min+1)+min);
 }
 
+let cho = document.querySelector('.cho');
+let index = cho;
+index = 5;
+
 let rgbBgcChange = setInterval(function(){
   let r = rand(0,255);
   let g = rand(0,255);
   let b = rand(0,255);
   // count.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
   count.style.backgroundColor = `rgb(${r},${g},${b})`;
+
+  index--;
+  count.textContent = index+'초마다 배경색 바꾸기';
+
 }, 1000)
