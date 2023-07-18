@@ -13,6 +13,11 @@ li {
   list-style: none;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 .lg-hidden {
   display: none;
 }
@@ -275,124 +280,65 @@ footer {
 
 
 
+
 .popup {
   position: absolute;
-  top: 100px;
+  top: 10%;
   left: 50%;
+  width: 480px;
   transform: translateX(-50%);
-  width: 500px;
-  padding-top: 30px;
-  border: 2px solid black;
+  z-index: 300;
+  border: 3px solid darkblue;
   background-color: #fff;
-  z-index: 100;
 }
 
-.popup-btn {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+.popup-top {
+  padding: 30px;
 }
 
-.popup-btn::after,
-.popup-btn::before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 2px;
-  background-color: black;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transition: transform 0.4s;
+.popup .close-btn {
+  text-align: right;
 }
 
-.popup-btn::after {
-  transform: translate(-50%,-50%) rotate(-45deg);
+.close-btn button {
+  font-size: 24px;
 }
-.popup-btn::before {
-  transform: translate(-50%,-50%) rotate(45deg);
-}
-
-.popup-btn:hover {
-  transform: scale(1.25);
-}
-
-/* .popup-btn:hover::before {
-  transform: skew(45deg,-45deg);
-}
-.popup-btn:hover::after {
-  transform: skew(-45deg,45deg);
-} */
-
 
 .popup h2 {
-  padding: 20px 30px 20px 30px;
-  color:#113676;
+  margin-top: 20px;
+  color: darkblue;
 }
 
 .popup img {
-  padding: 0 30px 100px 30px;
+  margin-top: 20px;
 }
 
-.popup-nav {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 15px 70px;
-  font-size: 13px;
-  border: none;
-  color: white;
-  background-color: cadetblue;
-}
-
-.popup-nav:hover {
-  opacity: 0.8;
-}
-
-.popup p {
-  padding: 18px 0 18px 20px;  
-  border-top: 1px solid #b6b6b6;
-  color: #333;
-  background-color:#dfdfdf;
-  position: relative;
-}
-
-
-input[id="popup-chk"] {
-	display: none;
-}
-
-input[id="popup-chk"] + label {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	border: 2px solid #bcbcbc;
-  background-color: #fff;
-	cursor: pointer;
-}
-
-input[id="popup-chk"]:checked + label::after {
-  content:'✔';
-  font-size: 15px;
-  width: 20px;
-  height: 20px;
+.content-btn {
+  margin-top: 20px;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: -10%;
-  transform: translateY(-50%);
 }
 
-.popup span {
-  padding-left: 28px;
-  font-size: 12px;
+.content-btn button {
+  padding: 14px 80px;
+  color: white;
+  background-color: #5baa96;
+  transition: background-color 300ms;
+}
+
+.content-btn button:hover {
+  cursor: pointer;
+  background-color: #4c9381;
+}
+
+.popup-check {
+  padding: 12px 20px;
+  border-top: 1px solid #ccc;
+  background-color: #f5f5f5;
+}
+
+.popup-check span {
+  font-size: 14px;
+  color: #666;
 }
 
 
