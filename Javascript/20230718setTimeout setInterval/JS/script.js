@@ -4,9 +4,10 @@ let count = document.querySelector('.count');
 
 setTimeout(() => {
   count.classList.add('is-active');
-  // console.log('창 사라졌다')
+  // console.log('창 사라졌다');
   // 함수를 변수 선언하여 가져와서 클리어로 멈춤
-  clearInterval(hexBgcChange)
+  // clearInterval(hexBgcChange);
+  clearInterval(rgbBgcChange);
 }, 5000);
 
 
@@ -30,9 +31,37 @@ setTimeout(() => {
 // ff : 255
 // toString(16) : 16진수로 변환
 
-let hexBgcChange = setInterval(function(){
-  let randomColor = '#' + Math.round(Math.random() * 0xffffff).toString(16);
-  console.log(randomColor);
-  // console.log(Math.round(Math.random()))
-  count.style.backgroundColor = randomColor;
+
+// let hexBgcChange = setInterval(function(){
+//   let randomColor = '#' + Math.round(Math.random() * 0xffffff).toString(16);
+//   console.log(randomColor);
+//   // console.log(Math.round(Math.random()))
+//   count.style.backgroundColor = randomColor;
+// }, 1000)
+
+
+
+// RGB 값으로 랜컴 컬러 변경
+// 최솟값, 최댓값을 지정하고 그 사이에서 랜덤한 값(정수)을 만드는 함수
+
+// rand라는 함수에 최소, 최대 값을 매개변수로 받는다.
+
+// Math.random() : 0 이상 1 미만의 부동 소수점 난수 생성 함수 
+// Math.round : 소수점 이하 값 반올림으로 정수 변환
+
+// (max - min + 1) 최소, 최대 값 범위 내에서 랜덤한 값을 얻기 위한 코드
+// (255 - 0 + 1) + 0 = 256
+// 1을 더해주지 않으면 255미만이기 때문에 254까지만 랜덤 수로 가져올 수 있어서
+// (20 - 10 + 1) + 10 = 21 / 20
+
+function rand(min, max){
+  return Math.round(Math.random() * (max-min+1)+min);
+}
+
+let rgbBgcChange = setInterval(function(){
+  let r = rand(0,255);
+  let g = rand(0,255);
+  let b = rand(0,255);
+  // count.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
+  count.style.backgroundColor = `rgb(${r},${g},${b})`;
 }, 1000)
