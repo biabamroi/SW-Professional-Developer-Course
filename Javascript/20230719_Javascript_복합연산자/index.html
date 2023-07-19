@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="" content="">
-  <meta name="" content="">
-  <meta name="" content="">
+  <meta name="description" content="Javascript 복합연산자">
+  <meta name="keywords" content="html, CSS, Javascript">
+  <meta name="author" content="kai">
   <title>Javascript 복합연산자</title>
 </head>
 <body>
   <script>
     // 1. 산술 연산자 : + - / (나누기) * (곱하기) % (나머지값) ** (거듭제곱) -->
-    console.log(30 % 10);
+    // console.log(30 % 10);
 
     // 2. 대입 연산자 : = += -=
     let str1 = 'Hello';
@@ -22,13 +22,56 @@
     // NaN : Not a Number
     // console.log(str1-str2);
 
+    // 3. 복합 대입 연산자 : += -= /= *= %=
+    // let num = 10;
+
+    // let은 값 할당없이 변수만 먼저 선언 가능하다.
+    // let result_1, result_2, result_3, result_4, result_5;
+    // const 변수; const는 변수와 값이 할당되어야 한다.
+    // result_1 = result_2 = result_3 = result_4 = result_5 = 10; // 여러 변수에 같은 값을 넣고 싶을 때
+
+
     // += : result += num
     // result = result + num
+    // result_1 = result_1 + num
+    // result_1 += num
+    // console.log(result_1)
 
     // -= : result -= num
     // result : result - num
 
 
+    // 4. 증가 감소 연산자
+    let num, result;
+    num = 10;
+
+    // (++) 증감연산자가 뒤에 위치할 경우
+    // result에 num이 복사
+    // num++한 것은 다음 값부터 적용된다.
+    // result = num++; // 10
+    
+    // (++) 증감연산자가 앞에 위치할 경우
+    // 작성한 행에서 ++값 반영하여 업데이트된 값을 result에 저장
+    // result = ++num; // 11
+    // console.log(result);
+
+    // 자바스크립트는 동적언어라서 변수 선언 시 타입을 지정하지 않는다.
+    // 값이 할당되는 순간, 그 값에 따라 타입이 결정된다.
+    // 장점 : 자유도와 유연성이 높다. 
+    // 단점
+    // 1. 예상 못한 버그 발생 확률이 높다.
+    // 2. 프로젝트 규모가 커질 수록 유지 보수 비용이 증가한다.
+    // 3. 안정성 저하
+    // → 타입스크립트, 넥카라쿠베  
+    // 타입스크립트는 선언과 동시에 어떤 타입 값을 넘길 건지 작성해 줘야 한다.
+    // 해당 타입이 아닌 다른 데이터를 넘긴다면 바로 컴파일러 에러 발생.
+    // → 사전에 빠른 대응 가능.
+    // let num:number = 1; 
+    let num1 = 5;
+    console.log(typeof(num1))
+
+    // Typescript는 마이크로소프트가 개발하고 있는 오픈소스 프로그래밍 언어
+    // 자바스크립트에 타입을 부여한 언어, 자바스크립트 상위 집합.
   </script>
 </body>
 </html>
