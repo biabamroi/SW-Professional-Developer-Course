@@ -14,7 +14,7 @@ modalBtn.addEventListener('click', function(){
   modalOver.classList.remove('show');
 })
 
-$(".modal-btn").on("click", function() {
+$(".modal-btn").click(function() {
   $(".modal-popup").fadeout(slow);
   $(".modal-overay").fadeout(slow);
 });
