@@ -21,13 +21,14 @@ li {
   overflow: hidden;
 }
 
-.slide-wrapper {
+.slide-list {
   display: flex;
   width: 300vw;
   height: 100vh;
+  transition: transform 1s;
 }
 
-.slide-wrapper li {
+.slide-list li {
   width: 100vw;
   height: 100vh;
 }
@@ -77,6 +78,7 @@ li {
   border: none;
   color:#fff;
   background-color: transparent;
+  cursor: pointer;
 }
 .left-btn {
   left: 20px;
