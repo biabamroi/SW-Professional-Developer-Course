@@ -17,11 +17,19 @@ li {
   display: none;
 }
 
+.wrapper {
+  overflow: hidden;
+}
+
 .slide-wrapper {
   display: flex;
   width: 300vw;
   height: 100vh;
-  overflow: hidden;
+}
+
+.slide-wrapper li {
+  width: 100vw;
+  height: 100vh;
 }
 
 .slide-item-content {
