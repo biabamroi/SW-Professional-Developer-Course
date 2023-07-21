@@ -19,6 +19,8 @@ button {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  /* fadeOut, fadeIn 자연스럽게 */
+  background-color: black;
 }
 
 .slide-item {

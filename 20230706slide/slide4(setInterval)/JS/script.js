@@ -32,10 +32,12 @@ function sliding(dir){
   // fadeIn으로 현재 슬라이드를 화면에 보이게 한다.
   $('.slide-item').eq(cur).stop().fadeIn(function(){
     $(this).siblings('.slide-item').children('p').css({
+      // 문자열 ""
       marginTop : "20px",
       opacity : 0
     })
     $(this).children('p').stop().animate({
+      // 텍스트가 밑에서 위로 올라오는 효과를 위한
       marginTop : 0,
       opacity : 1
     }, 600)
@@ -45,7 +47,31 @@ function sliding(dir){
   $('#dots div').eq(cur).addClass('is-active');
 }
 
+
+
 // 함수 호출, dir 매개변수 0
 // 이미지, 텍스트, dots 상태 확인
-// sliding(1)
+// sliding(2)
+
+
+sliding(0)
+
+// 이전 슬라이드로 가야 하는 버튼
+// 음수값을 매개변수로 전달
+$('#prev').click(function(){sliding(-1)});
+// 다음 슬라이드로 가야 하는 버튼
+// 양수값을 매개변수로 전달
+$('#next').click(function(){sliding(1)});
+
+
+let auto = setInterval(sliding, 5000, 1);
+
+
+// dots div(btn)을 클릭했을 때 해당 슬라이드로 이동하는 코드
+$('#dots div').click(function(){
+  cur = 0;
+  let num = $(this).index();
+  sliding(num);
+})
+
 
