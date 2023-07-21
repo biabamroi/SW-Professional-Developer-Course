@@ -16,38 +16,29 @@
 <body>
   <div class="wrapper">
 
-    <ul class="slide-list">
-      <li class="slide-item">
-        <img src="./images/img_visual1.jpg" alt="요리">
-        <div class="slide-item-content">
-          <p>식자재 유통의 베스트</p>
-          <p>Solution</p>
-        </div>
-      </li>
-      <li class="slide-item">
-        <img src="./images/img_visual2.jpg" alt="채소">
-        <div class="slide-item-content hidden">
-          <p>신선하고 차별화된 식자재</p>
-          <p>Provider</p>
-        </div>
-      </li>
-      <li class="slide-item">
-        <img src="./images/img_visual3.jpg" alt="배송">
-        <div class="slide-item-content hidden">
-          <p>고객의 성공을 위해</p>
-          <p>함께하는 Partner</p>
-        </div>
-      </li>
-    </ul>
-    <div class="slide-btn">
-      <button id="slide-btn1" type="button"></button>
-      <button id="slide-btn2" type="button"></button>
-      <button id="slide-btn3" type="button"></button>
+    <div class="slide-list">
+      <div class="slide-item">
+        <img src="./images/img_visual1.jpg" alt="식자재 유통의 Best Solution">
+        <p>식자재 유통의 베스트<br>Solution</p>
+      </div>
+      <div class="slide-item">
+        <img src="./images/img_visual2.jpg" alt="신선하고 차별화된 식자재 Provider">
+        <p>신선하고 차별화된 식자재<br>Provider</p>
+      </div>
+      <div class="slide-item">
+        <img src="./images/img_visual3.jpg" alt="고객의 성공을 위해 함께하는 Partner">
+        <p>고객의 성공을 위해<br>함께하는 Partner</p>
+      </div>
     </div>
-    <div class="side-btn">
-      <button class="left-btn" type="button"><i class="fa-solid fa-chevron-left"></i></button>
-      <button class="right-btn" type="button"><i class="fa-solid fa-chevron-right"></i></button>
-    </div>
+
+    <button id="prev" type="button">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="next" type="button">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div id="dots"></div>
 
   </div>
   <script src="./JS/script.js"></script>
