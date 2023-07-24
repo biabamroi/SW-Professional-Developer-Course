@@ -43,3 +43,10 @@ button i:hover {
   height: 3000px;
   background-color: black;
 }
+
+.lorem {
+  width: 500px;
+  height: 300px;
+  overflow-y: scroll;
+  margin: 30px auto;
+}
