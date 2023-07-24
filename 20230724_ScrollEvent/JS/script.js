@@ -14,9 +14,9 @@ window.addEventListener('scroll', function(){
   // 현재 페이지에서 100px 이상 스크롤 됐을 때
   // nav 태그의 배경색 변경
   if(window.scrollY >= 100){
-    document.querySelector('nav').style.backgroundColor = '#ccc';
-  }else{
     document.querySelector('nav').style.backgroundColor = 'white';
+  }else{
+    document.querySelector('nav').style.backgroundColor = '#ccc';
   }
 })
 
