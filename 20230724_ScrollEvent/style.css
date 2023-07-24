@@ -24,10 +24,18 @@ nav {
 .logo img {
   width: 80px;
   height: 80px;
+  transition: all 200ms ease-in-out;
+}
+.logo img:hover {
+  opacity: 0.5;
 }
 
 button i {
   font-size: 48px;
+  transition: all 200ms ease-in-out;
+}
+button i:hover {
+  opacity: 0.5;
 }
 
 .box {
