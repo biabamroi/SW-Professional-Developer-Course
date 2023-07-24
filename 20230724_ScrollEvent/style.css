@@ -20,6 +20,16 @@ nav {
   background-color: #ccc;
   padding: 10px 30px;
   transition: background-color 300ms ease-in-out;
+  z-index: 1;
+}
+
+.bar {
+  position: absolute;
+  top: 105px;
+  left: 0;
+  width: 0%;
+  border: 2px solid red;
+  z-index: 10;
 }
 
 .logo img {
@@ -37,6 +47,16 @@ button i {
 }
 button i:hover {
   opacity: 0.5;
+}
+
+.line {
+  position: fixed;
+  top: 106px;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 5px;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .box {
