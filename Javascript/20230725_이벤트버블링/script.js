@@ -26,11 +26,15 @@ document.querySelector('.overlay').addEventListener('click', function(e){
 })
 
 
-$('.overlay').on('click',function(){
-  if($(e.target) == $('.overlay')){
-    $('.overlay').removeClass('is-open');
-  }
-})
+// $('.overlay').on('click',function(){
+//   if($(e.target) == $('.overlay')){
+//     $('.overlay').removeClass('is-open');
+//   }
+// })
+
+
+
+
 
 
 
