@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 500px;
+}
+
+.logo {
+  margin: 50px 0;
+  text-align: center;
+}
+.logo img {
+  width: 300px;
+}
+
+#nation {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+.checker-wrap {
+  display: flex;
+}
+.checker-wrap img {
+  padding-right: 10px;
+  padding-bottom: 50px;
+}
+.checker-wrap a {
+  font-size: 18px;
+  font-weight: 700;
+}
+.checker-wrap img:hover,
+.checker-wrap a:hover {
+  cursor: pointer;  
+}
+
+.checker-agree img:hover {
+  cursor: pointer;
+}
+
+.green {
+  color: #08A600;
+}
+.gray {
+  color: gray;
+}
+.text-size {
+  font-size: 18px;
+}
+.text-box {
+  height: 120px;
+  margin: 20px auto;
+  padding: 16px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: gray;
+}
+.text-box p {
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+button {
+  width: 49%;
+  height: 60px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #08A600;
+}
+
+.join-us-text {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.join-us-text p {
+  font-size: 15px;
+}
+.join-us-text p > a {
+  color: #b9b9b9;
+  text-decoration: none;
+}
