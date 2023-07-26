@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tab Menu">
+  <meta name="keywords" content="html, CSS, javascript">
+  <meta name="author" content="kai">
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+  <title>Tab Menu</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <ul class="tab-list">
+      <li class="tab-item blue" data-id="0">Products</li>
+      <li class="tab-item" data-id="1">Information</li>
+      <li class="tab-item" data-id="2">Shipping</li>
+      <li class="tab-item" data-id="3">자주 묻는 질문</li>
+      <li class="tab-item" data-id="4">리뷰</li>
+    </ul>
+    <div class="tab-content show">
+      <p>상품</p>
+    </div>
+    <div class="tab-content">
+      <p>정보</p>
+    </div>
+    <div class="tab-content">
+      <p>배송</p>
+    </div>
+    <div class="tab-content">
+      <p>큐앤에이</p>
+    </div>
+    <div class="tab-content">
+      <p>리뷰</p>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
