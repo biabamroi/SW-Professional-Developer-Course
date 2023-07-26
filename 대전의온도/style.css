@@ -13,6 +13,11 @@ li {
   list-style: none;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 
 .navbar {
   display: flex;
@@ -59,6 +64,99 @@ li {
 
 
 
+.rotate-text {
+  animation: rotate_text 6s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes rotate_text {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+.slide-list {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.slide-item {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.slide-item p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3.2em;
+  text-align: center;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 48px;
+}
+
+#slide-prev {
+  left: 80px;
+}
+
+#slide-next {
+  right: 80px;
+}
+
+#slide-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%);
+  display: flex;
+  width: 100px;
+  height: 30px;
+}
+
+#slide-dots div {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin-right: 8px;
+}
+
+#dots div:last-child {
+  margin-right: 0;
+}
+
+#dots div.is-active {
+  background-color: #fff;
+}
+
+
+
+
+
+
+
 
 
 
@@ -82,5 +180,11 @@ footer {
 .footer-bottom {
   display: flex;
   justify-content: space-evenly;
+}
+
+.footer-logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
