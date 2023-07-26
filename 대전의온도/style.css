@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: brown;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid pink;
+  background-color: #FFF0F5;
+}
+
+.navbar-logo {
+  display: flex;
+  font-size: 30px;
+  color: pink;
+}
+
+.navbar-logo h1 {
+  font-family: 'Single Day', cursive;
+  padding: 20px;
+}
+
+.navbar-menu{
+  display: block;
+  width: 500px;  
+}
+
+.navbar-btn {
+  border: none;
+  background-color: #fff;
+  width: 50px;
+  color: pink;
+}
+
+.navbar-icon {
+  padding: 10px;
+}
+
+.navbar-icon i {
+  margin-left: 10px;
+  color: pink;
+}
+
+
+
+
+
+
+
+
+footer {
+  width: 100vw;
+  height: 500px;
+}
+
+.footer-wrapper {
+  height: 30px;
+  border: 1px solid rgb(222, 156, 255);
+  background-color: rgb(250, 196, 205);
+}
+
+.footer-top ul {
+  display: flex;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-evenly;
+}
+
