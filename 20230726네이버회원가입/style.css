@@ -13,6 +13,11 @@ body {
   justify-content: center;
 }
 
+header {
+  max-width: 768px;
+  position: relative;
+}
+
 .wrapper {
   width: 500px;
 }
@@ -27,28 +32,70 @@ body {
 
 #nation {
   position: absolute;
-  top: 10%;
-  right: 10%;
+  top: 20%;
+  right: 0;
 }
 
-.checker-wrap {
+main {
   display: flex;
+  justify-content: center;
 }
-.checker-wrap img {
-  padding-right: 10px;
-  padding-bottom: 50px;
+
+section {
+  max-width: 460px;
+  position: relative;
 }
+
+
+.checker-wrap input[type=checkbox] {
+  display:none;
+}
+.checker-wrap input[type=checkbox] + label { 
+  cursor: pointer; 
+  width: 24px;
+  height: 24px;
+  padding-left: 23px; 
+  background-repeat: no-repeat;
+  background-image: url(./images/pc_check_off_24.png);
+}
+.checker-wrap input[type=checkbox]:checked + label {
+  width: 24px;
+  height: 24px;
+  background-image: url(./images/pc_check_on_l_24.png);
+}
+.checker-wrap input[type=checkbox]:disabled + label {
+  width: 24px;
+  height: 24px;
+  background-image: url(./images/pc_check_off_24.png);
+}
+
+
+input[type=checkbox] {
+  display:none;
+}
+input[type=checkbox] + label { 
+  cursor: pointer; 
+  width: 24px;
+  height: 24px;
+  padding-left: 23px; 
+  background-repeat: no-repeat;
+  background-image: url(./images/pc_chcek_off_s_20.png);
+}
+input[type=checkbox]:checked + label {
+  width: 24px;
+  height: 24px;
+  background-image: url(./images/pc_chcek_on_s_20.png);
+}
+input[type=checkbox]:disabled + label {
+  width: 24px;
+  height: 24px;
+  background-image: url(./images/pc_chcek_off_s_20.png);
+}
+
+
 .checker-wrap a {
   font-size: 18px;
   font-weight: 700;
-}
-.checker-wrap img:hover,
-.checker-wrap a:hover {
-  cursor: pointer;  
-}
-
-.checker-agree img:hover {
-  cursor: pointer;
 }
 
 .green {
@@ -80,7 +127,8 @@ body {
   margin-top: 50px;
   margin-bottom: 10px;
 }
-button {
+
+.btn-wrap button {
   width: 49%;
   height: 60px;
   font-size: 16px;
@@ -88,6 +136,7 @@ button {
   border-radius: 5px;
   color: white;
   background-color: #08A600;
+  cursor: pointer;
 }
 
 .join-us-text {
