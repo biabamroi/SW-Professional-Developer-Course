@@ -64,3 +64,33 @@ $('.agree label').on('click', function(){
     $('.total label input[type="checkbox"]').removeAttr('checked'); 
   }
 })
+
+
+
+
+// 확인 버튼을 클릭했을 때 필수사항(2)을 모두 체크했는지 확인
+// 모두 체크했으면 submit()
+// 하나라도 체크하지 않은 게 있다면 submit()을 막고
+// .req-alert 텍스트를 보여준다.
+
+$('#submit').on('click', function(e){
+  e.preventDefault();
+  let req = $('.req').length;
+  let chkreq = $('.req .checked').length;
+  // console.log(req, chkreq);
+  let unchk = req - chkreq;
+  // req 개수에서 체크되지 않은 개수를 뺀 값
+
+  if(unchk == 0){
+    $('#form1').submit();
+  }else{
+    e.preventDefault();
+    $('.req-alert').css('visibility', 'visible');
+  }
+})
+
+
+// 취소 버튼 클릭했을 때 네이버 사이트로 이동
+$('#cancel').on('click', function(){
+  location.href = 'https://www.naver.com';
+})
