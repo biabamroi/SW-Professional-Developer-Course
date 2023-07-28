@@ -32,7 +32,9 @@ $('.total label').on('click', function(){
   if($(this).children('.checkbox-img').hasClass('checked')){
     // 참이면(있으면) $('.agree')에 ('.checkbox-img')를 찾아서 ('checked')를 추가해 줘라.
     $('.agree').find('.checkbox-img').addClass('checked');
+    $('.agree').find('input[type="checkbox"]').attr('checked', true);
   }else{
-
+    $('.agree').find('.checkbox-img').removeClass('checked');
+    $('.agree').find('input[type="checkbox"]').attr('checked', false);
   }
 })
