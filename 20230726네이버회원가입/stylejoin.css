@@ -4,3 +4,68 @@
   box-sizing: border-box;
 }
 
+input {
+  width: 428px;
+  height: 40px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.hidden {
+  display: none;
+}
+
+.redchk {
+  display: none;
+  color: red;
+}
+
+.greenchk {
+  display: none;
+  color: #08a600;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.imgrock {
+  position: relative;
+}
+
+.imgrock img {
+  position: absolute;
+  top: -35px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+
+
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+header img {
+  width: 200px;
+  padding: 30px;
+}
+
+main {
+  max-width: 468px;
+}
+
+main > section:first-child > input {
+  text-align: right;
+}
+
