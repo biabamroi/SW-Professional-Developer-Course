@@ -11,6 +11,11 @@ let agreeAll = document.querySelectorAll('.agree');
 let agreeLabel = document.querySelectorAll('.agree label');
 // console.log(agreeLabel)
 
+let submitBtn = document.getElementById('submit');
+let cancelBtn = document.getElementById('cancel');
+// console.log(submitBtn, cancelBtn)
+
+
 
 labels.forEach(function(label){
   label.addEventListener('click', function(e){
@@ -86,4 +91,39 @@ agreeLabel.forEach(function(alabel){
       document.querySelector('.total input[type="checkbox"]').checked = false;
     }
   })
+})
+
+
+
+// #submit(확인) 버튼을 클릭했을 때
+// 필수항목(req) 2개 모두 체크되어 있다면 #form1 submit
+// 필수항목 2개 모두 체크되지 않았다면 e.preventDefalt()로 막고
+// req-alert의 style visibility를 visible로 보여준다.
+
+submitBtn.addEventListener('click', function(e){
+  e.preventDefault();
+  let req = document.querySelectorAll('.req').length;
+  let chkreq = document.querySelectorAll('.req .checked').length;
+  // console.log(req, chkreq)
+  let unchk = req - chkreq;
+
+  if(unchk == 0){
+    document.getElementById('form1').submit();
+  }else{
+    e.preventDefault();
+    document.querySelector('.req-alert').style.visibility = 'visible';
+  }
+})
+
+
+
+cancelBtn.addEventListener('click', function(){
+  // 페이지 이동
+  // location.href = "https://www.naver.com"
+
+  // 현재 페이지를 대체 시켜서 이전 페이지로 이동 x
+  // location.replace('https://www.naver.com')
+
+  // 새 창 열기
+  window.open('https://www.naver.com')
 })
