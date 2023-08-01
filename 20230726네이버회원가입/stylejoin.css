@@ -18,11 +18,13 @@ input {
 
 .redchk {
   display: none;
+  margin-top: 5px;
   color: red;
 }
 
 .greenchk {
   display: none;
+  margin-top: 5px;
   color: #08a600;
 }
 
@@ -55,7 +57,6 @@ body {
 
 .wrapper {
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
   align-items: center;
   max-width: 468px;
@@ -66,16 +67,39 @@ header img {
   padding: 30px;
 }
 
+.inputbox {
+  position: relative;
+}
+.inputbox > div {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #ccc;
+  pointer-events: none;
+}
+
+.inputboxact input:focus {
+  outline: 1px solid #03C75A;
+}
+
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-main > section:first-child > input {
-  text-align: right;
+.write5 {
+  position: absolute;
+  top: -35px;
+  right: 40px;
 }
-
+.write6 {
+  position: absolute;
+  top: -35px;
+  right: 40px;
+}
 
 .birth {
   display: flex;
@@ -115,6 +139,12 @@ main > section:first-child > input {
   background-color: #08a600;
   color: #fff;
 }
+
+/* .radiochk {
+  background-color: #03C75A;
+  color: #fff;
+  font-weight: bold;
+} */
 
 .text-gray {
   font-size: 14px;
