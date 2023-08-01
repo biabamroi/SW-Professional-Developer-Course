@@ -27,7 +27,8 @@ input {
 }
 
 p {
-  margin: 10px 0;
+  margin: 1rem 0;
+  font-weight: 700;
 }
 
 .imgrock {
@@ -37,7 +38,7 @@ p {
 .imgrock img {
   position: absolute;
   top: -35px;
-  right: 45px;
+  right: 5px;
   width: 30px;
   height: 30px;
 }
@@ -47,25 +48,137 @@ p {
 
 
 
-
+body {
+  display: flex;
+  justify-content: center;
+}
 
 .wrapper {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   align-items: center;
+  max-width: 468px;
 }
 
 header img {
-  width: 200px;
+  width: 300px;
   padding: 30px;
 }
 
 main {
-  max-width: 468px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main > section:first-child > input {
   text-align: right;
 }
 
+
+.birth {
+  display: flex;
+  justify-content: space-around;
+  width: 428px;
+}
+
+.birth > input {
+  width: 136px;
+}
+
+.birth > div > select {
+  width: 136px;
+  height: 40px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.select > input[type=radio] {
+  display: none;
+}
+
+.select > input[type=radio]+label {
+  display: inline-block;
+  width: 136px;
+  height: 40px;
+  margin-right: 4px;
+  border: 1px solid #ccc;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.select input[type=radio]:checked+label{
+  background-color: #08a600;
+  color: #fff;
+}
+
+.text-gray {
+  font-size: 14px;
+  font-weight: 400;
+  color: #bbb;
+}
+
+section > div > select {
+  width: 428px;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tel > input {
+  width: 318px;
+  height: 40px;
+  margin-right: 2px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.tel > button {
+  width: 100px;
+  height: 40px;
+  margin: 5px 0;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  background-color: #08a600;
+}
+
+.sample6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sample6_postcode {
+  width: 318px;
+  height: 40px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#sample6_submit {
+  width: 100px;
+  height: 40px;
+  margin: 5px 0;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  background-color: #08a600;
+}
+
+.join-btn {
+  width: 428px;
+  height: 40px;
+  margin: 10px 0;
+  border: none;
+  color: #fff;
+  background-color: #08a600;
+  font-size: large;
+}
