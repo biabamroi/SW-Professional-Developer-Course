@@ -8,7 +8,10 @@ $('input').focusout(function(){
   $(this).parent('.inputbox').removeClass('border-act');
 })
 
-let idveri, pwveri, pwchkveri, nameveri, bitrhveri, genderveri, phoneveri, addressveri = false;
+
+let idveri = pwveri = pwchkveri = nameveri = bitrhveri = genderveri = phoneveri = addressveri = false;
+
+// 선택사항
 let mailveri = true;
 
 
@@ -18,15 +21,15 @@ let mailveri = true;
 $('.userid input').focusout(function(){
   let userId = $(this).val();
   // 최소 5글자 ~ 최대 8글자 사이 영문 소문자 + 숫자 포함
-  let idExp= /^[a-z0-9]{5,8}$/
+  let idExp = /^[a-z0-9]{5,8}$/
 
   if(userId.length == 0) {
-    $('.userid .warn').html('<span class="text-red">필수정보 입니다.</span>')
+    $('.userid .warn').html('<span class="text-red">필수정보 입니다.</span>');
   } else if(!idExp.test(userId)) {
-    $('.userid .warn').html('<span class="text-red">5~8자의 영문 소문자, 숫자만 사용 가능합니다.</span>')
+    $('.userid .warn').html('<span class="text-red">5~8자의 영문 소문자, 숫자만 사용 가능합니다.</span>');
   } else {
     idveri = true;
-    $('.userid .warn').html('<span class="text-green">멋진 아이디네요!</span>')
+    $('.userid .warn').html('<span class="text-green">멋진 아이디네요!</span>');
   }
 })
 
@@ -40,16 +43,18 @@ $('.userpw input').focusout(function(){
   let pwExp = /^[A-Za-z0-9`~!@#\$%\^&\*\(\)\{\}\[\]\-_=\+\\|;:'"<>,\./\?]{8,20}$/
 
   if(userPw.length == 0) {
-    $('.userpw .warn').html('<span class="text-red">필수정보 입니다.</span>')
+    $('.userpw .warn').html('<span class="text-red">필수정보 입니다.</span>');
+    $('.userpw .inputbox span').empty();
+    $('.userpw .inputbox img').attr('src', './images/m_icon_pw_step_01.png');
   } else if(!pwExp.test(userPw)) {
     $('.userpw .warn').html('<span class="text-red">8~20자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</span>')
     $('.userpw .inputbox p').html('<span class="text-red">사용불가</span>');
-    $('.userpw .inputbox img').attr('src', './images/m_icon_pw_step_10.png')
+    $('.userpw .inputbox img').attr('src', './images/m_icon_pw_step_10.png');
   } else {
     pwveri = true;
     $('.userpw .warn').empty();
     $('.userpw .inputbox p').html('<span class="text-green">안전</span>');
-    $('.userpw .inputbox img').attr('src', './images/m_icon_pw_step_04.png')
+    $('.userpw .inputbox img').attr('src', './images/m_icon_pw_step_04.png');
   }
 })
 
