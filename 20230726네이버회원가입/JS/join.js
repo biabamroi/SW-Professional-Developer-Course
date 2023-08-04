@@ -1,8 +1,17 @@
 // 모든 input 태그에 focusin 되면 
 // 부모인 .inputbox에 border-act class add
-$('input').focusin(function(){
-  $(this).parent('.inputbox').addClass('border-act');
-})
+// $('input').focusin(function(){
+//   $(this).parent('.inputbox').addClass('border-act');
+// })
+
+let input = document.querySelectorAll('input');
+
+input.forEach(input, function(){
+  input.addEventListener("focusin", function(){
+    querySelector('input .inputbox').classList.add('border-act');
+  });
+});
+
 
 // 모든 input 태그에 focusout되면 
 // 부모인 .inputbox border-act class remove
@@ -398,3 +407,21 @@ function sample6_execDaumPostcode() {
       }
   }).open();
 }
+
+
+
+// #joinbtn을 click했을 때 필수 요소가 모두 true라면 (조건)
+// #join-form submit()
+
+// else (필수 요소가 하나라도 true가 아니라면)
+// e.preventDefault() 전송을 막는다.
+// 모든 input에 강제로 focusout 이벤트를 발생 시킨다.
+$('#joinbtn').on('click', function(e){
+  if(idveri && pwveriidveri && pwchkveriidveri && nameveriidveri && bitrhveriidveri && genderveriidveri && phoneveriidveri && addressveri && mailveri){
+    $('#join-form').submit();
+  } else {
+    e.preventDefault();
+    // 강제 이벤트 발생 시키는 메서드 trigger
+    $('input').trigger('focusout');
+  }
+})
