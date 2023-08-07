@@ -116,6 +116,9 @@ let birthList = document.querySelectorAll('.birth-item');
 // let year = document.getElementById("year").value;
 // let month = document.getElementById("month").value;
 // let date = document.getElementById("date").value;
+function birthWarnTxt (text){
+  document.querySelector('.birth .warn').innerHTML = `<span class="text-red">${text}</span>`;
+}
 
 birthList.forEach(function(item){
   item.addEventListener('focusout', function(){
@@ -123,7 +126,29 @@ birthList.forEach(function(item){
     let month = birthList[1].value;
     let date = birthList[2].value;
     // console.log(year,month,date);
+    let now = new Date(); // 한국 표준시
+    let nowstamp = now.getTime(); // 1970
+    now = now.getFullYear(); // 재할당
 
+    let birth = new Date(year,month,date);
+    birth = birth.getTime(); // 재할당
+
+    if(year.length != 4){
+      birthWarnTxt('태어난 년도 4자리를 정확하게 입력하세요.');
+    }else if(month.length == 0){
+      birthWarnTxt('태어난 월을 선택하세요.');
+    }else if(date.length == 0 || date > 31 || date <= 0){
+      birthWarnTxt('태어난 일(2자리) 정확하게 입력하세요.');
+    }else if(isNaN(year * month * date)){
+      birthWarnTxt('생년월일을 다시 확인해주세요.');
+    }else if(now - year > 100){
+      birthWarnTxt('정말이세요?');
+    }else if(nowstamp<birth){
+      birthWarnTxt('미래에서 오셨군요?');
+    }else{
+      bitrhveri = true;
+      birthWarnTxt('');
+    }
   })
 })
 
