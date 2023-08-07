@@ -109,6 +109,24 @@ document.querySelector('.username input').addEventListener('focusout', function(
 
 
 // 생년월일
+// HTML에서 class name 부여
+let birthList = document.querySelectorAll('.birth-item');
+// console.log(birthList)
+// NodeList(3) [input#year.birth-item, select#month.birth-item, input#date.birth-item]
+// let year = document.getElementById("year").value;
+// let month = document.getElementById("month").value;
+// let date = document.getElementById("date").value;
+
+birthList.forEach(function(item){
+  item.addEventListener('focusout', function(){
+    let year = birthList[0].value;
+    let month = birthList[1].value;
+    let date = birthList[2].value;
+    // console.log(year,month,date);
+
+  })
+})
+
 
 
 // 성별
