@@ -153,8 +153,21 @@ birthList.forEach(function(item){
 })
 
 
-
 // 성별
+let genderInputs = document.querySelectorAll('.gender .inputbox');
+// console.log(genderInputs)
+
+genderInputs.forEach(function(input){
+  input.addEventListener('click', function(){
+    genderInputs.forEach(function(item){
+      item.classList.remove('btn-primary');
+      item.querySelector('input[type="radio"]').checked = false;
+    })
+    this.classList.add('btn-primary');
+    this.querySelector('input[type="radio"]').checked = true;
+    genderveri = true;
+  })
+})
 
 
 // 본인 확인 이메일
