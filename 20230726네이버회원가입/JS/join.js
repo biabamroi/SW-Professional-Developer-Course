@@ -1,16 +1,19 @@
 // 모든 input 태그에 focusin 되면 
 // 부모인 .inputbox에 border-act class add
-// $('input').focusin(function(){
-//   $(this).parent('.inputbox').addClass('border-act');
-// })
 
 let input = document.querySelectorAll('input');
 
-input.forEach(input, function(){
-  input.addEventListener("focusin", function(){
-    querySelector('input .inputbox').classList.add('border-act');
-  });
-});
+input.forEach(function(input){
+  input.addEventListener('focus', function(){
+    this.parentNode.classList.add('border-act');
+  })
+})
+
+input.forEach(function(input){
+  input.addEventListener('focusout', function(){
+    this.parentNode.classList.remove('border-act');
+  })
+})
 
 
 // 모든 input 태그에 focusout되면 
