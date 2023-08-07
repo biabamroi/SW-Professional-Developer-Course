@@ -187,4 +187,64 @@ document.querySelector('.usermail input').addEventListener('focusout', function(
 })
 
 
+let numWarn = document.querySelector('.phone .warn');
+
 // 휴대전화
+document.querySelector('.phonenum input').addEventListener('focusout', function(){
+  let phoneNum = this.value;
+
+  if(phoneNum.length == 0){
+    numWarn.innerHTML = essenInfo;
+  }else{
+    numWarn.innerHTML = '';
+  }
+})
+
+
+// 인증번호
+document.getElementById('veribtn').addEventListener('click', function(){
+  let phoneVal = document.querySelector('.phonenum input').value;
+  phoneVal = phoneVal.replace(/[^0-9]/g, '');
+  document.querySelector('.phonenum input').value = phoneVal;
+
+  let veriText = document.getElementById('veritext');
+
+ 
+  let phoneLeng;
+  if(phoneVal.length < 10 || phoneVal.length > 11){
+    phoneLeng = false;
+  } else {
+    phoneLeng = true;
+  }
+
+  let phoneNaN;
+  if(isNaN(phoneVal)){
+    phoneNaN = false;
+  } else {
+    phoneNaN = true;
+  }
+
+  if(phoneLeng && phoneNaN){
+    numWarn.innerHTML = '<span class="text-green">인증번호를 발송했습니다. (유효시간 30분)<br>인증번호가 오지 않으면 입력하신 정보가 정확한지 확인하여 주세요. 이미 가입된 번호거나, 가상전화번호는 인증번호를 받을 수 없습니다.</span>';
+    veriText.parentNode.classList.remove('disinput');
+    veriText.disabled = false;
+  }else{
+    numWarn.innerHTML = '<span class="text-red">형식에 맞지 않는 번호입니다.</span>';
+    veriText.parentNode.classList.add('disinput');
+    veriText.disabled = true;
+  }
+
+  
+
+})
+
+//   $('#veritext').focusout(function(){
+//     if($(this).val() == "1234") {
+//       phoneveri = true;
+//       $('.phone .warn').html('<span class="text-green">인증 되었습니다.</span>');
+//       $(this).next('div').empty();
+//       $(this).parent('.inputbox').removeClass('border-red');
+//     } else {
+//       $('.phone .warn').html('<span class="text-red">인증번호를 다시 확인 해주세요.</span>')
+//       $(this).next('div').html('<span class="text-red">불일치</span><span class="disagree"></span>')
+//       $(this).parent('.inputbox').addClass('border-red');
