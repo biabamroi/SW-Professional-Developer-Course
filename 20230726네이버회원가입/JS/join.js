@@ -1,6 +1,3 @@
-// 모든 input 태그에 focusin 되면 
-// 부모인 .inputbox에 border-act class add
-
 let input = document.querySelectorAll('input');
 
 input.forEach(function(input){
@@ -16,19 +13,7 @@ input.forEach(function(input){
 })
 
 
-// 모든 input 태그에 focusout되면 
-// 부모인 .inputbox border-act class remove
-$('input').focusout(function(){
-  $(this).parent('.inputbox').removeClass('border-act');
-})
-
-// 필수항목인 모든 변수에 false 값 할당 후
-// 각 해당 조건을 충족 했을 때 true값으로 변경한다.
-// 마지막에 필수항목에 해당하는 변수가 모두 true라면 submit
-// 아니라면 제출되지 못하게 막는다.
-// Javascript(폴더) ->  230719_복합연산자.html 파일 참고
 let idveri = pwveri = pwchkveri = nameveri = bitrhveri = genderveri = phoneveri = addressveri = false;
-// 메일은 필수가 아니라 선택사항 이므로 true
 let mailveri = true;
 
 
