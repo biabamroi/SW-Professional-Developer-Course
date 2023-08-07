@@ -38,7 +38,7 @@ document.querySelector('.userid input').addEventListener('focusout', function(){
   }
 })
 
-// 하단에서 필요하여 전역 변수로 뺌
+// 비밀번호 재확인에서 필요하여 전역 변수로 뺌
 let userPw = document.querySelector('.userpw input');
 
 // 비밀번호
