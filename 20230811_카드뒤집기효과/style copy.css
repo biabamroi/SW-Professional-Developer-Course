@@ -21,7 +21,8 @@
   transform-style: preserve-3d;
 }
 
-.item {
+.front,
+.back {
   backface-visibility: hidden;
   transition: 1s;
 }
