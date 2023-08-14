@@ -13,7 +13,7 @@
   <div class="wrapper">
     <header>
       <nav>
-        <h1></h1>
+        <h1 class="visually-hidden">메뉴</h1>
         <div class="logo">
           <img src="./images/logo_b.png" alt="logo">
         </div>
@@ -27,25 +27,29 @@
       </nav>
     </header>
     <main>
-      <section>
-        <img src="./images/cloud1.png" alt="cloud">
-      </section>
-      <section>
+      <img class="cloud2" src="./images/cloud2.png" alt="cloud">
+      <section class="main-container">
         <div class="main-text">
-          <p>Lorem Ipsum</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Lorem <span>Ipsum</span></p>
+          <span>Lorem ipsum dolor sit amet adipisicing elit.</span>
         </div>
         <div class="phone-container">
-          <img src="./images/phone_morning.png" alt="phone">
-          <img src="./images/cloud2.png" alt="cloud">
-          <p class="time"></p>
+          <div class="phone">
+            <div class="cloud1-box">
+              <img src="./images/cloud1.png" alt="cloud">
+            </div>
+            <img src="./images/phone_morning.png" alt="phone">
+            <p class="time">00 : 00 : 00</p>
+          </div>
         </div>
       </section>
-      <section>
-        <button type="button">morning</button>
-        <button type="button">afternoon</button>
-        <button type="button">evening</button>
-        <button type="button">night</button>
+      <section class="btn-container">
+        <div class="btn-group">
+          <button type="button">morning</button>
+          <button type="button">afternoon</button>
+          <button type="button">evening</button>
+          <button type="button">night</button>
+        </div>
       </section>
     </main>
     <footer></footer>
