@@ -77,6 +77,24 @@ nav > ul > li > a:hover {
   }
 }
 
+.cloud3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* border: 2px solid red; */
+  animation: cloud3 20s ease-in-out alternate infinite;
+}
+
+@keyframes cloud3 {
+  0% {
+    left: 80vw;
+  }
+  100% {
+    left: -80vw;
+  }
+}
+
 .main-text {
   position: absolute;
   top: 100px;
@@ -124,7 +142,7 @@ nav > ul > li > a:hover {
   object-fit: cover;
   opacity: 0.5;
   /* border: 1px solid red; */
-  animation: cloud1 15s alternate infinite;
+  animation: cloud1 20s alternate infinite;
 }
 
 @keyframes cloud1 {
@@ -133,6 +151,26 @@ nav > ul > li > a:hover {
   }
   100% {
     right: -500px;
+  }
+}
+
+.cloud4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 200px;
+  object-fit: cover;
+  opacity: 0.5;
+  /* border: 1px solid red; */
+  animation: cloud4 10s alternate infinite;
+}
+
+@keyframes cloud4 {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 0;
   }
 }
 
