@@ -1,3 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Orbitron, sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.visually-hidden {
+  display: none;
+}
+
 @font-face {
   font-family: Orbitron;
   src: url(./fonts/Orbitron-Regular.eot);
@@ -6,5 +26,150 @@
 }
 
 body {
-  font-family: Orbitron, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/bg_morning.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 100px 0 30px;
+}
+
+nav > .logo img {
+  width: 80px;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+}
+
+nav > ul > li {
+  margin-right: 30px;
+}
+
+nav > ul > li > a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.cloud2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* border: 2px solid red; */
+  animation: cloud2 30s ease-in-out alternate infinite;
+}
+
+@keyframes cloud2 {
+  0% {
+    left: -80vw;
+  }
+  100% {
+    left: 80vw;
+  }
+}
+
+.main-text {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.main-text p {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.main-text p > span {
+  color: #666;
+}
+
+.main-container {
+  position: relative;
+}
+
+.phone-container .phone {
+  position: absolute;
+  top: 0;
+  right: -180px;
+}
+
+.phone-container .phone img {
+  width: 1000px;
+}
+
+.cloud1-box {
+  position: absolute;
+  top: 12%;
+  left: 11%;
+  width: 447px;
+  height: 250px;
+  overflow: hidden;
+  /* border: 1px solid yellow; */
+}
+
+.cloud1-box img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 200px;
+  object-fit: cover;
+  opacity: 0.5;
+  /* border: 1px solid red; */
+  animation: cloud1 15s alternate infinite;
+}
+
+@keyframes cloud1 {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -500px;
+  }
+}
+
+.time {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  font-size: 46px;
+  opacity: 0.8;
+  z-index: 100;
+}
+
+.btn-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-group button {
+  width: 300px;
+  height: 30px;
+  margin-right: 10px;
+  border: none;
+  background-color: rgba(255,255,255,0.5);
+  font-size: 16px;
+}
+.btn-group button:last-child {
+  margin-right: 0;
+}
+
+.btn-group button:hover {
+  color: white;
+  background-color: rgba(0,0,0,0.8);
 }
