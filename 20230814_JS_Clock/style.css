@@ -164,3 +164,41 @@ body {
 }
 
 
+
+#phone div {
+  position: absolute;
+  top: 76px;
+  left: 104px;
+  width: 418px;
+  height: 238px;
+  overflow: hidden;
+}
+
+.phone-time {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  z-index: 10;
+  transform: translateY(-50%);
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* 공통 태그
+#phone img {
+  position: absolute;
+} */
+
+#phone img:first-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+}
+#phone img:last-of-type {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 800px;
+}
