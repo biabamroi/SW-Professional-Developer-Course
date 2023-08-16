@@ -67,3 +67,18 @@ body {
 }
 
 
+
+.global-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 90px;
+  height: 80px;
+  background-image: url(./images/logo_b.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
