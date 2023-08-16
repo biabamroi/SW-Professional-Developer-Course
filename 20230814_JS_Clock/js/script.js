@@ -21,6 +21,9 @@ function morningT(){
   document.getElementById('phone-hand').src = './images/phone_morning.png';
   document.querySelector('.main-text p').style.color = 'black';
   time.style.color = 'black';
+  // 시도 중
+  document.querySelector('.morning').style.color = 'white';
+  document.querySelector('.morning').style.backgroundColor = 'rgba(0,0,0,0.8)';
 }
 
 function afternoonT(){
