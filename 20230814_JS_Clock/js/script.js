@@ -1,4 +1,11 @@
 // new Date() 한국 표준시
+let now = new Date();
+let hr = now.getHours();
+let min = now.getMinutes();
+let sec = now.getSeconds();
+
+
+
 // n초마다 코드 실행하는 setInterval
 
 setInterval(function(){
@@ -46,5 +53,32 @@ setInterval(function(){
   sec = String(sec).padStart(2, '0');
   // console.log(sec)
 
-  
+  document.querySelector('.phone-time').innerHTML = hr +':'+ min +':'+ sec;
 }, 1000)
+
+
+
+// 시간 맞춰 배경 이미지, 버튼 활성화
+// 1. 06-11 까지 **morning** background-image
+// 2. 12-15 까지 **afternoon** background-image
+// 3. 16-19 까지 **evening** background-image
+// 4. 20~ **night** background-imag
+
+let btnList = document.querySelectorAll('.btn-list li');
+// console.log(btnList)
+let wrapper = document.querySelector('.wrapper');
+
+if(hr >= 6 && hr < 12){
+  wrapper.classList.add('morning');
+  btnList[0].classList.add('on');
+}else if(hr >= 12 && hr < 16){
+  wrapper.classList.add('afternoon');
+  btnList[1].classList.add('on');
+}else if(hr >= 16 && hr < 20){
+  wrapper.classList.add('evening');
+  btnList[2].classList.add('on');
+}else{
+  wrapper.classList.add('night');
+  btnList[3].classList.add('on');
+}
+
