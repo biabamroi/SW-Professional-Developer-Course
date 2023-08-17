@@ -11,6 +11,7 @@
 <body>
   
   <h1 class="com"></h1>
+  <h1 class="com2"></h1>
   
   <script>
     
@@ -26,13 +27,13 @@
 
     let com = document.querySelector('.com');
     // com = computer[1];
-
+    
     document.querySelector('.com').innerHTML = computer[1];
     computer[0] = '삼성';
     computer[3] = 'SAMBO';
     console.log(computer);
-
-
+    
+    
     // object {중괄호}
     // {key : value}
     let sw = {
@@ -43,12 +44,12 @@
     // 1. object.['가져오고 싶은 value의 key값']
     // console.log(sw['computer']);
     // console.log(sw['name']);
-
+    
     // 2. object.해당 value의 key값
     console.log(sw.computer);
     console.log(sw.name);
-
-
+    
+    
     // array & object 차이점
     // array는 순서대로 자료를 저장한다.
     // 0:"삼성"
@@ -59,14 +60,27 @@
     // length:5
     // [[Prototype]]
     // : Array(0)
-
+    
     // object는 자료에 이름k(ey)을 붙여서 저장
     // array는 자료간 순서가 존재, object 순서 개념 존재 x
     // array는 자료간 정렬 / 자르기 기능 할 수 있다.
-
+    
     com.innerHTML = '내 컴퓨터는 '+sw.computer+'이고, 내 이름은 '+sw.name+'이야.';
-
-
-</script>
+    
+    
+    
+    let com2 = document.querySelector('.com2');
+    
+    // object 안에는 array도 들어갈 수 있다.
+    
+    let sw2 = {
+      computer : ['SAMSUNG','LG','APPLE','MAC','DELL','SAMBO'],
+      name : ['길동','철수','영희','지우','이슬','웅이']
+    }
+    
+    com2.innerHTML = '내 컴퓨터는 '+sw2.computer[1]+'(이)고, 내 이름은 '+sw2.name[1]+'(이)야.';
+    
+    
+  </script>
 </body>
 </html>
