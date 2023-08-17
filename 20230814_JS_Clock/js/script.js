@@ -66,19 +66,48 @@ setInterval(function(){
 
 let btnList = document.querySelectorAll('.btn-list li');
 // console.log(btnList)
-let wrapper = document.querySelector('.wrapper');
+let back = document.querySelector('#wrapper');
 
 if(hr >= 6 && hr < 12){
-  wrapper.classList.add('morning');
+  back.classList.add('morning');
   btnList[0].classList.add('on');
 }else if(hr >= 12 && hr < 16){
-  wrapper.classList.add('afternoon');
+  back.classList.add('afternoon');
   btnList[1].classList.add('on');
 }else if(hr >= 16 && hr < 20){
-  wrapper.classList.add('evening');
+  back.classList.add('evening');
   btnList[2].classList.add('on');
 }else{
-  wrapper.classList.add('night');
+  back.classList.add('night');
   btnList[3].classList.add('on');
 }
 
+
+
+// 버튼 클릭 시 배경 이미지 변경, on class add & remove
+
+btnList.forEach(function(item){
+  // 각 li 안의 a 태그에 있는 HTML text를 변수에 저장
+  let backTxt = item.querySelector('a').innerHTML;
+  // console.log(backTxt)
+  
+  // 각 버튼에 클릭 이벤트 추가
+  item.addEventListener('click', function(e){
+    // a 태그 링크 이동 막기
+    e.preventDefault();
+
+    // 모든 요소 on class remove
+    btnList.forEach(function(btn){
+      btn.classList.remove('on');
+    })
+    
+    // 현재 클릭된 요소에 on class add
+    item.classList.add('on');
+
+    // Element.className = 'class name';
+    // 기존 class가 없으면 add,
+    // 있으면 기존 class를 우측 class name으로 변경
+    back.className = backTxt;
+
+  })
+})
