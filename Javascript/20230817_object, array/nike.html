@@ -6,6 +6,8 @@
   <meta name="description" content="nike">
   <meta name="keywords" content="html, javascript">
   <meta name="author" content="kai">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
   <title>nike</title>
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -23,6 +25,36 @@
     </div>
   </div>
   <script>
+    // Array 안에 object 존재
+    let products = [
+      {
+        // key : value
+        img : 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5e90af51-c6cd-4426-ad31-5f34ac7df0ee/%EC%A4%8C-%EB%B3%B4%EB%A9%94%EB%A1%9C-5-%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-fwdJDzm0.png',
+        title : '나이키 줌 보메로 5 프리미엄',
+        price : '219,000 원',
+        size : ['230','240','250','260']
+      }
+    ]
+    
+    // console.log(products[0].size[0])
+    
+    let boxItem = document.querySelector('.box-item');
+    let boxItemImage = document.querySelector('.box-item > img');
+    let shoInfoTitle = document.querySelector('.sho-info > h2');
+    // let shoInfoPrice = document.querySelector('');
+    // let shoInfoSize = document.querySelector('');
+
+    boxItemImage.src = products[0].img;
+    shoInfoTitle.innerHTML = products[0].title;
+    document.querySelectorAll('.sho-info > p')[0].innerHTML = products[0].price;
+    document.querySelectorAll('.sho-info > p')[1].innerHTML = products[0].size;
+
+    // $('.box-item > img').attr('src', products[0].img);
+
+
+
+
+
 
   </script>
 </body>
