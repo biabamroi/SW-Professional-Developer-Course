@@ -1,13 +1,3 @@
-// createElement로 products length만큼 html 생성
-
-// .box-list 안에 .box-item이라는 class를 가진 div 생성
-// .box-item 안 
-// 1. img tag 생성 src = products.img / alt = products.title
-// 2. .box-list 안에 .sho-info라는 class를 가진 div 생성
-// 3. .sho-info 안에 h2 tag 생성 => innerHTML = products.title
-// 4. .sho-info 안에 p tag 생성 => innerHTML = products.price
-// 5. .sho-info 안에 p tag 생성 => innerHTML = products.size
-
 let boxList = document.querySelector('.box-list');
 
 let products = [
@@ -49,8 +39,6 @@ let products = [
   }
 ]
 
-let productsLength = products.length;
-
 {/* <div class="box-item">
     <img src="" alt="">
     <div class="sho-info">
@@ -60,78 +48,25 @@ let productsLength = products.length;
   </div>
 </div> */}
 
-products.forEach(function(item){
-  let boxItem = document.createElement('div');
-  boxItem.classList.add('box-item');
-  boxList.appendChild(boxItem);
 
-  let boxImg = document.createElement('img');
-  boxImg.src = item.img;
-  boxImg.alt = item.title;
-  boxItem.appendChild(boxImg);
-  
-  let shoInfo = document.createElement('div');
-  shoInfo.classList.add('sho-info');
-  boxItem.appendChild(shoInfo);
-  
-  let boxTitle = document.createElement('h3');
-  boxTitle.innerHTML = item.title;
-  shoInfo.appendChild(boxTitle);
+// Javascript로 html 생성하는 방법 두 번째 (최신 문법)
+// let pTag = '<p class="txt">html 생성</p>';
+// .insertAdjacentElement(추가할 위치) => 문자형 html을 넣어주는 함수
+// 첫 번째 파라미터 : 추가할 위치(beforeend = 안쪽 맨 밑)
+// 두 번째 파라미터 : 추가할 html 문자(pTag)
+// boxList.insertAdjacentHTML('beforeend', pTag);
 
-  let boxPrice = document.createElement('p');
-  boxPrice.innerHTML = item.price;
-  shoInfo.appendChild(boxPrice);
 
-  let boxSize = document.createElement('p');
-  boxSize.innerHTML = item.size;
-  shoInfo.appendChild(boxSize);
+// insertAdjacentHTML로 .box-item 완성
+
+
+products.forEach((i)=>{
+  let boxItem = 
+  `<div class="box-item"><img src="${i.img}" alt="${i.title}">
+    <div class="sho-info">
+      <h3>${i.title}</h3>
+      <p>${i.price}</p>
+      <p>${i.size}</p>
+    </div></div>`;
+  boxList.insertAdjacentHTML('beforeend', boxItem);
 })
-
-// for (let i=0; i < productsLength; i++){
-//   let boxItem = document.createElement('div');
-//   boxItem.classList.add('box-item');
-//   boxList.appendChild(boxItem);
-  
-//   let img = document.createElement('img');
-//   boxItem.appendChild(img);
-  
-//   let shoInfo = document.createElement('div');
-//   shoInfo.classList.add('sho-info');
-//   boxItem.appendChild(shoInfo);
-  
-//   let h3Tag = document.createElement('h3');
-//   let pTag1 = document.createElement('p');
-//   let pTag2 = document.createElement('p');
-  
-//   shoInfo.appendChild(h3Tag);
-//   shoInfo.appendChild(pTag1);
-//   shoInfo.appendChild(pTag2);
-// };
-
-// let boxItems = document.querySelectorAll('.box-item');
-// let boxItemImage = document.querySelector('.box-item > img');
-// let shoInfoTitle = document.querySelector('.sho-info > h3');
-// let shoInfoPrice = document.querySelectorAll('.sho-info > p')[0];
-// let shoInfoSize = document.querySelectorAll('.sho-info > p')[1];
-
-// let boxItemLength = boxItems.length;
-
-// boxItems.forEach(function(item, index){
-//   item.querySelector('img').src = products[index].img;
-//   item.querySelector('.sho-info > h3').innerHTML = products[index].title;
-//   item.querySelectorAll('.sho-info > p')[0].innerHTML = products[index].price;
-//   item.querySelectorAll('.sho-info > p')[1].innerHTML = products[index].size;
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
