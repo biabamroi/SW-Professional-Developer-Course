@@ -10,9 +10,10 @@
 
 .box-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
+  gap: 10px;
 }
 
 .box-item {
