@@ -1,5 +1,13 @@
 // createElement로 products length만큼 html 생성
 
+// .box-list 안에 .box-item이라는 class를 가진 div 생성
+// .box-item 안 
+// 1. img tag 생성 src = products.img / alt = products.title
+// 2. .box-list 안에 .sho-info라는 class를 가진 div 생성
+// 3. .sho-info 안에 h2 tag 생성 => innerHTML = products.title
+// 4. .sho-info 안에 p tag 생성 => innerHTML = products.price
+// 5. .sho-info 안에 p tag 생성 => innerHTML = products.size
+
 let boxList = document.querySelector('.box-list');
 
 let products = [
