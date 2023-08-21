@@ -28,6 +28,24 @@ let products = [
     title : '에어 조던 1 로우 OG',
     price : '169,000 원',
     size : ['230','240','250','260']
+  },
+  {
+    img : 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e3c24388-9a45-44e2-95c7-8f99d38bd882/tc-7900-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-2rIhOi40.png',
+    title : '나이키 TC 7900',
+    price : '139,000 원',
+    size : ['230','240','250','260']
+  },
+  {
+    img : 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/76274d81-023f-4c0e-82bf-25ff919fe399/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EC%8B%A0%EB%B0%9C-f3lJbRsL.png',
+    title : '나이키 덩크 로우',
+    price : '139,000 원',
+    size : ['230','240','250','260']
+  },
+  {
+    img : 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9e979778-83a8-4ddb-b39a-d678a69efb0b/p-6000-%EC%8B%A0%EB%B0%9C-lH2N4mEX.png',
+    title : '나이키 P-6000',
+    price : '129,000 원',
+    size : ['230','240','250','260']
   }
 ]
 
@@ -59,9 +77,11 @@ products.forEach(function(item){
   let boxTitle = document.createElement('h3');
   boxTitle.innerHTML = item.title;
   shoInfo.appendChild(boxTitle);
+
   let boxPrice = document.createElement('p');
   boxPrice.innerHTML = item.price;
   shoInfo.appendChild(boxPrice);
+
   let boxSize = document.createElement('p');
   boxSize.innerHTML = item.size;
   shoInfo.appendChild(boxSize);
