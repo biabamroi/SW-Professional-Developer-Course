@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal-popup {
+  width: 500px;
+  height: 230px;
+  padding: 40px 0 20px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.modal-popup h1 {
+  margin-bottom: 20px;
+}
+
+.modal-popup p {
+  margin-bottom: 20px;
+}
+
+.modal-popup input {
+  margin: 0 10px 20px 0;
+}
+
+.modal-popup button {
+  display: block;
+  padding: 3px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
