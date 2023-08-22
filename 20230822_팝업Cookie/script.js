@@ -15,4 +15,16 @@
 // 1. setCookie : 쿠키값을 설정한느 함수
 // 2. getCookie : 쿠키값을 가져오는 함수
 
-// localstorage라는 
+// localstorage라는 이용해서 구현할 수 
+
+function setCookie(name, value, hours){
+  // 빈 문자열로 변수 초기화 => 쿠키 만료 시간 담을 그릇
+  let expires = '';
+}
+
+// 만약 hours라는 값이 있다면 (true)
+if(hours){
+  let date = new Date();
+  // hour(시간) * 60(분) * 60(초) * 1000 (밀리초)
+  date.setTime(date.getTime() + (hours * 60 * 60 * 1000))
+}
