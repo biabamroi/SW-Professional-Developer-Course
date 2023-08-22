@@ -51,7 +51,7 @@ let products = [
 
 // Javascript로 html 생성하는 방법 두 번째 (최신 문법)
 // let pTag = '<p class="txt">html 생성</p>';
-// .insertAdjacentElement(추가할 위치) => 문자형 html을 넣어주는 함수
+// .insertAdjacentHTML(추가할 위치) => 문자형 html을 넣어주는 함수
 // 첫 번째 파라미터 : 추가할 위치(beforeend = 안쪽 맨 밑)
 // 두 번째 파라미터 : 추가할 html 문자(pTag)
 // boxList.insertAdjacentHTML('beforeend', pTag);
@@ -59,14 +59,35 @@ let products = [
 
 // insertAdjacentHTML로 .box-item 완성
 
+products.forEach(function(item, index){
+  let boxItem = `<div class="box-item"></div>`;
+  document.querySelector('.box-list').insertAdjacentHTML('beforeend', boxItem);
+  
+  let boxImg = `<img src="${item.img}" alt="${item.title}">`;
+  document.querySelectorAll('.box-item')[index].insertAdjacentHTML('beforeend', boxImg);
+  
+  let shoInfo = `<div class="sho-info"></div>`;
+  document.querySelectorAll('.box-item')[index].insertAdjacentHTML('beforeend', shoInfo);
 
-products.forEach((i)=>{
-  let boxItem = 
-  `<div class="box-item"><img src="${i.img}" alt="${i.title}">
-    <div class="sho-info">
-      <h3>${i.title}</h3>
-      <p>${i.price}</p>
-      <p>${i.size}</p>
-    </div></div>`;
-  boxList.insertAdjacentHTML('beforeend', boxItem);
+  let boxTitle = `<h3>${item.title}</h3>`;
+  document.querySelectorAll('.sho-info')[index].insertAdjacentHTML('beforeend', boxTitle);
+  
+  let boxPrice = `<p>${item.price}</p>`;
+  document.querySelectorAll('.sho-info')[index].insertAdjacentHTML('beforeend', boxPrice);
+  
+  let boxSize =  `<p>${item.size}</p>`;
+  document.querySelectorAll('.sho-info')[index].insertAdjacentHTML('beforeend', boxSize);
 })
+
+// products.forEach((i)=>{
+//   let boxItem = 
+//   `<div class="box-item">
+//     <img src="${i.img}" alt="${i.title}">
+//     <div class="sho-info">
+//       <h3>${i.title}</h3>
+//       <p>${i.price}</p>
+//       <p>${i.size}</p>
+//     </div>
+//    </div>`;
+//   boxList.insertAdjacentHTML('beforeend', boxItem);
+// })
