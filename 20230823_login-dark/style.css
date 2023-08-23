@@ -61,22 +61,38 @@ body {
 .input-wrap {
   margin-top: 20px;
 }
-.input-wrap label {
-  position: relative;
-}
+
 .input-wrap input {
   width: 100%;
   height: 40px;
   margin-bottom: 10px;
+  padding-left: 10px;
+  background-color: transparent;
   border: 1px solid var(--box-border-color);
   border-radius: 5px;
 }
-.input-wrap p {
+
+label {
+  position: relative;
+}
+
+.userid-txt,
+.userpw-txt {
   position: absolute;
   top: 0;
   left: 10px;
   color: var(--txt-second-color);
 }
+
+.warn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
 
 .log-wrap button {
   width: 100%;
@@ -161,6 +177,13 @@ footer {
   margin-top: 60px;
 }
 
+footer span {
+  margin-right: 10px;
+}
+footer span:last-child {
+  margin-right: 0;
+}
+
 footer span a {
   color: var(--txt-second-color);  
 }
@@ -171,4 +194,9 @@ footer span a {
   align-items: center;
   margin: 20px;
   color: var(--txt-second-color);
+}
+
+#mode {
+  color: var(--txt-second-color);
+  cursor: pointer;
 }
