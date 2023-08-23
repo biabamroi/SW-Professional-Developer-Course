@@ -6,12 +6,78 @@
   <meta name="description" content="Login mode change">
   <meta name="keywords" content="html, css, javascript">
   <meta name="author" content="kai">
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+
   <title>Login mode change</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div class="wrapper">
+    <div class="log-wrap">
+      <div class="logo">
+        <img src="./images/logo-light.png" alt="logo">
+      </div>
+      <div class="input-wrap">
+        <label for="inp" class="inp">
+          <input type="text" name="userid" id="userid" placeholder="&nbsp;">
+          <p>전화번호, 사용자 이름 또는 이메일</p>
+        </label>
+        <label for="inp" class="inp">
+          <input type="password" name="userpw" id="userpw" placeholder="&nbsp;">
+          <p>비밀번호</p>
+        </label>
+      </div>
+      <button type="submit">로그인</button>
+      <div class="hr-wrap">
+        <hr>
+        <span>또는</span>
+        <hr>
+      </div>
+      <div class="app-login">
+        <img src="./images/facebook-icon.png" alt="facebook">
+        <a href="">
+          <span>페이스북으로 로그인</span>
+        </a>
+      </div>
+      <p><a href="">비밀번호를 잊으셨나요?</a></p>
+    </div>
+
+    <div class="join-wrap">
+      <span>계정이 없으신가요?</span><span>가입하기</span>
+    </div>
+
+    <p>앱을 다운로드하세요.</p>
     
+    <div class="app-down">
+      <img src="./images/app-store.png" alt="App Store">
+      <img src="./images/gg-play.png" alt="Google Play">
+    </div>
+
+    <footer>
+      <span><a href="">Meta</a></span>
+      <span><a href="">소개</a></span>
+      <span><a href="">블로그</a></span>
+      <span><a href="">채용 정보</a></span>
+      <span><a href="">도움말</a></span>
+      <span><a href="">API</a></span>
+      <span><a href="">개인정보처리방침</a></span>
+      <span><a href="">약관</a></span>
+      <span><a href="">인기 계정</a></span>
+      <span><a href="">위치</a></span>
+      <span><a href="">Instagram Lite</a></span>
+      <span id="mode"><a href="">DarkMode</a></span>
+      <div class="copyright">
+        <p>© 2023 Instagram from Meta</p>
+      </div>
+    </footer>
   </div>
   <script src="./script.js"></script>
 </body>
