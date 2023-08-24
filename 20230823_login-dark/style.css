@@ -1,3 +1,8 @@
+/* :root는 html 문서 어디에서나 사용할 수 있다. */
+/* 사용자 지정 속성은 전용 표기법으로 정의 */
+/* --이름 : 값 */
+/* 속성(color, bgc) : var(이름) */
+
 :root {
   --body-bg: #fafafa;
   --box-bg: #fff;
@@ -24,182 +29,107 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   color: var(--a-color);
 }
 
+button {
+  border: navajowhite;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+}
+
 body {
-  background-color: var(--body-bg);
   color: var(--txt-color);
+  background-color: var(--body-bg);
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.form-container {
+  width: 350px;
+  /* 상 / 좌우 / 하 */
+  margin: 50px auto 0;
+  padding: 10px;
 }
 
-.log-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  margin: 60px 0 10px 0;
-  padding: 40px 50px;
-  border: 2px solid var(--box-border-color);
-  border-radius: 5px;
+.form-box {
+  border: 1px solid var(--box-border-color);
+  border-radius: 0dvb5px;
   background-color: var(--box-bg);
+}
+
+.logo {
+  width: 175px;
+  height: 50px;
+  margin: 20px auto;
 }
 
 .logo img {
-  width: 200px;
-}
-
-.input-wrap {
   width: 100%;
-  margin-top: 20px;
 }
 
-.input-wrap input {
-  width: 100%;
-  height: 40px;
-  margin-bottom: 10px;
-  padding-left: 10px;
-  background-color: transparent;
-  border: 1px solid var(--box-border-color);
-  border-radius: 5px;
+.dark-logo {
+  display: none;
 }
 
-.inp {
+/* body한테 .dark라는 클래스가 있을 때 (body는 생략 가능 */
+.dark .dark-logo {
+  display: block;
+}
+.dark .dark-logo {
+  display: none;
+}
+
+.signin-form {
+  padding: 24px 0;
+}
+
+.form-group {
+  margin: 0 30px 6px 30px;
+}
+
+.animate-input {
   position: relative;
+  height: 36px;
+  border: 1px solid var(--box-border-color);
 }
 
-.userid-txt,
-.userpw-txt {
+.animate-input span {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 10px;
-  font-size: 14px;
+  left: 8px;
+  font-size: 12px;
   color: var(--txt-second-color);
+  line-height: 36px;
+  /* 이벤트 제어
+  HTMl 요소에 정의된 이벤트를 조정할 수 있는 속성
+  none : 정의된 상태를 비활성화
+  auto : 비활성화된 이벤트가 다시 활성화
+  inherit : 부모 요소로부터 상속 */
+  pointer-events: none;
 }
 
-.warn {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-
-
-.log-wrap button {
+.animate-input input {
   width: 100%;
-  height: 40px;
+  height: 100%;
+  padding: 8px;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  background-color: var(--btn-bg);
-  color: var(--btn-color);
-  opacity: .3;
-}
-
-.hr-wrap {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.hr-wrap span {
-  color: var(--txt-second-color);
-}
-
-.hr-wrap hr {
-  width: 30%;
-  height: 1px;
-  background: var(--box-border-color);
-  border: 0;
-}
-
-.app-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.app-login img {
-  width: 24px;
-  margin-right: 10px;
-}
-
-.app-login a {
-  font-weight: 700;
-}
-
-.log-wrap > p {
-  margin-top: 20px;
-}
-
-.log-wrap > p > a {
-  font-size: 14px;
-}
-
-.join-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  padding: 20px 50px;
-  border: 2px solid var(--box-border-color);
-  border-radius: 5px;
+  outline: none;
+  color: var(--txt-color);
   background-color: var(--box-bg);
 }
 
-.join-wrap span:last-child {
-  margin-left: 10px;
-  font-weight: 700;
-  color: var(--btn-bg);
+.animate-input.active span {
+  font-size: 10px;
+  transform: translateY(-10px);
 }
 
-.wrapper > p {
-  margin: 20px 0;
+.animate-input.active input {
+  padding: 14px 0 2px 8px;
 }
 
-.app-down img {
-  height: 40px;
-}
-
-footer {
-  margin-top: 60px;
-}
-
-footer span {
-  margin-right: 10px;
-}
-footer span:last-child {
-  margin-right: 0;
-}
-
-footer span a {
-  color: var(--txt-second-color);  
-}
-
-.copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-  color: var(--txt-second-color);
-}
-
-#mode {
-  color: var(--txt-second-color);
-  cursor: pointer;
-}
