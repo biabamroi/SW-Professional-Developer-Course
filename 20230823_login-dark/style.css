@@ -35,7 +35,6 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--a-color);
 }
 
 button {
@@ -91,7 +90,7 @@ body {
 }
 
 .form-group {
-  margin: 0 30px 6px 30px;
+  margin: 0 40px 6px 40px;
 }
 
 .animate-input {
@@ -133,3 +132,125 @@ body {
   padding: 14px 0 2px 8px;
 }
 
+.animate-input button {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  display: none;
+}
+.animate-input.active button {
+  display: block;
+}
+
+.btn-group {
+  padding: 8px 40px;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: var(--btn-color);
+  background-color: var(--btn-bg);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: rgba(0, 149, 246, .3);
+}
+
+.or-box {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.or-box div:not(:nth-child(2)) {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--box-border-color);
+}
+
+.or-box div:nth-child(2) {
+  margin: 0 18px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--txt-second-color);
+}
+
+.fb-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.fb-btn img {
+  width: 16px;
+  margin-right: 8px;
+}
+
+.fb-btn span {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--fb-color);
+}
+
+.forgot-pw {
+  display: block;
+  font-size: 12px;
+  margin-top: 12px;
+  text-align: center;
+  color: var(--a-color);
+}
+
+.join-box {
+  margin: 24px 0;
+  padding: 20px 0;
+}
+
+.join-box p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.join-box a {
+  color: var(btn-bg);
+}
+
+.app-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-down p {
+  font-size: 14px;
+}
+
+.store-link {
+  margin: 20px 0;
+}
+
+.store-link a img {
+  height: 40px;
+}
+
+.link-list {
+  display: flex;
+  justify-self: center;
+}
+
+.link-list li a {
+  padding: 8px;
+  font-size: 12px;
+  color: var(--txt-second-color);
+}
+
+.copyright {
+  padding: 12px 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--txt-second-color);
+}
