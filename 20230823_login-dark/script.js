@@ -1,52 +1,50 @@
+// 화살표 함수 (arrow function)
+// 함수 선언식 보다 간결하게 사용할 수 있다.
+// function name(x, y){
+//   return x + y;
+// }
+// x, y => x + y;
+let btnLog = document.querySelector('.btn-login');
 
-let body = document.querySelector('body');
-let logWrap = document.querySelector('.log-wrap');
-let logo = document.querySelector('.logo img');
-let joinWrap = document.querySelector('.join-wrap')
-let mode = document.getElementById('mode');
+document.querySelectorAll('.animate-input').forEach((e) => {
+  // e : .animate-input class가진 값을 하나씩 떼서 넘겨준 값
+  let input = e.querySelector('input');
+  let button = e.querySelector('button');
 
-let hr = document.querySelectorAll('hr');
-let input = document.querySelectorAll('input');
-let userid = document.getElementById('userid');
-let userpw = document.getElementById('userpw');
+  // onkeyup
+  // 사용자가 키보드 키를 눌렀다가 떼었을 때 발생하는 이벤트
+  // trim() : 공백을 제거하는 함수
 
+  // 공백을 제거한 input.value.length가 0보다 클 때 (= 입력된 값이 있다)
+  // .animate-input에 active class를 추가해서 span이 위로 올라가게 한다.
+  // .btn-login에 disabled 라는 속성을 remove
 
-
-
-
-
-mode.addEventListener('click', function(){
-  if(mode.innerText == 'DarkMode'){
-    mode.innerText = 'LightMode';
-    logo.src="./images/logo-dark.png";
-    body.style.backgroundColor = '#151515';
-    body.style.color = '#d2d2d2';
-    logWrap.style.backgroundColor = '#151515';
-    logWrap.style.border = '2px solid #262626';
-    joinWrap.style.backgroundColor = '#151515';
-    joinWrap.style.border = '2px solid #262626';
-    input.forEach(e => {
-      e.style.backgroundColor = '#151515';
-      e.style.border = '1px solid #262626';
-    });
-    hr.forEach(e => {
-      e.style.background = '#262626';
-    })
-  }else{
-    mode.innerText = 'DarkMode';
-    logo.src="./images/logo-light.png";
-    body.style.backgroundColor = '#fafafa';
-    body.style.color = '#262626';
-    logWrap.style.backgroundColor = '#fff';
-    logWrap.style.border = '2px solid #dbdbdb';
-    joinWrap.style.backgroundColor = '#fff';
-    joinWrap.style.border = '2px solid #dbdbdb';
-    input.forEach(e => {
-      e.style.backgroundColor = '#fff';
-      e.style.border = '1px solid #dbdbdb';
-    });
-    hr.forEach(e => {
-      e.style.background = '#dbdbdb';
-    })
+  // else
+  // .animate-input 에 active class remove span 원래 자리
+  // btnLog disabled 속성 add => setAttribute
+  input.onkeyup = () => {
+    if(input.value.trim().length > 0) {
+      e.classList.add('active');
+      btnLog.removeAttribute('disabled');
+    } else {
+      e.classList.remove('active');
+      btnLog.setAttribute('disabled', 'true');
+    }
   }
+
+  // 비밀번호 표시 / 숨기기
+  // 비밀번호 표시 클릭 했을 때 => 숨기기 input type="text"
+  // 비밀번호 숨기기 클릭 했을 때 => 표시 input type="password"
+  // getAttribute input type 속성을 가져온다.
+  if(button) {
+    button.onclick = () => {
+      if(input.getAttribute('type') === 'text') {
+        input.setAttribute('type', 'password');
+        button.innerHTML = '비밀번호 표시';
+      } else {
+        input.setAttribute('type', 'text');
+        button.innerHTML = '비밀번호 숨기기';
+      }
+    }
+  } 
 })
