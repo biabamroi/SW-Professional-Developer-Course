@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fiteness-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.fiteness-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 400px;
+}
+
+.fiteness-list .fiteness-item:nth-child(1){
+  background-color: #283491;
+  background-image: url(./images/img1.png);
+  background-size: 200px, 300px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+.fiteness-list .fiteness-item:nth-child(1):hover {
+  flex-basis: 2000px;
+}
+.fiteness-list .fiteness-item:nth-child(1):hover h1 {
+  text-align: left;
+}
+.fiteness-list .fiteness-item:nth-child(1):hover p,
+.fiteness-list .fiteness-item:nth-child(1):hover button {
+  transform: translateX(0);
+}
+
+
+.fiteness-list .fiteness-item:nth-child(2){
+  background-color: #f18684;
+  background-image: url(./images/img2.png);
+  background-size: 200px, 300px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+.fiteness-list .fiteness-item:nth-child(2):hover {
+  flex-basis: 2000px;
+}
+.fiteness-list .fiteness-item:nth-child(2):hover h1 {
+  text-align: left;
+}
+.fiteness-list .fiteness-item:nth-child(2):hover p,
+.fiteness-list .fiteness-item:nth-child(2):hover button {
+  transform: translateX(0);
+}
+
+.fiteness-list .fiteness-item:nth-child(3){
+  background-color: #6ee2f1;
+  background-image: url(./images/img3.png);
+  background-size: 200px, 300px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+.fiteness-list .fiteness-item:nth-child(3):hover {
+  flex-basis: 2000px;
+}
+.fiteness-list .fiteness-item:nth-child(3):hover h1 {
+  text-align: left;
+}
+.fiteness-list .fiteness-item:nth-child(3):hover p,
+.fiteness-list .fiteness-item:nth-child(3):hover button {
+  transform: translateX(0);
+}
+
+
+.fiteness-item {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  overflow: hidden;
+}
+
+.fiteness-item h1 {
+  text-align: center;
+}
+
+.fiteness-item p,
+.fiteness-item button {
+  transform: translateX(-300px);
+}
+
+.fiteness-item p {
+  margin: 20px 0;
+}
+
+.fiteness-item button {
+  padding: 8px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: transparent;
+}
