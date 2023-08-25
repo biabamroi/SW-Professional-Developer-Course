@@ -13,9 +13,9 @@ let workout = [
   }
 ]
 
+let cardList = document.querySelector('.card-list');
 
 workout.forEach((item, i)=>{
-  let cardList = document.querySelector('.card-list');
   // console.log(item, i)
   let cardItem = `
   <div class="card-item">
@@ -27,5 +27,5 @@ workout.forEach((item, i)=>{
     <img src="${workout[i].img}" alt="${workout[i].title}">
   </div>
   `
-  cardList.insertAdjacentHTML('beforeend');
+  cardList.insertAdjacentHTML('beforeend', cardItem);
 })
