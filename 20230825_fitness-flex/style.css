@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 1s ease-in;
 }
 
 .fiteness-slide {
@@ -82,7 +83,6 @@
   height: 100%;
   color: white;
   overflow: hidden;
-  transition: all 1s ease-in;
 }
 
 .fiteness-item h1 {
