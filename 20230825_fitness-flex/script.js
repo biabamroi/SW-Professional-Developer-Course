@@ -19,13 +19,15 @@ workout.forEach((item, i)=>{
   // console.log(item, i)
   let cardItem = `
   <div class="card-item">
-    <h2>${workout[i].title}</h2>
+    <h2>${item.title}</h2>
     <div class="caption">
       <p>Strength does not come from the physical capacity. It comes from an indomitable will.</p>
       <button type="button">Know more</button>
     </div>
-    <img src="${workout[i].img}" alt="${workout[i].title}">
+    <img src="${item.img}" alt="${item.title}">
   </div>
   `
+  // <h2>${workout[i].title}</h2>
+  
   cardList.insertAdjacentHTML('beforeend', cardItem);
 })
