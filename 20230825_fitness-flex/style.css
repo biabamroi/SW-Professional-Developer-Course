@@ -82,6 +82,7 @@
   height: 100%;
   color: white;
   overflow: hidden;
+  transition: all 1s ease-in;
 }
 
 .fiteness-item h1 {
@@ -103,5 +104,8 @@
   border: 1px solid white;
   border-radius: 20px;
   background-color: transparent;
+}
+.fiteness-item button:hover {
+  opacity: .7;
 }
 
