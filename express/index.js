@@ -77,6 +77,9 @@ app.get('/test', function(requests, response){
 // set-executionpolicy unrestricted
 // y
 
+
 // /login 경로로 접속했을 때 login.html 
 
-
+app.get('/login', function(requests, response){
+  response.sendFile(__dirname + '/login.html');
+})
