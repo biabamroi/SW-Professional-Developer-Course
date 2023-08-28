@@ -83,3 +83,10 @@ app.get('/test', function(requests, response){
 app.get('/login', function(requests, response){
   response.sendFile(__dirname + '/login.html');
 })
+
+
+// /map 경로로 접속했을 때 map.html
+
+app.get('/map', function(requests, response){
+  response.sendFile(__dirname + '/map.html');
+})
