@@ -16,15 +16,6 @@ const app = express();
 // para1 : 서버를 띄워줄 포트 번호 작성
 // para2 : (콜백함수 안에 작성) 실행할 코드
 
-// 내 컴퓨터에서 7000포트로 진입 
-// :  localhost:7000(port number)
-// 콜백함수 안에 있는 코드 실행 
-
-app.listen(7000, function(){
-  console.log('7000번 포트')
-})
-
-
 // 서버 : 요청한 정보를 보내주는 프로그램
 // HTTP 요청 방식 네 가지
 // 1. GET (읽기)
@@ -45,3 +36,30 @@ app.listen(7000, function(){
 // 단점 : 이미지, 동영상, 연산처리가 필요한 서비스를 개발해야 할 경우
 //       속도가 떨어지고 라이브러리도 부족하다.
 //  → 보통 파이썬 처리 
+
+
+
+
+// 내 컴퓨터에서 7000포트로 진입 
+// :  localhost:7000(port number)
+// 콜백함수 안에 있는 코드 실행 
+
+app.listen(7000, function(){
+  console.log('7000번 포트');
+})
+
+// 서버에 GET 요청으로 정보 받아오기
+// 유저가 localhost:7000으로 접속하면 send, sendFile() 속 내용을 보여준다.
+// app.get('경로', 콜백함수 function(requests, response){ 실행할 코드 })
+// requests(요청 보낼 때 사용), response(응답 받을 때 사용)
+
+app.get('/', function(requests, response){
+  response.sendFile(__dirname + '/index.html');
+})
+
+// 항상 변경 사항 적용 후 서버 재시작 ctrl + c
+
+app.get('/test', function(requests, response){
+  response.send('Test 페이지 입니다.');
+})
+
