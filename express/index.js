@@ -52,6 +52,7 @@ app.listen(7000, function(){
 // 유저가 localhost:7000으로 접속하면 send, sendFile() 속 내용을 보여준다.
 // app.get('경로', 콜백함수 function(requests, response){ 실행할 코드 })
 // requests(요청 보낼 때 사용), response(응답 받을 때 사용)
+// slash / 는 메인 경로 (localhost:7000)
 
 app.get('/', function(requests, response){
   response.sendFile(__dirname + '/index.html');
@@ -62,4 +63,20 @@ app.get('/', function(requests, response){
 app.get('/test', function(requests, response){
   response.send('Test 페이지 입니다.');
 })
+
+
+// 서버 종료 -> ctrl + c 
+// 서버 재실행 자동화
+// -g(global)로 컴퓨터 전역에서 이용 가능하게 설치해 달라는 명령어
+// npm install -g nodemon
+// node index.js -> nodemon index.js
+
+// powershell 보안 오류
+// powershell 관리자 권한으로 실행
+// executionpolicy
+// set-executionpolicy unrestricted
+// y
+
+// /login 경로로 접속했을 때 login.html 
+
 
