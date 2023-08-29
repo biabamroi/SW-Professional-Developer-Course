@@ -100,3 +100,20 @@ app.get('/map', function(requests, response){
 })
 
 
+// POST
+// body-parser : 요청 데이터 해석을 도와주는 라이브러리
+// 설치 -----------------------------------------------------------
+// npm install body-parser
+// 사용 선언
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended : true}));
+
+
+// input 태그 값을 서버에 전송하려면 name 속성 추가
+
+// app.post('', function(){})
+app.post('/add', function(requests, response){
+  response.send('전송완료!')
+  console.log(requests.body)
+})
+
