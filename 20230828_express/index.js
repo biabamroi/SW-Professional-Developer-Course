@@ -115,5 +115,9 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.post('/add', function(requests, response){
   response.send('전송완료!')
   console.log(requests.body)
+  // console.log(requests.body.id)
+  // console.log(requests.body.pw)
 })
 
+// 서버한테 정보를 보내주는 코드
+// 서버에 보낸 정보를 영구 저장하려면 DB(Data Base)에 저장해야 한다.
