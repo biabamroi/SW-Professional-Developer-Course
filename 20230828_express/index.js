@@ -59,7 +59,7 @@ app.get('/', function(requests, response){
 })
 
 // 항상 변경 사항 적용 후 서버 재시작 ctrl + c
-
+// 'localhost:7000/test' 로 접속시 실행 할 코드
 app.get('/test', function(requests, response){
   response.send('Test 페이지 입니다.');
 })
@@ -72,6 +72,7 @@ app.get('/test', function(requests, response){
 // node index.js -> nodemon index.js
 
 // powershell 보안 오류
+// 에러 원인 : Restricted일 때 허가된 script외에 막아버리기 때문에 에러가 발생한다.
 // powershell 관리자 권한으로 실행
 // executionpolicy
 // set-executionpolicy unrestricted
@@ -86,7 +87,8 @@ app.get('/login', function(requests, response){
 
 
 // /map 경로로 접속했을 때 map.html
-
+// localhost:7000/map 으로 접속시 보여줄 화면 => map.html
+// map.html : 카카오 지도 OPEN API
 app.get('/map', function(requests, response){
   response.sendFile(__dirname + '/map.html');
 })
