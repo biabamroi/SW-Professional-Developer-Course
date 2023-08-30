@@ -113,12 +113,12 @@ app.use(bodyParser.urlencoded({extended : true}));
 
 // app.post('', function(){})
 // input에 작성된 내용은 requests 파라미터가 가지고 있다.
-app.post('/add', function(requests, response){
-  response.send('전송완료!')
-  console.log(requests.body)
-  // console.log(requests.body.id)
-  // console.log(requests.body.pw)
-})
+// app.post('/add', function(requests, response){
+//   response.send('전송완료!')
+//   console.log(requests.body)
+//   // console.log(requests.body.id)
+//   // console.log(requests.body.pw)
+// })
 
 // 서버한테 정보를 보내주는 코드
 // 서버에 보낸 정보를 영구 저장하려면 DB(Data Base)에 저장해야 한다.
@@ -133,7 +133,7 @@ app.post('/add', function(requests, response){
 // 6. URL을 봤을 때 어떤 페이지인지 알 수 있어야 한다.
 
 
-// 몽고db
+// 몽고db =============================================================================
 // mongodb.com
 // database access 
 // Add New Database User
@@ -159,4 +159,36 @@ app.post('/add', function(requests, response){
 
 // MongoDB
 // npm install mongodb@3.6.4
+// 몽고db 연결
+const MongoClient = require('mongodb').MongoClient;
 
+// 데이터를 저장할 변수
+let db;
+
+// Database access에서 만든 아이디 : 비밀번호
+MongoClient.connect('mongodb+srv://admin:zbJIiHYEKSsLa6Jg@data.faox2rv.mongodb.net/?retryWrites=true&w=majority', function(error,client){
+  // 커넥션 에러의 99.9%가 오타에 의한 것
+  if(error){
+    return console.log(error);
+  }
+
+  // '' 안에 db 이름 정한 것 
+  db = client.db('data');
+  app.listen('7070', function(){
+    console.log('success');
+  });
+})
+
+// 에러 발생 
+// (node:10616) Warning: Accessing non-existent property 'MongoError' of module exports inside circular dependency
+// database -> Connect to your application -> 3.6 -> link 변경 -> 비밀번호 괄호 없이 적어넣고 수정
+
+app.post('/add', function(requests, response){
+  response.send('전송완료!')
+  console.log(requests.body)
+
+  // 내 콜렉션 이름 / insertOne 오브젝트 값 중괄호 db에 넘겨줄 값, 콜백함수 (error, 결과값 받아볼 변수)
+  db.collection('post').insertOne({아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error, result){
+    console.log('db저장완료');
+  })
+})
