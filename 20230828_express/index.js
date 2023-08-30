@@ -180,8 +180,9 @@ MongoClient.connect('mongodb+srv://admin:zbJIiHYEKSsLa6Jg@data.faox2rv.mongodb.n
 })
 
 // 에러 발생 
+// 이 줄은 커뮤니티 글 확인 시 넘겨도 된다고 적힌 개발자 커뮤니티 몽고db 직원 글 21년 존재 
 // (node:10616) Warning: Accessing non-existent property 'MongoError' of module exports inside circular dependency
-// database -> Connect to your application -> 3.6 -> link 변경 -> 비밀번호 괄호 없이 적어넣고 수정
+// 다른 에러 : database -> Connect to your application -> 3.6 -> link 변경 -> 비밀번호 괄호 없이 적어넣고 수정
 
 app.post('/add', function(requests, response){
   response.send('전송완료!')
