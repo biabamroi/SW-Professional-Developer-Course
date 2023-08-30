@@ -214,6 +214,8 @@ app.get('/add', function(requests, response){
   // post라는 collection에 저장된 데이터를 꺼낸다.
   db.collection('post').find().toArray(function(error, result){
     console.log(result);
-    response.render('data.ejs', {log : result});
-  });
-});
+    response.render('data.ejs', {log : result})
+  })
+})
+
+// .ejs에 주석 사용 ㄴㄴ 인식 불가로 에러 발생 
