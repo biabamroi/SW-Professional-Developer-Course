@@ -210,11 +210,10 @@ app.post('/add', function(requests, response){
 // .ejs 사용 세팅
 app.set('view engine', 'ejs');
 
-app.get('/add', function(requests,response){
+app.get('/add', function(requests, response){
   // post라는 collection에 저장된 데이터를 꺼낸다.
   db.collection('post').find().toArray(function(error, result){
-    console.log(result)
-  })
-
-  response.render('data.ejs', {log : result})
-})
+    console.log(result);
+    response.render('data.ejs', {log : result});
+  });
+});
