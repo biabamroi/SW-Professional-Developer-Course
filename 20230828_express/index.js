@@ -193,3 +193,17 @@ app.post('/add', function(requests, response){
     console.log('db저장완료');
   })
 })
+
+// 라이브러리 이용
+// views 폴더에 data.ejs 파일 생성 : 반드시 view 폴더 안에 넣을 것.
+// html에서 JS문법을 사용할 수 있게 해 주는 
+
+// /add로 접속하면 GET 요청으로 DB에 저장된 데이터를 보여준다. 
+
+// ejs를 사용하기 위해
+// npm install ejs
+// 확장자 .html -> .ejs 
+// 데이터를 좀 더 직관적이고 쉽게 사용하기 위해 이용
+
+// .jsx : 리액트 or 뷰 - 데이터 바인딩 최적화 
+
