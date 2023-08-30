@@ -132,3 +132,31 @@ app.post('/add', function(requests, response){
 // 5. 자료 하나당 하나의 URL을 사용
 // 6. URL을 봤을 때 어떤 페이지인지 알 수 있어야 한다.
 
+
+// 몽고db
+// mongodb.com
+// database access 
+// Add New Database User
+// Built-in Role
+// atlas admin
+// atlasAdmin@admin
+
+// Network Access 
+// 현재 아이피만 add current / 모든 아이피 allow 
+
+// Database 
+// build a database 
+// free / seoul / name -> create 
+
+// Database 
+// browse Collections
+// Explore Your Data -> Add my own data
+// data - post - 선택값 없이 ㄱㄱ
+
+// database - collections 
+// data
+// └post
+
+// MongoDB
+// npm install mongodb@3.6.4
+
