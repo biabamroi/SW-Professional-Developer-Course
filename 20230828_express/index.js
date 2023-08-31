@@ -193,8 +193,8 @@ MongoClient.connect('mongodb+srv://admin:zbJIiHYEKSsLa6Jg@data.faox2rv.mongodb.n
 // 다른 에러 : database -> Connect to your application -> 3.6 -> link 변경 -> 비밀번호 괄호 없이 적어넣고 수정
 
 app.post('/add', function(requests, response){
-  response.send('전송완료!')
   console.log(requests.body)
+  response.send('전송완료!')
 
   // DB total collection에서 총 데이터 수를 꺼내오기
   // 데이터를 전부 찾고 싶으면 find(), 하나만 찾고 싶으면 findOne()
@@ -204,32 +204,28 @@ app.post('/add', function(requests, response){
     let totalDataLength = result.totalData;
 
     // 내 콜렉션 이름 / insertOne 오브젝트 값 중괄호 db에 넘겨줄 값, 콜백함수 (error, 결과값 받아볼 변수)
-  // post에 데이터 추가 insert
-  db.collection('post').insertOne({
-    _id : 1,
-    아이디 : requests.body.id, 
-    비밀번호 : requests.body.pw
-    }, function(error, result){
-    console.log('db저장완료');
-  })
+    // post에 데이터 추가 insert
+    db.collection('post').insertOne({
+      _id : totalDataLength+1,
+      아이디 : requests.body.id, 
+      비밀번호 : requests.body.pw
+      }, function(error, result){
+      console.log('db저장완료');
+    })
 
-  // 새로운 데이터가 저장됐을 때 total collection에 있는 tatalData +1
-  // .updateOne({변경할 데이터}, {$inc:{수정값}})
-  // update operator(연산자) $set, $inc(증가) 등 여러 가지
-  // {$set:{totalData:변경할 값}} - 세팅값 
-  // {$inc:{totalData:기존 값에 더해줄 값}}
-  db.collection('total').updateOne({name : 'dataLength'},
-  {$inc : {totalData : 1}},
-  function(error, result){
-    if(error){
-      return console.log(error);
-    }
+    // 새로운 데이터가 저장됐을 때 total collection에 있는 tatalData +1
+    // .updateOne({변경할 데이터}, {$inc:{수정값}})
+    // update operator(연산자) $set, $inc(증가) 등 여러 가지
+    // {$set:{totalData:변경할 값}} - 세팅값 
+    // {$inc:{totalData:기존 값에 더해줄 값}}
+    db.collection('total').updateOne({name : 'dataLength'},
+    {$inc : {totalData : 1}},
+    function(error, result){
+      if(error){
+        return console.log(error);
+      }
+    })
   })
-  
-  })
-
-  
-
 })
 
 
