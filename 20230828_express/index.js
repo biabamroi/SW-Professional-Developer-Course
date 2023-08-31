@@ -157,6 +157,14 @@ app.use(bodyParser.urlencoded({extended : true}));
 // data
 // └post
 
+// insert Document (콜렉션 추가 후 데이터 입력) 
+// to collection total
+// 1. _id : 임의 숫자
+// 2. totalData (원하는 이름) : " 0 " (value값)  int32 (숫자)
+// 3. name : dataLength
+// insert -> data 1 more 
+
+
 // MongoDB
 // npm install mongodb@3.6.4
 // 몽고db 연결
@@ -189,10 +197,30 @@ app.post('/add', function(requests, response){
   console.log(requests.body)
 
   // 내 콜렉션 이름 / insertOne 오브젝트 값 중괄호 db에 넘겨줄 값, 콜백함수 (error, 결과값 받아볼 변수)
-  db.collection('post').insertOne({아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error, result){
+  // post에 데이터 추가 insert
+  db.collection('post').insertOne({
+    _id : 1,
+    아이디 : requests.body.id, 
+    비밀번호 : requests.body.pw
+    }, function(error, result){
     console.log('db저장완료');
   })
+
+  // 새로운 데이터가 저장됐을 떄 total collection에 있는 tatalData +1
+  // 데이터를 업데이트(수정) 
+  db.collection('total').updateOne({name : 'dataLength'},
+  {$inc : {totalData : 1}},
+  function(error, result){
+    if(error){
+      return console.log(error);
+    }
+  })
 })
+
+
+
+
+
 
 // 라이브러리 이용
 // views 폴더에 data.ejs 파일 생성 : 반드시 view 폴더 안에 넣을 것.
@@ -219,3 +247,5 @@ app.get('/add', function(requests, response){
 })
 
 // .ejs에 주석 사용 ㄴㄴ 인식 불가로 에러 발생 
+
+
