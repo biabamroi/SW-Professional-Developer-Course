@@ -196,7 +196,14 @@ app.post('/add', function(requests, response){
   response.send('전송완료!')
   console.log(requests.body)
 
-  // 내 콜렉션 이름 / insertOne 오브젝트 값 중괄호 db에 넘겨줄 값, 콜백함수 (error, 결과값 받아볼 변수)
+  // DB total collection에서 총 데이터 수를 꺼내오기
+  // 데이터를 전부 찾고 싶으면 find(), 하나만 찾고 싶으면 findOne()
+  // name이 totalData인 데이터를 찾아달라는 쿼리문
+  db.collection('total').findOne({name:'dataLength'}, function(error, result){
+    console.log(result.totalData); // total collection이 가지고 있는 총 데이터 수
+    let totalDataLength = result.totalData;
+
+    // 내 콜렉션 이름 / insertOne 오브젝트 값 중괄호 db에 넘겨줄 값, 콜백함수 (error, 결과값 받아볼 변수)
   // post에 데이터 추가 insert
   db.collection('post').insertOne({
     _id : 1,
@@ -218,6 +225,10 @@ app.post('/add', function(requests, response){
       return console.log(error);
     }
   })
+  
+  })
+
+  
 
 })
 
