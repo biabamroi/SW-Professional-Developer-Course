@@ -206,8 +206,11 @@ app.post('/add', function(requests, response){
     console.log('db저장완료');
   })
 
-  // 새로운 데이터가 저장됐을 떄 total collection에 있는 tatalData +1
-  // 데이터를 업데이트(수정) 
+  // 새로운 데이터가 저장됐을 때 total collection에 있는 tatalData +1
+  // .updateOne({변경할 데이터}, {$inc:{수정값}})
+  // update operator(연산자) $set, $inc(증가) 등 여러 가지
+  // {$set:{totalData:변경할 값}} - 세팅값 
+  // {$inc:{totalData:기존 값에 더해줄 값}}
   db.collection('total').updateOne({name : 'dataLength'},
   {$inc : {totalData : 1}},
   function(error, result){
@@ -215,6 +218,7 @@ app.post('/add', function(requests, response){
       return console.log(error);
     }
   })
+
 })
 
 
