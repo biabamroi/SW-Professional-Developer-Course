@@ -284,6 +284,8 @@ app.delete('/delete', function(requests, response){
     }
     console.log('삭제완료')
   })
+
+  response.status(200).send({message : '성공'})
 })
 
 
