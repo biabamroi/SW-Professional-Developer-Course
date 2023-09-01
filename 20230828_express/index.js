@@ -265,6 +265,27 @@ app.get('/add', function(requests, response){
   })
 })
 
-// .ejs에 주석 사용 ㄴㄴ 인식 불가로 에러 발생 
+// .ejs body에 주석 사용 ㄴㄴ 인식 불가로 에러 발생 
+
+
+// 데이터 사용자한테는 숨기고 개발자는 알 수 있게 할 때 
+// <p>No.<%= log[i]._id %></p> 기존 사용자도 확인할 수 있는 스타일링
+// data-id="<%= log[i]._id %>" 개발자 모드에서 확인 가능
+
+
+app.delete('/delete', function(requests, response){
+  console.log(requests.body._id)
+  // 숫자로 재할당
+  requests.body._id = parseInt(requests.body._id)
+
+  db.collection('post').deleteOne({_id : requests.body._id}, function(error, result){
+    if(error){
+      console.log(error)
+    }
+    console.log('삭제완료')
+  })
+})
+
+
 
 
