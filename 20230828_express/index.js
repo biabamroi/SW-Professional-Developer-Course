@@ -44,9 +44,9 @@ const app = express();
 // :  localhost:7000(port number)
 // 콜백함수 안에 있는 코드 실행 
 
-app.listen(7000, function(){
-  console.log('7000번 포트');
-})
+// app.listen(7000, function(){
+//   console.log('7000번 포트');
+// })
 
 
 // 폴더 내 모든 정적 파일 제공 (JS, CSS, images, fonts)
@@ -182,7 +182,7 @@ MongoClient.connect('mongodb+srv://admin:zbJIiHYEKSsLa6Jg@data.faox2rv.mongodb.n
 
   // '' 안에 db 이름 정한 것 
   db = client.db('data');
-  app.listen('7070', function(){
+  app.listen('7000', function(){
     console.log('success');
   });
 })
