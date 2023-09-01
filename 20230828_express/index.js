@@ -285,6 +285,10 @@ app.delete('/delete', function(requests, response){
     console.log('삭제완료')
   })
 
+  // 서버에서 응답코드로 요청 상태 표시
+  // 2-- 요청 성공
+  // 4-- 고객 문제 요청 실패
+  // 5-- 서버 문제 요청 실패
   response.status(200).send({message : '성공'})
 })
 
