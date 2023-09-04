@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1>_id값 info page</h1>
+    <div class="box-item">
+      <div class="info-box">
+        <p>No.<%= data._id %></p>
+        <h3>ID : <%= data.아이디 %></h3>
+        <h3>PW : <%= data.비밀번호 %></h3>
+      </div>
+      <button type="button" class="delete" data-id="<%= data._id %>">삭제</button>
+    </div>
+  <script>
+    $('.delete').on('click', function(e){
+      let dataNum = e.target.dataset.id;
+      let curClick = $(this);
+      $.ajax({
+        method : 'DELETE',
+        url : '/delete',
+        data : {_id : dataNum}
+      }).done(function(result){
+        console.log('요청성공')
+        curClick.parent('.box-item').fadeOut();
+      })
+    })
+  </script>
+</body>
+</html>
