@@ -17,6 +17,7 @@ body {
 }
 
 .box-item {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,4 +47,12 @@ button {
   border: none;
   background-color: black;
   color: white;
+}
+
+.box-item button:first-of-type {
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translateY(-50%);
+  background-color: grey;
 }
