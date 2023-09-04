@@ -293,5 +293,39 @@ app.delete('/delete', function(requests, response){
 })
 
 
+// npm install cookie-parser --save
+
+
+// 상세페이지 구축 시 사용하는 방법
+// url에 데이터가 가지고 있는 _id값을 파라미터로 받는다.
+// 각 페이지에 보여줄 내용이 다르기 때문에
+// 내용에 따라서 경로 변경 (_id 값 사용)
+// url경로/아이디값 /info/_id /info/1 /info/2 
+// url 파라미터 == 함수 파라미터
+// id는 매개변수 이름 '/info/:id' : 콜론 뒤에 아무 문자나 입력했을 때 (경로)
+app.get('/info/:id', function(requests, response){
+  // params.id : url 파라미터 중 id값
+  // 'post' collection에서 params.id 값에 해당하는 데이터 찾아오기
+  // console.log(typeof(requests.params.id)) // 문자 확인
+  // 데이터 찾을 때 req.params.id String -> Int로 형 변환 필요
+  // 'post' collection의 _id 값이 Int
+  db.collection('post').findOne({_id:parseInt(requests.params.id)}, function(error, result){
+    console.log(result);
+    response.render('info.ejs', {data : result})
+  })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
