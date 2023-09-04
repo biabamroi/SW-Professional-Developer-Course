@@ -17,8 +17,10 @@
         <h3>ID : <%= log[i].아이디 %></h3>
         <h3>PW : <%= log[i].비밀번호 %></h3>
       </div>
-      <a href="./edit/<%= log[i]._id %>"><button type="button" class="edit">수정</button></a>
-      <button type="button" class="delete" data-id="<%= log[i]._id %>">삭제</button>
+      <div>
+        <a href="./edit/<%= log[i]._id %>"><button type="button" class="edit">수정</button></a>
+        <button type="button" class="delete" data-id="<%= log[i]._id %>">삭제</button>
+      </div>
     </div>
   <% } %>
   <script>
@@ -48,7 +50,7 @@
         console.log('요청성공')
         // button의 부모 요소인 .box-item을 찾아서 서서히 안 보이게 
         // 삭제 버튼을 클릭했을 때 새로고침하지 않아도 서서히 안 보이게 해주는 효과
-        curClick.parent('.box-item').fadeOut();
+        curClick.parent().parent('.box-item').fadeOut();
       })
     })
   </script>
