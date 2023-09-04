@@ -12,6 +12,11 @@ h1 {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 body {
   padding: 40px;
 }
@@ -41,6 +46,14 @@ body {
   margin-right: 20px;
 }
 
+input {
+  padding: 5px;
+}
+
+input:first-of-type {
+  margin-right: 20px;
+}
+
 button {
   padding: 5px 10px;
   border-radius: 10px;
@@ -49,10 +62,10 @@ button {
   color: white;
 }
 
-.box-item button:first-of-type {
-  position: absolute;
-  top: 50%;
-  right: 80px;
-  transform: translateY(-50%);
+.edit {
   background-color: grey;
+}
+
+.delete {
+  background-color: black;
 }
