@@ -309,7 +309,7 @@ app.get('/info/:id', function(requests, response){
   // console.log(typeof(requests.params.id)) // 문자 확인
   // 데이터 찾을 때 req.params.id String -> Int로 형 변환 필요
   // 'post' collection의 _id 값이 Int
-  db.collection('post').findOne({_id:parseInt(requests.params.id)}, function(error, result){
+  db.collection('post').findOne({_id : parseInt(requests.params.id)}, function(error, result){
     console.log(result);
     response.render('info.ejs', {data : result})
   })
@@ -317,18 +317,30 @@ app.get('/info/:id', function(requests, response){
 
 // /edit 경로로 접속 시 edit.ejs 내용 보여주기
 // /edit/:id
-// params로 받은 _id 값 db collection post에서 가져dhktj
+// params로 받은 _id 값 db collection post에서 가져와서
 // edit.ejs input(id, pw) value 값으로 바인딩
 
 app.get('/edit/:id', function(requests, response){
-  db.collection('post').findOne({_id:parseInt(requests.params.id)}, function(error, result){
+  db.collection('post').findOne({_id : parseInt(requests.params.id)}, function(error, result){
     console.log(result);
     response.render('edit.ejs', {data : result})
   })
 })
 
 
+// npm install method-override 라이브러리 설치
+// HTML form 태그에서는 GET, Post 요청만 가능
+// PUT, DELETE 요청을 하고 싶다면 외부 라이브러리 설치
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
+app.put('/edit', function(requests, response){
+  db.collection('post').updateOne({_id : parseInt(requests.body._id)},
+    {$set:{아이디 : requests.body.id, 비밀번호 : requests.body.pw}}, function(error, result){
+    console.log('수정완료');
+
+  })
+})
 
 
 
