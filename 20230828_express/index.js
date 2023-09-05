@@ -345,6 +345,9 @@ app.put('/edit', function(requests, response){
 })
 
 
+// Node.js express 서버 구축
+// 서버에 GET, POST, PUT, DELETE 요청하는 방법
+// DB CRUD (Create, Read, Update, Delete)
 
 
 
