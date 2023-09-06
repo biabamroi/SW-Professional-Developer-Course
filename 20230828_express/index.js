@@ -356,37 +356,36 @@ app.put('/edit', function(requests, response){
 // 2. 회원가입 폼 작성
 // 3. db.collection('login')에 join.ejs 파일에 있는 input value값 저장
 
-app.post('/join', function(requests, response){
-  db.collection('total').findOne({name:'dataLength'}, function(error, result){
-    console.log(result.totalData);
-    let totalDataLength = result.totalData;
+app.get('/join', function(requests, response){
+  // db.collection('total').findOne({name:'dataLength'}, function(error, result){
+  //   console.log(result.totalData);
+  //   let totalDataLength = result.totalData;
 
-    db.collection('join').insertOne({
-      _id : totalDataLength+1,
-      ID : requests.body.userid, 
-      PW : requests.body.userpw, 
-      name : requests.body.username,
-      birth : requests.body.year + requests.body.month + requests.body.date,
-      gender : requests.body.gender,
-      email : requests.body.usermail,
-      phone : requests.body.country + requests.body.phonenum,
-      adress : requests.body.sample6_postcode + requests.body.sample6_address + requests.body.sample6_detailAddress + requests.body.sample6_extraAddress
-    }, function(error, result){
-      if(error){
-        return console.log(error);
-      }
-    })
+  //   db.collection('join').insertOne({
+  //     _id : totalDataLength+1,
+  //     ID : requests.body.userid, 
+  //     PW : requests.body.userpw, 
+  //     name : requests.body.username,
+  //     birth : requests.body.year + requests.body.month + requests.body.date,
+  //     gender : requests.body.gender,
+  //     email : requests.body.usermail,
+  //     phone : requests.body.country + requests.body.phonenum,
+  //     adress : requests.body.sample6_postcode + requests.body.sample6_address + requests.body.sample6_detailAddress + requests.body.sample6_extraAddress
+  //   }, function(error, result){
+  //     if(error){
+  //       return console.log(error);
+  //     }
+  //   })
 
-    db.collection('total').updateOne({name : 'dataLength'},
-    {$inc : {totalData:1}},
-    function(error, result){
-      if(error){
-        return console.log(error);
-      }
-    })
-  })
-  response.render('join.ejs', {data : result})
-  // response.redirect('/login');
+  //   db.collection('total').updateOne({name : 'dataLength'},
+  //   {$inc : {totalData:1}},
+  //   function(error, result){
+  //     if(error){
+  //       return console.log(error);
+  //     }
+  //   })
+  // })
+  response.render('join.ejs');
 })
 
 
