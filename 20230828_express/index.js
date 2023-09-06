@@ -361,7 +361,7 @@ app.get('/join', function(requests, response){
 
 app.post('/join', function(requests, response){
   db.collection('total').findOne({name:'dataLength'}, function(error, result){
-    // console.log(result.totalData)
+    console.log(result.totalData)
     let totalDataLength = result.totalData;
     
     db.collection('login').insertOne({
@@ -370,6 +370,15 @@ app.post('/join', function(requests, response){
       id : requests.body.id,
       pw : requests.body.pw}, function(error, result){
         console.log('login collection 저장 완료')
+      }
+    )
+      
+    db.collection('total').updateOne({name : 'dataLength'}, {$inc : {totalData:1}},
+      function(error, result){
+        if(error){
+          return console.log(error);
+        }
+        response.redirect('/login')
       }
     )
   })
