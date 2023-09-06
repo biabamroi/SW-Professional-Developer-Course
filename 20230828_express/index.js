@@ -471,3 +471,26 @@ passport.deserializeUser(function(id, done){
   })
 })
 
+
+// 마이페이지, 로그아웃
+// 로그인 여부를 판단하는 미들웨어
+function getLogin(requests, response, next){
+  if(requests.user){
+    next()
+  }else{
+    response.send('로그인이 필요한 페이지입니다.');
+  }
+}
+
+// 로그인한 사람만 접속할 수 있는 경로
+app.get('/mypage', getLogin, function(requests, response){
+  console.log(requests.user)
+  response.render('mypage.ejs', {info : requests.user})
+})
+
+app.post('/logout', function(requests, response){
+  requests.session.destroy();
+  console.log('로그아웃');
+  response.redirect('/login');
+})
+
