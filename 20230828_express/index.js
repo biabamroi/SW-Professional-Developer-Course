@@ -437,7 +437,7 @@ passport.use(new LocalStrategy({
   session : true,
   // 아이디, 비밀번호 외에 다른 정보를 추가로 검증하고 싶을 때 
   // req 매개변수 값을 콜백함수로 전달하면 된다.
-  passReqToCallback : false,
+  passReqToCallback : false
 // 콜백함수에서 유저 아이디 / 비밀번호 검증
 }, function(userID, userPW, done){
   db.collection('login').findOne({id : userID}, function(error, result){
@@ -455,3 +455,19 @@ passport.use(new LocalStrategy({
     }
   })
 }))
+
+
+// 로그인 성공 -> 세션 정보 만들고,
+// 씨리얼라이즈유저 : 유저 정보를 암호화 
+passport.serializeUser(function(user, done){
+  done(null, user.id)
+})
+
+
+// 해당 세션 데이터를 login collection에서 찾는다.
+passport.deserializeUser(function(id, done){
+  db.collection('login').findOne({id : id}, function(error, result){
+    done(null, result)
+  })
+})
+
