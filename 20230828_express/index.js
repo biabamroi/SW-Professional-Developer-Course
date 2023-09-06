@@ -383,3 +383,30 @@ app.post('/join', function(requests, response){
     )
   })
 })
+
+
+
+// Session 로그인 기능 구현
+// 유저가 로그인하면 Session ID 발급 
+// 서버측 1 : 유저 로컬 1 값을 가진다.
+// Session ID : 유저가 로그인할 때 작성한 정보
+
+// 라이브러리 설치
+// npm install passport 
+// npm install passport-local 
+// npm install express-session
+
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+const session = require('express-session');
+
+// app.use (미들웨어)
+// 서버와 요청 사이, 중간에서 실행하고 싶은 코드가 있을 때 사용
+// passport 라이브러리 : 미들웨어 제공
+
+app.use(session({secret : 'secret', resave : true, saveUninitialized : false}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
