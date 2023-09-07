@@ -32,7 +32,7 @@ xhr.onreadystatechange = function () {
           }
         }
       } else {
-        console.log('데이터 구조를 다시 확인해 주세요.');
+        console.log('데이터 구조를 다시 확인해 주세요.'); 
       }
     } else {
       console.log('HTTP 요청 실패' + this.status);
