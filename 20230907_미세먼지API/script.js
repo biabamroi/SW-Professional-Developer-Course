@@ -37,9 +37,22 @@ function updateData(){
               if(!latestData || item.dataTime > latestData.dataTime){
                 // latestData에 더 큰 item 값을 넣어서 latestData에 제일 최근 데이터를 담는다.
                 latestData = item;
-                let dataItem = document.createElement('div');
-                dataItem.innerHTML = item.cityName + '미세먼지 : ' + latestData.pm10Value + latestData.dataTime;
-                dataDisplay.appendChild(dataItem);
+
+                let dataItem = `
+                  <div class="dust-item">
+                    <div>${latestData.sidoName}</div>
+                    <div>${latestData.cityName}</div>
+                    <div>${latestData.pm10Value}</div>
+                  </div>
+                `
+                dataDisplay.insertAdjacentHTML('beforeend', dataItem);
+
+                let dustItem = document.querySelector('.dust-item');
+                if(item.pm10Value >= 20) {
+                  dustItem.classList.add('not-good');
+                } else {
+                  dustItem.classList.add('good');
+                }
               }
             }
           }
