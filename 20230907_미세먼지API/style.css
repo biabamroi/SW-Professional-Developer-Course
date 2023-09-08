@@ -17,7 +17,7 @@
 }
 
 .dust-item.not-good {
-  background-image: url('./미세먼지.jpg');
+  background-image: url('./미세먼지.jpg');
 }
 
 .dust-item > div:not(:last-child) {
