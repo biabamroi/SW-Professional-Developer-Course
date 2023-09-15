@@ -10,4 +10,4 @@
 
 // VScode setting : Include Languages - add item - javascript, javascriptreact
 
-
+// ctrl + alt + n 환경설정 (f5)
