@@ -16,3 +16,15 @@
 // Code Runner 확장기능 
 // ctrl+alt+N (OUTPUT) 값 확인 
 // 자바스크립트 코드 콘솔로그 바로 확인하는 기능
+
+// react - 경로 - npm start
+
+// 리액트 공식 사이트
+// https://ko.legacy.reactjs.org/
+// 앱 개발용 
+// https://reactnative.dev/
+
+// component 컴포넌트 폴더
+// 앞자리 대문자 생성 .jsx 파일
+// 함수 작성 시 반드시 전체를 감싸는 div 존재해야 함.
+// 클로징 태그 </>
