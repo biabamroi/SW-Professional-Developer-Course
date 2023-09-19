@@ -20,6 +20,10 @@ h2 {
   color: red;
 }
 
+h3 {
+  color: grey;
+}
+
 button {
   padding: 5px;
   margin: 10px 0;
