@@ -29,6 +29,9 @@ const State = () => {
       <button onClick={()=>setCount(count+1)}>Click</button>
       <h2>{title}</h2>
       <button onClick={()=>{
+        // state는 등호로 상태를 변경할 수 없다.
+        // state 변경 함수에는 이름 앞에 set을 붙여준다.
+        // state 변경 함수로 값을 변경해야 html이 재랜더링 된다.
         let titleCopy = [...title];
         titleCopy = '나를 위한 현재';
         setTitle(titleCopy)
