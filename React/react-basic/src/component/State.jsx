@@ -17,7 +17,7 @@ import { useState } from 'react';
 const State = () => {
   // let num = 0;
   let [count, setCount] = useState(0);
-  let [title, setTitle] = useState('너를 위한 시간');
+  let [title, setTitle] = useState('너를 위한 과거');
   // count : 해당 상태값을 의미하는 변수
   // setCount : 해당 상태값을 변경하는 함수
   // 이 함수를 호출할 때 변경된 값을 인수로 전달한다.
@@ -30,7 +30,7 @@ const State = () => {
       <h2>{title}</h2>
       <button onClick={()=>{
         let titleCopy = [...title];
-        titleCopy = '나를 위한 시간';
+        titleCopy = '나를 위한 현재';
         setTitle(titleCopy)
         }}>제목 변경</button>
     </div>
