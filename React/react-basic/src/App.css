@@ -9,5 +9,9 @@
 }
 
 .text {
-  color: red;
+  color: white;
+}
+
+.hr {
+margin: 30px 0;
 }
