@@ -23,7 +23,8 @@ const State = () => {
   let [bg, setBg] = useState('white');
   let changeBg = ()=>{
     // 삼항연산자로 현재 배경색이 white라면 다른 색으로 바꾸고, 아니라면 white로 바꿔라.
-    document.body.style.backgroundColor = 'white' === bg ? document.body.style.backgroundColor = 'yellow' : document.body.style.backgroundColor = 'white'; 
+    let newBg = bg === 'white' ? 'yellow' : 'white';
+    setBg(newBg);
   };
 
   // count : 해당 상태값을 의미하는 변수
@@ -31,7 +32,9 @@ const State = () => {
   // 이 함수를 호출할 때 변경된 값을 인수로 전달한다.
   // (0) : 초기상태값 / 컴포넌트가 처음 랜더링될 때 사용되는 값
   return (
-    <div>
+    <div style={{backgroundColor:bg}}>
+      <button onClick={changeBg}>배경색 변경</button>
+      <br />
       <h2>{count}</h2>
       <button onClick={()=>setCount(count+1)}>Click</button>
 
@@ -46,17 +49,16 @@ const State = () => {
         titleCopy = '나를 위한 현재';
         // console.log(title === titleCopy)
         setTitle(titleCopy)
-        }}>제목 변경</button>
+      }}>제목 변경</button>
 
-        <h3>{name}</h3>
-        <button onClick={()=>{
-          let nameCopy = [...name];
-          nameCopy[0] = '전우치';
-          setName(nameCopy)
-        }}>이름 변경</button>
+      <h3>{name}</h3>
+      <button onClick={()=>{
+        let nameCopy = [...name];
+        nameCopy[0] = '전우치';
+        setName(nameCopy)
+      }}>이름 변경</button>
 
-        <br />
-        <button onClick={()=>setBg(changeBg)}>배경색 변경</button>
+      
     </div>
   );
 };
