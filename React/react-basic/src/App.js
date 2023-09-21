@@ -8,8 +8,8 @@ import Back from './component/Main/Back';
 function App() {
   return (
     <div className="App">
-      {/* <User/>
-      <State/> */}
+      {/* <User/> */}
+      {/* <State/> */}
       {/* <Map/> */}
       <Nav/>
       <Back/>
