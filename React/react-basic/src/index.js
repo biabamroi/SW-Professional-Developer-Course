@@ -6,6 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  // 예상 못한 에러를 잡기 위해 StrictMode 제공
+  // 랜더링 단계에서 함수를 한 번 호출하고 
+  // 후에 한 번 더 호출해서 동일한 값이 나오는지 비교
+  // React 개발 환경에서만 두 번 호출되고 
+  // 배포 됐을 때는 상관없음
   <React.StrictMode>
     <App />
   </React.StrictMode>
