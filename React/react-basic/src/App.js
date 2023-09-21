@@ -3,6 +3,7 @@ import './App.css';
 // import State from './component/State';
 // import Map from './component/Map';
 import Nav from './component/Header/Nav';
+import Back from './component/Main/Back';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <State/> */}
       {/* <Map/> */}
       <Nav/>
-      
+      <Back/>
     </div>
   );
 }
