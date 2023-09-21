@@ -13,7 +13,7 @@ const Back = () => {
 
 function Box(props){
   // 조건부 랜더링
-  let showBtn = props.name === 'front-txt'
+  let showBtn = props.name === 'front-txt' ? true : false;
   return (
     <>
       <section className={props.layout}>

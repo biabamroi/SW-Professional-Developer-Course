@@ -7,12 +7,13 @@
 }
 
 .front-txt {
-  height: 600px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  height: 600px;
   color: #fff;
+  text-align: center;
 }
 
 .front-txt h2 {
@@ -20,17 +21,17 @@
 }
 
 .front-txt p {
+  margin-top: 30px;
   width: 80%;
   font-size: 24px;
-  margin-top: 30px;
-  text-align: center;
 }
 
 .front-btn {
-  margin-top: 30px;
+  margin-top: 40px;
   padding: 10px 20px 10px 20px;
   border-radius: 10px;
   border: none;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -40,17 +41,18 @@
   margin-top: -70px;
 }
 
-.top > div {
+.second-txt {
   width: 60%;
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
   color: #fff;
   background-color: #000;
-  border-radius: 20px;
-  box-shadow: 5px 5px 10px #666;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px #666;
 }
 
-.top > p {
+.second-txt p {
   margin-top: 20px;
 }
+
