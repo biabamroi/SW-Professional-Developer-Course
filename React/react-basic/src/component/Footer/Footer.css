@@ -1,0 +1,19 @@
+footer {
+  margin-top: 120px;
+}
+
+.contact {
+  color: #fff;
+}
+
+.footer-list {
+  display: flex;
+  margin-right: 50px;
+  width: 160px;
+  justify-content: space-between;
+}
+
+.footer-list a {
+  color: #fff;
+  font-weight: 700; 
+}

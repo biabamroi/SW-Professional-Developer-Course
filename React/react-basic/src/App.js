@@ -4,6 +4,7 @@ import './App.css';
 // import Map from './component/Map';
 import Nav from './component/Header/Nav';
 import Back from './component/Main/Back';
+import Footer from './component/Footer/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       {/* <Map/> */}
       <Nav/>
       <Back/>
+      <Footer/>
     </div>
   );
 }
