@@ -14,4 +14,10 @@ const Cards = () => {
   );
 };
 
+function Card() {
+  return (
+    
+  )
+}
+
 export default Cards;
