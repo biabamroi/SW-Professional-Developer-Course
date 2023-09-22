@@ -1,0 +1,106 @@
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.menu-container {
+  width: 200px;
+  margin: 20px 20px 0 30px;
+  /* border: 1px solid red; */
+}
+
+.profile-face {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  /* border: 1px solid grey; */
+}
+
+.profile-face button:first-of-type {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.profile-face img {
+  width: 160px;
+  height: 160px;
+  border: 2px solid rgba(248, 203, 0, 0.2);
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.profile-face button:last-of-type {
+  position: absolute;
+  right: 22px;
+  bottom: -10px;
+}
+
+.profile-face button iconify-icon {
+  font-size: 40px;
+}
+
+
+.like-group {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 20px 0;
+  /* border: 1px solid red; */
+}
+.like-group::after {
+  content: '디자이너 \A     필요······.';
+  white-space: pre;
+  position: absolute;
+  top: 80px;
+  left: 220px;
+  font-family: 'Gowun Dodum', sans-serif;
+}
+.like-group::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 150px;
+  display: inline-block;
+  width: 230px;
+  height: 200px;
+  transform: rotateY(180deg);
+  background-image: url('https://cdn.pixabay.com/photo/2022/08/01/09/59/speech-balloon-7357799_1280.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 10;
+}
+
+.like-group span {
+  padding: 5px;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  /* border: 1px solid red; */
+  border-radius: 20px;
+  background-color: antiquewhite;
+  opacity: .5;
+}
+.like-group span:hover {
+  opacity: 1;
+}
+
+
+.menu-list {
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid goldenrod;
+  border-radius: 20px;
+  color: goldenrod;
+}
+
+.menu-list:hover {
+  opacity: .7;
+}
+

@@ -1,0 +1,32 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+.visually-hidden { display: none; }
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* 
+font-family: 'Dongle', sans-serif;
+font-family: 'East Sea Dokdo', cursive;
+font-family: 'Nanum Brush Script', cursive;
+font-family: 'Single Day', cursive;
+*/
+
+/* body {} */
+/* .wrapper {} */

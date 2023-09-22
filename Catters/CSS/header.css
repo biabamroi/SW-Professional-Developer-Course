@@ -1,0 +1,27 @@
+
+/* header {} */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+/* .logo {} */
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.paw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paw i {
+  color: #ffce2d;
+}

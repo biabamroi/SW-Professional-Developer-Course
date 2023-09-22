@@ -1,0 +1,16 @@
+
+.top-menu-bar {
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  display: flex;
+  align-items: center;
+
+}
+
+.top-menu-bar a {
+  margin-right: 20px;
+}
+.top-menu-bar:last-child a {
+  margin-right: 0;
+}
