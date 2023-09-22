@@ -5,9 +5,10 @@ let styles = {
     display : 'flex',
     justifyContent : 'space-between',
     alignItems : 'center',
-    padding : '0 20px',
+    margin : '5px',
+    padding : '10px 20px',
     border : '1px solid #ccc',
-    borderRadius : '16px'
+    borderRadius : '30px'
   },
   img : {
     width : '50px',
@@ -16,22 +17,28 @@ let styles = {
   },
   contentBox : {
     flexGrow : 1,
-    marginLeft : '16px'
+    marginLeft : '16px',
+    lineHeight : '50%'
+  },
+  button : {
+    fontSize : '32px',
+    border : 'none',
+    backgroundColor : 'transparent',
+    cursor : 'pointer'
   }
 }
 
-
-const Comment = () => {
+const Comment = (props) => {
   return (
     <div style={styles.wrapper}>
       <div>
         <img style={styles.img} src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" alt="user image" />
       </div>
       <div style={styles.contentBox}>
-        <h3>User name</h3>
-        <p>Content</p>
+        <h3>{props.name}</h3>
+        <p>{props.text}</p>
       </div>
-      <button type='button'>🆇</button>
+      <button style={styles.button} type='button'>✘</button>
     </div>
   );
 };
