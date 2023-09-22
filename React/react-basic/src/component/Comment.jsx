@@ -28,6 +28,8 @@ let styles = {
   }
 }
 
+// 부모 컴포넌트로 부터 받아온 값 바인딩 props
+// props.부모가 넘겨 준 이름
 const Comment = (props) => {
   return (
     <div style={styles.wrapper}>
@@ -38,7 +40,7 @@ const Comment = (props) => {
         <h3>{props.name}</h3>
         <p>{props.text}</p>
       </div>
-      <button style={styles.button} type='button'>✘</button>
+      <button style={styles.button} type='button' onClick={props.delete}>✘</button>
     </div>
   );
 };

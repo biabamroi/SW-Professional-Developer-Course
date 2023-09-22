@@ -70,20 +70,38 @@ const CommentList = () => {
       // 삼항연산자 조건이 false일 때 name, text 값이 있으면
       // 다음 함수가 즉시 실행되도록 한다.
       (()=>{
+        // 첫번째 name : key값
+        // 두번째 name : let [name, setName]의 초기값
         let add = {name:name, content:text};
         setList([add,...list])
+        // 글추가 후 input satate 변경 함수로 비우기
         setName('')
         setText('')
       })()
     )
   }
 
+  let deleteComment = (index) => {
+    let newList = [...list];
+    // splice(배경 변경할 인덱스 값, 제거할 요소의 수)
+    newList.splice(index, 1)
+    setList(newList)
+    console.log(index)
+  }
+
+  // let removeComment = (id) => {
+  //   setList((name) => {
+  //     return name.filter((list) => list.id !== id);
+  //   });
+  // }
+
   return (
     <div>
       {
         list.map((item, i)=>{
           return (
-            <Comment name={item.name} text={item.content}/>
+            // 자식 comment component에 name, text이름으로 값 전달
+            <Comment name={item.name} text={item.content} key={i} delete={() => deleteComment(i)} />
           )
         })
       }
