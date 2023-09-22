@@ -89,12 +89,6 @@ const CommentList = () => {
     console.log(index)
   }
 
-  // let removeComment = (id) => {
-  //   setList((name) => {
-  //     return name.filter((list) => list.id !== id);
-  //   });
-  // }
-
   return (
     <div>
       {
