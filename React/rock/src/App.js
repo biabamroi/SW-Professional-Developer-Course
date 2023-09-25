@@ -22,12 +22,18 @@ let choice = {
 
 function App() {
   let [userSelect, setUserSelect] = useState(null);
-  let [comSelect, SetComSelect] = useState(null);
+  let [comSelect, setComSelect] = useState(null);
   let [result, setResult] = useState('');
 
   // 유저랑 컴퓨터가 선택한 값 업데이트
-  let play = () => {
+  let play = (userChoice) => {
+    let userChoices = choice[userChoice];
+    setUserSelect(userChoices);
 
+    let comChoice = randomChoice();
+    setComSelect(comChoice);
+
+    setResult()
   }
 
   // 컴퓨터 랜덤값 선택
@@ -44,8 +50,16 @@ function App() {
   }
 
   // 조건문으로 유저, 컴퓨터 중 누가 이겼는지 판단
-  let judgment = () => {
-
+  let judgment = (user, com) => {
+    // user가 이겼는지, computer가 이겼는지
+    // 어떤 값을 이용해서 판단할 건지 결정
+    // 사용자가 rock, computer가 scissors면 사용자 win, computer lose
+    // 사용자가 선택한 값, 컴퓨터가 선택한 값 비교
+    if (user.name === com.name) {
+      return 'tie';
+    } else if (user.name === 'Rock') return com.name === 'Scissors' ? 'win' : 'lose';
+    else if(user.name === 'Paper') return com.name === 'Rock' ? 'win' : 'lose';
+    else if(user.name === 'Scissors') return com.name === 'Paper' ? 'win' : 'lose';
   }
 
   return (
@@ -55,9 +69,9 @@ function App() {
         <Box title="Computer"/>
       </div>
       <div className="btn-list">
-        <button type='button' onClick={()=>{}}>✌️</button>
-        <button type='button' onClick={()=>{}}>👊</button>
-        <button type='button' onClick={()=>{}}>🖐️</button>
+        <button type='button' onClick={()=>play('scissors')}>✌️</button>
+        <button type='button' onClick={()=>play('rock')}>👊</button>
+        <button type='button' onClick={()=>play('paper')}>🖐️</button>
       </div>
     </div>
   );
