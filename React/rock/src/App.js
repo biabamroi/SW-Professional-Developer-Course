@@ -27,13 +27,12 @@ function App() {
 
   // 유저랑 컴퓨터가 선택한 값 업데이트
   let play = (userChoice) => {
-    let userChoices = choice[userChoice];
-    setUserSelect(userChoices);
+    setUserSelect(choice[userChoice]);
 
     let comChoice = randomChoice();
     setComSelect(comChoice);
 
-    setResult()
+    setResult(judgment(choice[userChoice], comChoice))
   }
 
   // 컴퓨터 랜덤값 선택
