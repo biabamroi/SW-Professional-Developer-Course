@@ -1,0 +1,49 @@
+.btn-list,
+.box-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+}
+
+.box-item {
+  border: 5px solid #ccc;
+}
+
+.box-item:first-child {
+  margin-right: 20px;
+}
+
+.box-item img {
+  width: 90%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.btn-list {
+  margin-top: 20px;
+}
+
+.btn-list button {
+  /* border: none; */
+  border-radius: 5px;
+  margin-right: 8px;
+  padding: 10px 30px;
+}
+
+.btn-list button:last-child {
+  margin-right: 0;
+}
+
+.win {
+  border: 5px solid blue;
+}
+
+.lose {
+  border: 5px solid red;
+}
+
+.tie {
+  border: 5px solid green;
+}
