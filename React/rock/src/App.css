@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 90%;
 }
 
 .box-item {
@@ -30,6 +29,8 @@
   border-radius: 5px;
   margin-right: 8px;
   padding: 10px 30px;
+  /* color: #fff; */
+  /* background-color: #000; */
 }
 
 .btn-list button:last-child {
@@ -37,7 +38,7 @@
 }
 
 .win {
-  border: 5px solid blue;
+  border: 5px solid green;
 }
 
 .lose {
@@ -45,5 +46,5 @@
 }
 
 .tie {
-  border: 5px solid green;
+  border: 5px solid #000;
 }
