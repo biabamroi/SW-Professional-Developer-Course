@@ -2,7 +2,7 @@
 // cd React
 // node --version
 // npm --version
-// npx create-react-app react-basic
+// npx create-react-app react-basic 
 // cd react-basic
 // npm start
 // Local:            http://localhost:3000
@@ -11,6 +11,9 @@
 // VScode setting : Include Languages - add item - javascript, javascriptreact
 
 // ctrl + alt + n 환경설정 (f5)
+
+// node-modules가 없는 경우 (용량문제)
+// npm install (node-modules 폴더 생성 후)
 
 
 // Code Runner 확장기능 
