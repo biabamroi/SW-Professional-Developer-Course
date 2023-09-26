@@ -36,3 +36,6 @@
 // Reactjs code snippets 확장기능 설치
 // rsc 엔터
 
+
+// 구글 코랩에서 파이썬 검색해서 머신러닝 -> 코드로 바로 확인 가능
+// colaboratory 
