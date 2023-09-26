@@ -22,23 +22,14 @@ function App() {
   let [comSelect, setComSelect] = useState(null);
   let [result, setResult] = useState('');
 
-  // 유저랑 컴퓨터가 선택한 값 업데이트
-  let play = (userChoice) => {
-    setUserSelect(choice[userChoice]);
-
-    let comChoice = randomChoice();
-    setComSelect(comChoice);
-
-    setResult(judgment(choice[userChoice], comChoice))
-  }
-
-  // 컴퓨터 랜덤값 선택
+  // 01. 컴퓨터 랜덤 값 선택
   let randomChoice = () => {
-    // choice object key값을 배열로 만들어서 랜덤으로 선택
-    // keys() : 객체의 key값을 뽑아서 Array로 만들어 주는 함수
+    // choice object 키값(rock, paper, scissors)을 배열로 만들어주는 함수 사용
+    // Object.keys() : 객체의 key 값을 뽑아서 Array로 만들어주는 함수
     let itemArr = Object.keys(choice);
 
-    // Math.floor로 소수점 이하를 버리고 random으로 0부터 2사이에 있는 랜덤 값 
+    // Math.floor 소수점 이하를 버리는 함수
+    // 0부터 2사이 숫자 중 랜덤 선택
     let randomItem = Math.floor(Math.random() * itemArr.length);
     let final = itemArr[randomItem]
 
@@ -46,7 +37,21 @@ function App() {
     return choice[final]
   }
 
-  // 조건문으로 유저, 컴퓨터 중 누가 이겼는지 판단
+
+  // 02. 유저랑 컴퓨터가 선택한 값 업데이트
+  let play = (userChoice) => {
+    setUserSelect(choice[userChoice]);
+
+    let comChoice = randomChoice();
+    setComSelect(comChoice);
+
+    // ** 결과 state 변경 함수에 judgment 를 호출해서 유저 선택값 & 컴퓨터 선택값을 넘겨준다.
+    setResult(judgment(choice[userChoice], comChoice))
+  }
+
+  
+  // 03. 유저랑 컴퓨터가 선택한 값으로 누가 이겼는지 판단(조건문)
+  // ** play 함수에서 넘겨준 유저, 컴퓨터 선택값을 매개변수(user, computer)로 받는다.
   let judgment = (user, com) => {
     // user가 이겼는지, computer가 이겼는지
     // 어떤 값을 이용해서 판단할 건지 결정
@@ -62,10 +67,12 @@ function App() {
   return (
     <div className="App">
       <div className='box-list'>
+        {/* 자식 컴포넌트 Box에 props로 값 전달(title, select, result) */}
         <Box title="You" select={userSelect} result={result}/>
         <Box title="Computer" select={comSelect} result={result}/>
       </div>
       <div className="btn-list">
+        {/* 각 버튼을 클릭 했을 때 play 함수에 매개변수로 choice 키 값 전달 */}
         <button type='button' onClick={()=>play('scissors')}>✌️</button>
         <button type='button' onClick={()=>play('rock')}>👊</button>
         <button type='button' onClick={()=>play('paper')}>🖐️</button>
