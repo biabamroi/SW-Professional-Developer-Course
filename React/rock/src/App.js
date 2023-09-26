@@ -37,9 +37,10 @@ function App() {
 
   // 컴퓨터 랜덤값 선택
   let randomChoice = () => {
-    // object key값을 배열로 만들어서 랜덤으로 선택
+    // choice object key값을 배열로 만들어서 랜덤으로 선택
     // keys() : 객체의 key값을 뽑아서 Array로 만들어 주는 함수
     let itemArr = Object.keys(choice);
+    
     // Math.floor로 소수점 이하를 버리고 random으로 0부터 2사이에 있는 랜덤 값 
     let randomItem = Math.floor(Math.random() * itemArr.length);
     let final = itemArr[randomItem]
