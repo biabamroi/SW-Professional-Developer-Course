@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 20px;
 }
 
 .box-item {
@@ -18,10 +19,6 @@
   width: 400px;
   height: 400px;
   object-fit: cover;
-}
-
-.btn-list {
-  margin-top: 20px;
 }
 
 .btn-list button {
