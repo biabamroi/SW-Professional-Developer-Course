@@ -5,18 +5,15 @@ import Box from './component/Box';
 let choice = {
   rock : {
     name : 'Rock',
-    img : 'https://cdn.pixabay.com/photo/2014/12/22/00/01/stone-576620_1280.png',
-    alt : 'rock'
+    img : 'https://cdn.pixabay.com/photo/2014/12/22/00/01/stone-576620_1280.png'
   },
   paper : {
     name : 'Paper',
-    img : 'https://cdn.pixabay.com/photo/2013/07/13/12/34/typewriter-159878_640.png',
-    alt : 'paper'
+    img : 'https://cdn.pixabay.com/photo/2013/07/13/12/34/typewriter-159878_640.png'
   },
   scissors : {
     name : 'Scissors',
-    img : 'https://cdn.pixabay.com/photo/2019/06/21/22/35/vintage-4290490_640.png',
-    alt : 'scissors'
+    img : 'https://cdn.pixabay.com/photo/2019/06/21/22/35/vintage-4290490_640.png'
   }
 }
 
@@ -40,7 +37,7 @@ function App() {
     // choice object key값을 배열로 만들어서 랜덤으로 선택
     // keys() : 객체의 key값을 뽑아서 Array로 만들어 주는 함수
     let itemArr = Object.keys(choice);
-    
+
     // Math.floor로 소수점 이하를 버리고 random으로 0부터 2사이에 있는 랜덤 값 
     let randomItem = Math.floor(Math.random() * itemArr.length);
     let final = itemArr[randomItem]
